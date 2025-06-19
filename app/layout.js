@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preload" href="/background_texture_image.png" as="image" />
       </head>
-      <body className="bg-[url(/background_texture_image.png)] bg-repeat bg-contain flex justify-center overflow-x-hidden">
+      <body className="bg-[#EFE7DE] bg-[url(/background_texture_image.png)] bg-repeat bg-contain flex justify-center overflow-x-hidden">
         {children}
       </body>
     </html>
