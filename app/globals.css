@@ -1,26 +1,124 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-Regular.woff2") format("woff2");
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: "OutfitMedium";
+  src: url("/fonts/Outfit-Medium.woff2") format("woff2");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@font-face {
+  font-family: "Pitch";
+  src: url("/fonts/Pitch-Regular.otf") format("opentype");
+}
+
+@theme {
+  --font-family-outfit: "Outfit", sans-serif;
+  --font-family-outfitMedium: "OutfitMedium", sans-serif;
+  --font-family-pitch: "Pitch", serif;
+
+  --color-cream: #efe7de;
+  --color-blue: #295cbf;
+  --color-dark-blue: #2755a8;
+  --color-grey: #efe7de8c;
+}
+
+@layer components {
+  .heading-1 {
+    font-family: var(--font-family-outfitMedium);
+    font-size: 1rem;
+    line-height: 26px;
+    letter-spacing: 0.18rem;
+  }
+
+  .heading-2 {
+    font-family: var(--font-family-outfitMedium);
+    font-size: 14px;
+    line-height: 23.2px;
+    letter-spacing: 0.15rem;
+  }
+
+  .body-text {
+    font-family: var(--font-family-outfit);
+    font-size: 1rem;
+    line-height: 21px;
+    letter-spacing: 0.04rem;
+  }
+
+  .body-small {
+    font-family: var(--font-family-outfit);
+    font-size: 14px;
+    line-height: 23.17px;
+    letter-spacing: 0.04rem;
+  }
+
+  .button-main {
+    font-family: var(--font-family-pitch);
+    font-size: 1rem;
+    line-height: 21px;
+    letter-spacing: 0.09rem;
+  }
+
+  .button-small {
+    font-family: var(--font-family-pitch);
+    font-size: 14px;
+    line-height: 23.2px;
+    letter-spacing: 0.09rem;
+  }
+
+  .numbers-text {
+    font-family: var(--font-family-outfit);
+    font-size: 14px;
+    line-height: 23.2px;
+    letter-spacing: 0.09rem;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+nav li {
+  font-family: var(--font-family-pitch);
+  font-size: 1rem;
+  line-height: 21px;
+  letter-spacing: 0.09rem;
+  color: var(--color-blue);
+  border-bottom: 1.5px solid var(--color-blue);
+  text-transform: uppercase;
+}
+
+.text-align-last {
+  text-align-last: center;
+}
+
+option {
+  background-color: var(--color-cream);
+  color: var(--color-blue);
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+*::placeholder {
+  font-family: var(--font-family-outfit);
+  color: #efe7de8c;
+  font-size: 14px;
+  line-height: 23.17px;
+  letter-spacing: 0.04rem;
+}
+
+*:focus::placeholder {
+  color: transparent;
+}
+
+#sanity {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
