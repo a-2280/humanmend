@@ -62,10 +62,10 @@ export default function FreeConsult({ isOpen, onClose, onSuccess }) {
             ready for your free consult?
           </p>
           <p className="body-text text-cream text-justify">
-            Starting the healing journey is never easy. Sometimes, it can feel
+            {`Starting the healing journey is never easy. Sometimes, it can feel
             like you don't even know where to begin. That's why we're here. Join
             us for a free fifteen-minute consult to discuss your needs and see
-            if you think HumanMend is the right fit.
+            if you think HumanMend is the right fit.`}
           </p>
         </div>
         <form onSubmit={handleSubmit} className="flex flex-col gap-20 mt-20">
@@ -162,7 +162,7 @@ export default function FreeConsult({ isOpen, onClose, onSuccess }) {
 
           <div className="flex flex-col">
             <label htmlFor="textBox" className="body-text text-cream mb-4">
-              Anything you'd like us to know?
+              {`Anything you'd like us to know?`}
             </label>
             <textarea
               id="textBox"
@@ -179,10 +179,10 @@ export default function FreeConsult({ isOpen, onClose, onSuccess }) {
               required
             />
             <label htmlFor="understanding" className="body-text text-cream">
-              I understand that HumanMend is an out-of-network practice and does
+              {`I understand that HumanMend is an out-of-network practice and does
               not accept insurance directly. Superbills are available upon
               request, and we offer Thrizer to help simplify out-of-network
-              reimbursement.
+              reimbursement.`}
             </label>
           </div>
           <div className="flex justify-center items-center">

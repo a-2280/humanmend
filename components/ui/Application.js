@@ -62,10 +62,10 @@ export default function Application({ isOpen, onClose, onSuccess }) {
             INTERESTED IN WORKING AT HUMANMEND?
           </p>
           <p className="body-text text-cream text-justify">
-            Thank you for your interest in HumanMend. We’re a practice grounded
+            {`Thank you for your interest in HumanMend. We’re a practice grounded
             in empathy, integrity, and the belief that healing is a human
             process. Tell us about your background, values, and what draws you
-            to this work. We’re honored to get to know you.
+            to this work. We’re honored to get to know you.`}
           </p>
         </div>
         <form onSubmit={handleSubmit} className="flex flex-col gap-20 mt-20">
@@ -205,8 +205,8 @@ export default function Application({ isOpen, onClose, onSuccess }) {
 
           <div className="flex flex-col">
             <label htmlFor="textBox" className="body-text text-cream mb-4">
-              How do your values as a therapist align with HumanMend’s mission
-              and approach?
+              {`How do your values as a therapist align with HumanMend’s mission
+              and approach?`}
             </label>
             <textarea
               id="textBox"
@@ -244,7 +244,7 @@ export default function Application({ isOpen, onClose, onSuccess }) {
                 className="body-text text-cream"
               >
                 Are you open to future opportunities
-                <br /> if we aren’t currently hiring?
+                <br /> {`if we aren’t currently hiring?`}
               </label>
               <select
                 id="currentlyLicensed"

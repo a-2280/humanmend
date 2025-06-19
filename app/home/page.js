@@ -130,8 +130,8 @@ export default function Home() {
                   ANXIETY therapy
                 </h2>
                 <p className="body-small text-blue">
-                  {`Quiet the noise, reconnect with yourself,`}
-                  <br /> {`and find steadier ground.`}
+                  Quiet the noise, reconnect with yourself,
+                  <br /> and find steadier ground.
                 </p>
               </div>
             </div>
@@ -151,8 +151,8 @@ export default function Home() {
                   EATING DISORDER THERAPY
                 </h2>
                 <p className="body-small text-blue">
-                  {`Recovery starts with curiosity, compassion,`}
-                  <br /> {`and support.`}
+                  Recovery starts with curiosity, compassion,
+                  <br /> and support.
                 </p>
               </div>
             </div>
@@ -172,8 +172,8 @@ export default function Home() {
                   GROUP THERAPY
                 </h2>
                 <p className="body-small text-blue">
-                  {`Where shame starts to soften and personal struggles`}
-                  <br /> {`become shared wisdom.`}
+                  Where shame starts to soften and personal struggles
+                  <br /> become shared wisdom.
                 </p>
               </div>
             </div>
@@ -232,8 +232,8 @@ export default function Home() {
       </section>
       <section className="max-w-[565px] flex flex-col justify-center items-center mb-[204px]">
         <h1 className="heading-1 text-blue uppercase text-center mb-[86px]">
-          {`for more support, check out our blog, or subscribe to receive our free
-          printable note cards: Permission Notes for Being Human.`}
+          for more support, check out our blog, or subscribe to receive our free
+          printable note cards: Permission Notes for Being Human.
         </h1>
         <form
           className="w-full flex justify-center items-center mb-[96px]"
