@@ -262,7 +262,7 @@ export default function Home() {
             Now serving clients in NY, NJ, CT, MA, and CO.
           </p>
           <h2 className="heading-2 text-blue uppercase">
-            Interested in joining our team? inquire
+            Interested in joining our team? inquire{" "}
             <button
               className="heading-2 uppercase cursor-pointer border-b-[1.5px] leading-4"
               onClick={() => setModalState("application")}
