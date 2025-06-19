@@ -23,7 +23,7 @@ export default function Home() {
   }, []);
 
   if (!homePageContent) {
-    return <div>Loading...</div>;
+    return <div className="text-blue body-text">Loading...</div>;
   }
 
   return (
