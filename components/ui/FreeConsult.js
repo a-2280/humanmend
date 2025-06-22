@@ -189,7 +189,7 @@ export default function FreeConsult({ isOpen, onClose, onSuccess }) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="button-main text-cream border-b-[1.5px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed border-cream"
+              className="button-main text-cream border-b-[1.5px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed !border-cream"
             >
               {isSubmitting ? "Submitting..." : "Submit"}
             </button>

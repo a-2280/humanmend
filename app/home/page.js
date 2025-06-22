@@ -206,7 +206,7 @@ export default function Home() {
           alt="You deserve to take up space"
           width={964}
           height={699}
-          className="max-w-[318.58px] md:max-w-none px-[43px]"
+          className="w-full max-w-[318.58px] md:max-w-none px-[43px]"
         />
       </section>
       <section className="w-full max-w-[520px] md:max-w-[650px] flex flex-col justify-center items-center mb-[64px] lg:mb-[204px] px-[48px]">
