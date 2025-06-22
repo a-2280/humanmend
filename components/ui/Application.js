@@ -69,7 +69,7 @@ export default function Application({ isOpen, onClose, onSuccess }) {
           </p>
         </div>
         <form onSubmit={handleSubmit} className="flex flex-col gap-20 mt-20">
-          <div className="flex gap-12">
+          <div className="flex flex-col md:flex-row gap-12">
             <div className="flex flex-col flex-1">
               <label htmlFor="fullName" className="body-text text-cream">
                 Full Name
@@ -96,7 +96,7 @@ export default function Application({ isOpen, onClose, onSuccess }) {
               />
             </div>
           </div>
-          <div className="flex gap-12">
+          <div className="flex flex-col md:flex-row gap-12">
             <div className="flex flex-col flex-1">
               <label htmlFor="email" className="body-text text-cream">
                 Email
@@ -175,7 +175,7 @@ export default function Application({ isOpen, onClose, onSuccess }) {
               </>
             )}
           </div>
-          <div className="flex gap-12">
+          <div className="flex flex-col md:flex-row gap-12">
             <div className="flex flex-col justify-between items-start gap-4">
               <label htmlFor="pronouns" className="body-text text-cream">
                 How many years have you been
@@ -303,7 +303,7 @@ export default function Application({ isOpen, onClose, onSuccess }) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="button-main text-cream border-b-[1.5px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+              className="button-main text-cream border-b-[1.5px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed border-cream"
             >
               {isSubmitting ? "Submitting..." : "Submit"}
             </button>
