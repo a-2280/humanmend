@@ -83,7 +83,7 @@ export default function Navbar(props) {
         onClick={() => setMobileOpen(!mobileOpen)}
       />
       {mobileOpen && (
-        <ul className="p-4 w-full flex justify-evenly items-center flex-wrap gap-6 absolute top-8 right-0 bg-[url(/background_texture_image.png)] bg-repeat bg-cover z-999 px-[43px]">
+        <ul className="p-4 pb-8 w-full flex justify-evenly items-center flex-wrap gap-6 absolute top-8 right-0 bg-[url(/background_texture_image.png)] bg-repeat bg-cover z-999 px-[43px]">
           <li className="w-fit">
             <Link href={"/blog"}>Blog</Link>
           </li>

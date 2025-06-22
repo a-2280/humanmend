@@ -50,7 +50,7 @@ export default function FreeConsult({ isOpen, onClose, onSuccess }) {
 
   return (
     <div className="bg-black/50 fixed top-0 left-0 h-screen w-full max-w-screen flex justify-center items-start z-50 overflow-y-auto hide-scrollbar">
-      <div className="bg-dark-blue p-[86px] md:m-[86px] w-[54rem] max-w-full relative">
+      <div className="bg-dark-blue p-[43px] pt-[75px] md:p-[86px] md:m-[86px] w-[54rem] max-w-full relative">
         <p
           className="heading-1 text-cream absolute top-8 right-8 cursor-pointer"
           onClick={onClose}
@@ -171,7 +171,7 @@ export default function FreeConsult({ isOpen, onClose, onSuccess }) {
               className="text-cream border-[1.5px] border-cream h-[171px] placeholder-grey text-[14px] p-2"
             />
           </div>
-          <div className="flex justify-center items-baseline gap-8">
+          <div className="flex flex-col-reverse md:flex-row justify-center md:items-baseline gap-8">
             <input
               type="checkbox"
               id="understanding"
@@ -185,11 +185,11 @@ export default function FreeConsult({ isOpen, onClose, onSuccess }) {
               reimbursement.
             </label>
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center pb-[100px]">
             <button
               type="submit"
               disabled={isSubmitting}
-              className="button-main text-cream border-b-[1.5px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+              className="button-main text-cream border-b-[1.5px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed border-cream"
             >
               {isSubmitting ? "Submitting..." : "Submit"}
             </button>
