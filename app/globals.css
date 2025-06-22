@@ -29,27 +29,39 @@
 @layer components {
   .heading-1 {
     font-family: var(--font-family-outfitMedium);
-    font-size: 1rem;
-    line-height: 26px;
+    color: var(--color-blue);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
     letter-spacing: 0.18rem;
+    text-transform: uppercase;
+    text-align: center;
   }
 
   .heading-2 {
     font-family: var(--font-family-outfitMedium);
-    font-size: 14px;
-    line-height: 23.2px;
-    letter-spacing: 0.15rem;
+    color: var(--color-blue);
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.17rem;
+    text-transform: uppercase;
+    text-align: center;
   }
 
   .body-text {
     font-family: var(--font-family-outfit);
-    font-size: 1rem;
+    color: var(--color-blue);
+    font-size: 12px;
+    font-weight: 400;
     line-height: 21px;
     letter-spacing: 0.04rem;
+    text-align: justify;
   }
 
   .body-small {
     font-family: var(--font-family-outfit);
+    color: var(--color-blue);
     font-size: 14px;
     line-height: 23.17px;
     letter-spacing: 0.04rem;
@@ -57,33 +69,44 @@
 
   .button-main {
     font-family: var(--font-family-pitch);
-    font-size: 1rem;
-    line-height: 21px;
+    color: var(--color-blue);
+    font-size: 12px;
+    line-height: 10.46px;
     letter-spacing: 0.09rem;
+    border-bottom: 1px solid var(--color-blue);
+    text-transform: uppercase;
+    cursor: pointer;
   }
 
   .button-small {
     font-family: var(--font-family-pitch);
+    color: var(--color-blue);
     font-size: 14px;
     line-height: 23.2px;
     letter-spacing: 0.09rem;
+    border-bottom: 1px solid var(--color-blue);
   }
 
   .numbers-text {
     font-family: var(--font-family-outfit);
-    font-size: 14px;
-    line-height: 23.2px;
-    letter-spacing: 0.09rem;
+    color: var(--color-blue);
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.17rem;
+    text-transform: uppercase;
+    margin-right: 14px;
   }
 }
 
 nav li {
   font-family: var(--font-family-pitch);
-  font-size: 1rem;
-  line-height: 21px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 10.46px;
   letter-spacing: 0.09rem;
   color: var(--color-blue);
-  border-bottom: 1.5px solid var(--color-blue);
+  border-bottom: 1px solid var(--color-blue);
   text-transform: uppercase;
 }
 
@@ -121,4 +144,90 @@ option {
   width: 100vw;
   margin: 0;
   padding: 0;
+}
+
+hr {
+  border-top: 1px solid var(--color-blue);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .heading-1 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .heading-2 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 23.2px;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .body-text {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.04rem;
+    text-align: justify;
+  }
+
+  .body-small {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+  }
+
+  .button-main {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0.09rem;
+    border-bottom: 1.5px solid var(--color-blue);
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .button-small {
+    font-size: 14px;
+    line-height: 23.2px;
+    letter-spacing: 0.09rem;
+    border-bottom: 1.5px solid var(--color-blue);
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .numbers-text {
+    font-family: var(--font-family-outfit);
+    color: var(--color-blue);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.17rem;
+    text-transform: uppercase;
+    margin-right: 14px;
+  }
+
+  nav li {
+    font-weight: 600;
+    color: var(--color-blue);
+    font-size: 1rem;
+    line-height: 21px;
+    letter-spacing: 0.09rem;
+    border-bottom: 1.5px solid var(--color-blue);
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+
+.full-width-breakout {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 }

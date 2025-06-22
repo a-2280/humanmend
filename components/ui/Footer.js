@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-blue mix-blend-multiply w-screen p-12 flex flex-col gap-12 justify-center items-center">
-      <p className="heading-1 uppercase max-w-[310px] text-center text-cream">
+    <footer className="bg-blue mix-blend-multiply w-full p-[45px] md:p-[84px] flex flex-col gap-[28px] md:gap-[69px] justify-center items-center full-width-breakout">
+      <p className="heading-1 max-w-[250px] md:max-w-[325px] text-cream">
         HUMANMEND PSYCHOTHERAPY 26 Court street, suite 409 brooklyn, NY 11242
       </p>
       <Image
@@ -12,25 +12,33 @@ export default function Footer() {
         alt="lettermark"
         width={35}
         height={35}
+        className="max-w-[25px] md:max-w-[35px]"
       />
-      <div className="w-full flex flex-col md:flex-row gap-8 justify-between items-center">
-        <p className="heading-1 text-cream uppercase">© HUMANMEND 2025</p>
-        <div className="flex justify-center items-center gap-2">
-          <Link
-            href="#"
-            className="button-small text-cream border-b-[1px] uppercase leading-none"
-          >
+      <div className="flex justify-center items-baseline gap-2 md:hidden">
+        <Link href="#" className="button-main border-cream text-cream">
+          Instagram
+        </Link>
+        <p className="body-text text-cream">/</p>
+        <Link href="#" className="button-main border-cream text-cream">
+          Email
+        </Link>
+      </div>
+      <div className="w-full flex gap-8 justify-between items-center md:hidden">
+        <p className="heading-1 text-cream">© HUMANMEND 2025</p>
+        <p className="heading-1 text-cream">Site by Sugarcoat</p>
+      </div>
+      <div className="hidden w-full md:flex gap-8 justify-between items-center px-[43px]">
+        <p className="heading-1 text-cream">© HUMANMEND 2025</p>
+        <div className="flex justify-center items-baseline gap-2">
+          <Link href="#" className="button-main !border-cream text-cream">
             Instagram
           </Link>
           <p className="body-text text-cream">/</p>
-          <Link
-            href="#"
-            className="button-small text-cream border-b-[1px] uppercase leading-none"
-          >
+          <Link href="#" className="button-main !border-cream text-cream">
             Email
           </Link>
         </div>
-        <p className="heading-1 text-cream uppercase">Site by Sugarcoat</p>
+        <p className="heading-1 text-cream">Site by Sugarcoat</p>
       </div>
     </footer>
   );

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Landingpage() {
   return (
-    <div className="md:bg-[url(/landing-page-1.png)] h-screen bg-auto bg-center bg-no-repeat flex flex-col justify-center items-center w-full">
+    <div className="md:bg-[url(/landing-page-1.png)] h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center w-full">
       <Image
         src={"/man.png"}
         alt="man"
