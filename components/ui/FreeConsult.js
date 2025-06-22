@@ -171,7 +171,7 @@ export default function FreeConsult({ isOpen, onClose, onSuccess }) {
               className="text-cream border-[1.5px] border-cream h-[171px] placeholder-grey text-[14px] p-2"
             />
           </div>
-          <div className="flex flex-col-reverse md:flex-row justify-center md:items-baseline gap-8">
+          <div className="flex flex-col-reverse md:flex-row justify-center items-center md:items-baseline gap-8">
             <input
               type="checkbox"
               id="understanding"
