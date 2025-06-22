@@ -209,7 +209,7 @@ export default function Home() {
           className="max-w-[318.58px] md:max-w-none px-[43px]"
         />
       </section>
-      <section className="w-full max-w-[420px] md:max-w-[520px] flex flex-col justify-center items-center mb-[64px] lg:mb-[204px]">
+      <section className="w-full max-w-[520px] md:max-w-[650px] flex flex-col justify-center items-center mb-[64px] lg:mb-[204px] px-[48px]">
         <h1 className="heading-1 mb-[48px] lg:mb-[86px]">
           for more support, check out our blog, or subscribe to receive our free
           printable note cards: Permission Notes for Being Human.
@@ -240,7 +240,7 @@ export default function Home() {
           <p className="body-text">
             Now serving clients in NY, NJ, CT, MA, and CO.
           </p>
-          <h2 className="text-[12px] md:text-[14px] leading-[16px] md:leading-[23.17px] tracking-[0.04rem] md:tracking-[0.15rem] text-justify text-blue font-family-outfit md:uppercase">
+          <h2 className="text-[12px] md:text-[14px] leading-[16px] md:leading-[23.17px] tracking-[0.04rem] md:tracking-[0.15rem] text-justify text-blue font-family-outfit md:uppercase text-nowrap">
             Interested in joining our team? inquire{" "}
             <button
               className="text-[12px] md:text-[14px] leading-[16px] tracking-size[0.04rem] md:tracking-size[0.15rem] text-justify text-blue font-family-outfit md:uppercase md:border-b-1 cursor-pointer"

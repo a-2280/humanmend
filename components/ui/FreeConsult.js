@@ -49,8 +49,8 @@ export default function FreeConsult({ isOpen, onClose, onSuccess }) {
   if (!isOpen) return null;
 
   return (
-    <div className="bg-black/50 fixed top-0 left-0 h-screen w-screen flex justify-center items-start z-50 pt-4 overflow-y-auto hide-scrollbar">
-      <div className="bg-dark-blue p-[86px] m-[86px] max-w-[54rem] relative">
+    <div className="bg-black/50 fixed top-0 left-0 h-screen w-full max-w-screen flex justify-center items-start z-50 overflow-y-auto hide-scrollbar">
+      <div className="bg-dark-blue p-[86px] md:m-[86px] w-[54rem] max-w-full relative">
         <p
           className="heading-1 text-cream absolute top-8 right-8 cursor-pointer"
           onClick={onClose}
