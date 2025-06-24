@@ -45,7 +45,7 @@ export default function Landingpage() {
       />
       <Link
         href="/home"
-        className="button-main text-blue md:text-cream border-b-[1.5px] uppercase mt-8"
+        className="button-main text-blue md:text-cream md:!border-cream border-b-[1.5px] uppercase mt-8"
       >
         Welcome
       </Link>

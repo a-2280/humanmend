@@ -23,7 +23,11 @@ export default function Home() {
   }, []);
 
   if (!homePageContent) {
-    return <div className="body-text">Loading...</div>;
+    return (
+      <div className="w-screen h-screen flex justify-center items-center">
+        <Image src="/footer.gif" alt="vase" width={100} height={100} />
+      </div>
+    );
   }
 
   return (
@@ -82,7 +86,7 @@ export default function Home() {
             <hr className="mt-[32px] mb-[24px]" />
             {homePageContent.listItems &&
               homePageContent.listItems.map((item, index) => (
-                <div key={index}>
+                <div key={index} className="w-full">
                   <div className="flex justify-start items-start w-full">
                     <p className="numbers-text lg:!mr-6">
                       {String(index + 1).padStart(2, "0")}

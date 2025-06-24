@@ -2,7 +2,12 @@
 
 import { useState, useEffect } from "react";
 
-export default function FreeConsult({ isOpen, onClose, onSuccess }) {
+export default function GetInTouch({
+  isOpen,
+  onClose,
+  onSuccess,
+  linkSelected,
+}) {
   const [selectedOption, setSelectedOption] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -59,14 +64,23 @@ export default function FreeConsult({ isOpen, onClose, onSuccess }) {
         </p>
         <div className="flex flex-col justify-center items-center gap-4">
           <p className="heading-1 text-cream uppercase">
-            ready for your free consult?
+            LET&apos;S GET IN TOUCH
           </p>
-          <p className="body-text text-cream text-justify">
-            Starting the healing journey is never easy. Sometimes, it can feel
-            like you don&apos;t even know where to begin. That&apos;s why
-            we&apos;re here. Join us for a free fifteen-minute consult to
-            discuss your needs and see if you think HumanMend is the right fit.
-          </p>
+          <div>
+            <p className="body-text text-cream">
+              We&apos;re so glad you&apos;re here. If you&apos;re thinking about
+              starting therapy, fill out the form below to request a free
+              15-minute consultation. It&apos;s a chance for us to connect, hear
+              more about what you&apos;re looking for, and see if working
+              together feels like the right fit.
+            </p>
+            <p className="body-text text-cream">
+              <span className="ml-4"></span>While we primarily serve clients in
+              New York, we offer virtual therapy to residents of New Jersey,
+              Connecticut, and Massachusetts. We look forward to connecting with
+              you!
+            </p>
+          </div>
         </div>
         <form onSubmit={handleSubmit} className="flex flex-col gap-20 mt-20">
           <div className="flex flex-col md:flex-row gap-12">
@@ -122,26 +136,40 @@ export default function FreeConsult({ isOpen, onClose, onSuccess }) {
               />
             </div>
           </div>
-          <div className="flex flex-col w-fit gap-4">
-            <label htmlFor="howHeard" className="body-text text-cream">
-              How did you hear about us?
-            </label>
-            <select
-              id="howHeard"
-              name="howHeard"
-              value={selectedOption}
-              onChange={(e) => setSelectedOption(e.target.value)}
-              required
-              className="body-text text-cream border-b-[1.5px] pb-2 outline-0"
-            >
-              <option value="" disabled>
-                Select One
-              </option>
-              <option value="google">Google search</option>
-              <option value="socialMedia">Social media</option>
-              <option value="referral">Referral</option>
-              <option value="other">Other (please specify)</option>
-            </select>
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
+            <div className="flex flex-col w-fit gap-4">
+              <label htmlFor="howHeard" className="body-text text-cream">
+                How did you hear about us?
+              </label>
+              <select
+                id="howHeard"
+                name="howHeard"
+                value={selectedOption}
+                onChange={(e) => setSelectedOption(e.target.value)}
+                required
+                className="body-text text-cream border-b-[1.5px] pb-2 outline-0"
+              >
+                <option value="" disabled>
+                  Select One
+                </option>
+                <option value="google">Google search</option>
+                <option value="socialMedia">Social media</option>
+                <option value="referral">Referral</option>
+                <option value="other">Other (please specify)</option>
+              </select>
+            </div>
+            <div className="flex-1 flex flex-col gap-2">
+              <label htmlFor="phone" className="body-text text-cream">
+                What services are you interested in?
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder={linkSelected}
+                className="text-cream border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2"
+              />
+            </div>
           </div>
 
           {selectedOption === "other" && (
@@ -162,12 +190,12 @@ export default function FreeConsult({ isOpen, onClose, onSuccess }) {
 
           <div className="flex flex-col">
             <label htmlFor="textBox" className="body-text text-cream mb-4">
-              Anything you&apos;d like us to know?
+              What brings you to therapy at this time?
             </label>
             <textarea
               id="textBox"
               name="textBox"
-              placeholder="Help us make the most of your consult by sharing a little about yourself."
+              placeholder="Tell us your story. As much as you want."
               className="text-cream border-[1.5px] border-cream h-[171px] placeholder-grey text-[14px] p-2"
             />
           </div>

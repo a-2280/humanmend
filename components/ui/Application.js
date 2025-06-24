@@ -299,7 +299,7 @@ export default function Application({ isOpen, onClose, onSuccess }) {
               )}
             </div>
           </div>
-          <div className="flex justify-center items-center pb-[100px]">
+          <div className="flex justify-center items-center pb-[100px] md:pb-[10px]">
             <button
               type="submit"
               disabled={isSubmitting}
