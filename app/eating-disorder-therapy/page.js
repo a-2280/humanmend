@@ -91,10 +91,11 @@ export default function AnxietySpecialty() {
       content: (
         <div className="mb-[24px]">
           <p className="body-small">
-            Recovery isn&apos;t about forcing yourself to eat "normally" through
-            sheer willpower. It&apos;s about gently taking back the power your
-            eating disorder has claimed over your life. Working from a Health at
-            Every Size® approach, we&apos;ll help you:
+            Recovery isn&apos;t about forcing yourself to eat
+            &ldquo;normally&rdquo; through sheer willpower. It&apos;s about
+            gently taking back the power your eating disorder has claimed over
+            your life. Working from a Health at Every Size® approach,
+            we&apos;ll help you:
           </p>
           <ul className="body-small">
             <li className="ml-4 md:ml-5 lg:m-0">
@@ -127,12 +128,13 @@ export default function AnxietySpecialty() {
           <p className="body-small">
             We recognize that eating disorders and disordered eating affect
             people in bodies of every size, just as health can exist in every
-            size body. Our society&apos;s narrow definitions of "healthy" or
-            "normal" bodies contribute to the shame that fuels eating disorders.
-            We&apos;re here to challenge those definitions, not reinforce them.
-            The goal isn&apos;t perfect eating—it&apos;s freedom. Freedom from
-            constant thoughts about food. Freedom from body criticism. Freedom
-            to show up authentically in your life.
+            size body. Our society&apos;s narrow definitions of
+            &ldquo;healthy&rdquo; or &ldquo;normal&rdquo; bodies contribute to
+            the shame that fuels eating disorders. We&apos;re here to challenge
+            those definitions, not reinforce them. The goal isn&apos;t perfect
+            eating—it&apos;s freedom. Freedom from constant thoughts about food.
+            Freedom from body criticism. Freedom to show up authentically in
+            your life.
           </p>
         </div>
       ),
