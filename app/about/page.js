@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
 import SoloOrGroup from "@/components/ui/SoloOrGroup";
+import Success from "@/components/ui/Success";
 
 export default function AnxietySpecialty() {
   const [modalState, setModalState] = useState("closed");
