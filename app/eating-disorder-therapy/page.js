@@ -39,14 +39,15 @@ export default function AnxietySpecialty() {
       title: "What your eating disorder doesn't want you to know.",
       content: (
         <p className="body-small mb-[24px]">
-          It's not really about the food or your body, even if your mind insists
-          it is. The obsessions, the rules, the behaviors—they're the
-          surface-level symptoms of deeper needs and emotions. Your eating
+          It&apos;s not really about the food or your body, even if your mind
+          insists it is. The obsessions, the rules, the behaviors—they&apos;re
+          the surface-level symptoms of deeper needs and emotions. Your eating
           disorder is a coping mechanism, a way to manage anxiety, process
           emotions, create a sense of control, or protect yourself from pain.
           When we understand this truth, recovery becomes less about forcing
-          yourself to eat differently and more about addressing what's happening
-          beneath the surface. We've got you in this deeper exploration
+          yourself to eat differently and more about addressing what&apos;s
+          happening beneath the surface. We&apos;ve got you in this deeper
+          exploration
         </p>
       ),
     },
@@ -56,8 +57,8 @@ export default function AnxietySpecialty() {
         <div className="mb-[24px]">
           <p className="body-small">
             Our approach to eating disorder recovery goes beyond superficial
-            symptom management. We don't just want to change your behaviors—we
-            want to understand them. Together, we'll explore:
+            symptom management. We don&apos;t just want to change your
+            behaviors—we want to understand them. Together, we&apos;ll explore:
           </p>
           <ul className="body-small">
             <li className="ml-4 md:m-0">
@@ -90,10 +91,10 @@ export default function AnxietySpecialty() {
       content: (
         <div className="mb-[24px]">
           <p className="body-small">
-            Recovery isn't about forcing yourself to eat "normally" through
-            sheer willpower. It's about gently taking back the power your eating
-            disorder has claimed over your life. Working from a Health at Every
-            Size® approach, we'll help you:
+            Recovery isn&apos;t about forcing yourself to eat "normally" through
+            sheer willpower. It&apos;s about gently taking back the power your
+            eating disorder has claimed over your life. Working from a Health at
+            Every Size® approach, we&apos;ll help you:
           </p>
           <ul className="body-small">
             <li className="ml-4 md:ml-5 lg:m-0">
@@ -105,7 +106,7 @@ export default function AnxietySpecialty() {
             </li>
             <li className="ml-4 md:m-0">
               <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
-              Reconnect with your body's natural hunger and fullness cues
+              Reconnect with your body&apos;s natural hunger and fullness cues
             </li>
             <li className="ml-4 md:m-0">
               <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
@@ -114,8 +115,8 @@ export default function AnxietySpecialty() {
             </li>
             <li className="ml-4 md:m-0">
               <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
-              Build genuine self-worth that isn't tied to your appearance or
-              food choices
+              Build genuine self-worth that isn&apos;t tied to your appearance
+              or food choices
             </li>
             <li className="ml-4 md:m-0">
               <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
@@ -126,12 +127,12 @@ export default function AnxietySpecialty() {
           <p className="body-small">
             We recognize that eating disorders and disordered eating affect
             people in bodies of every size, just as health can exist in every
-            size body. Our society's narrow definitions of "healthy" or "normal"
-            bodies contribute to the shame that fuels eating disorders. We're
-            here to challenge those definitions, not reinforce them. The goal
-            isn't perfect eating—it's freedom. Freedom from constant thoughts
-            about food. Freedom from body criticism. Freedom to show up
-            authentically in your life.
+            size body. Our society&apos;s narrow definitions of "healthy" or
+            "normal" bodies contribute to the shame that fuels eating disorders.
+            We&apos;re here to challenge those definitions, not reinforce them.
+            The goal isn&apos;t perfect eating—it&apos;s freedom. Freedom from
+            constant thoughts about food. Freedom from body criticism. Freedom
+            to show up authentically in your life.
           </p>
         </div>
       ),
@@ -141,16 +142,16 @@ export default function AnxietySpecialty() {
       content: (
         <p className="body-small mb-[24px]">
           Your eating disorder has convinced you that your value lies in your
-          appearance or your ability to control your food intake. We're here to
-          remind you of a fundamental truth: you have so much more to offer this
-          world than how you look. Your unique perspectives, your compassion,
-          your creativity, your intelligence, your humor—these are the things
-          that make you indispensable. These are the things that the world is
-          missing when your eating disorder keeps you small and distracted. We
-          believe in your capacity to heal. We believe in your right to a
-          peaceful relationship with food and your body. And we believe that
-          your authentic self—not your eating disorder self—deserves to be
-          known, expressed, and celebrated.
+          appearance or your ability to control your food intake. We&apos;re
+          here to remind you of a fundamental truth: you have so much more to
+          offer this world than how you look. Your unique perspectives, your
+          compassion, your creativity, your intelligence, your humor—these are
+          the things that make you indispensable. These are the things that the
+          world is missing when your eating disorder keeps you small and
+          distracted. We believe in your capacity to heal. We believe in your
+          right to a peaceful relationship with food and your body. And we
+          believe that your authentic self—not your eating disorder
+          self—deserves to be known, expressed, and celebrated.
         </p>
       ),
     },

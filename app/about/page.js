@@ -38,14 +38,15 @@ export default function AnxietySpecialty() {
       title: "What your eating disorder doesn't want you to know.",
       content: (
         <p className="body-small mb-[24px]">
-          It's not really about the food or your body, even if your mind insists
-          it is. The obsessions, the rules, the behaviors—they're the
-          surface-level symptoms of deeper needs and emotions. Your eating
+          It&apos;s not really about the food or your body, even if your mind
+          insists it is. The obsessions, the rules, the behaviors—they&apos;re
+          the surface-level symptoms of deeper needs and emotions. Your eating
           disorder is a coping mechanism, a way to manage anxiety, process
           emotions, create a sense of control, or protect yourself from pain.
           When we understand this truth, recovery becomes less about forcing
-          yourself to eat differently and more about addressing what's happening
-          beneath the surface. We've got you in this deeper exploration
+          yourself to eat differently and more about addressing what&apos;s
+          happening beneath the surface. We&apos;ve got you in this deeper
+          exploration
         </p>
       ),
     },
