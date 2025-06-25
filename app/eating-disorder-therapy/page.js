@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
 import GetInTouch from "@/components/ui/GetInTouch";
 import Success from "@/components/ui/Success";
-import FreeConsult from "@/components/ui/FreeConsult";
 
 export default function AnxietySpecialty() {
   const [modalState, setModalState] = useState("closed");

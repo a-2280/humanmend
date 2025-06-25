@@ -153,7 +153,7 @@ export default function AnxietySpecialty() {
 
         {modalState === "success" && (
           <Success
-            text="In a world that often asks us to shrink, your message just claimed some space. That's where healing begins. We will be in touch soon."
+            text="In a world that often asks us to shrink, your message just claimed some space. That’s where healing begins. We will be in touch soon."
             onClose={() => setModalState("closed")}
           />
         )}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Application from "./Application";
 import Success from "./Success";
+import MobileNavbar from "@/components/ui/MobileNavbar";
 import { useState } from "react";
 
 export default function PreFooter() {

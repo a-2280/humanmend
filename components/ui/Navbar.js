@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import MobileNavbar from "@/components/ui/MobileNavbar";
 import { useState } from "react";
 
 export default function Navbar(props) {
@@ -10,7 +11,7 @@ export default function Navbar(props) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="flex w-full max-w-7xl justify-center lg:justify-between items-center mt-[59px] relative px-12">
+    <nav className="flex w-full max-w-7xl justify-center lg:justify-between items-center mt-[59px] px-12">
       <ul className="flex-1 hidden lg:flex gap-4 justify-between max-w-[388px]">
         <li>
           <Link href={"/home"}>Home</Link>
@@ -48,7 +49,7 @@ export default function Navbar(props) {
           {aboutOpen && (
             <ul className="absolute pt-4 z-999">
               <li className="w-fit">
-                <Link href={"/faqs"}>FAQs</Link>
+                <Link href={"/about"}>FAQs</Link>
               </li>
             </ul>
           )}
@@ -82,36 +83,7 @@ export default function Navbar(props) {
         className="absolute right-12 lg:hidden cursor-pointer w-full max-w-[25px] md:max-w-[30px]"
         onClick={() => setMobileOpen(!mobileOpen)}
       />
-      {mobileOpen && (
-        <ul className="p-4 pb-8 w-full flex justify-evenly items-center flex-wrap gap-6 absolute top-8 right-0 bg-[url(/background_texture_image.png)] bg-repeat bg-cover z-999 px-[43px]">
-          <li className="w-fit">
-            <Link href={"/blog"}>Blog</Link>
-          </li>
-          <li className="w-fit">
-            <Link href={"/login"}>Login</Link>
-          </li>
-          <li className="w-fit">
-            <Link href={"/contact"}>Contact</Link>
-          </li>
-          <li className="w-fit">
-            <Link href={"/faqs"}>FAQs</Link>
-          </li>
-          <li className="w-fit">
-            <Link href={"/anxiety-therapy"}>Anxiety Therapy</Link>
-          </li>
-          <li className="w-fit">
-            <Link href={"/eating-disorder-therapy"}>
-              Eating Disorder Therapy
-            </Link>
-          </li>
-          <li className="w-fit">
-            <Link href={"/group-therapy"}>Group Therapy</Link>
-          </li>
-          <li className="w-fit">
-            <Link href={"/consultation"}>Consultation</Link>
-          </li>
-        </ul>
-      )}
+      {mobileOpen && <MobileNavbar onClose={() => setMobileOpen(false)} />}
     </nav>
   );
 }
