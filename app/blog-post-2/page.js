@@ -129,8 +129,8 @@ export default function BlogPostTwo() {
             <div className="body-text flex">
               <p className="body-text mx-2">•</p>
               <p className="body-text">
-                You can decline to be weighed. You can ask for a blind weight.
-                You can say, “Let’s focus on what I came in for.” 
+                {`You can decline to be weighed. You can ask for a blind weight.
+                You can say, “Let’s focus on what I came in for.” `}
               </p>
             </div>
           </div>
