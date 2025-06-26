@@ -128,11 +128,11 @@ export default function BlogPostSix() {
               <div className="body-text flex">
                 <p className="body-text mx-2">•</p>
                 <p className="body-text">
-                  Trying on summer clothes or swimwear can be triggering.
+                  {`Trying on summer clothes or swimwear can be triggering.
                   Instead of defaulting to criticism, meet yourself with
                   kindness. "This is the body I have, and it deserves to be
                   comfortable." "I don't have to love how I look to be kind to
-                  myself."
+                  myself."`}
                 </p>
               </div>
             </div>
