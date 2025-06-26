@@ -63,10 +63,10 @@ export default function Home() {
           />
         )}
       </section>
-      <section className="lg:mt-[-8rem] w-full max-w-7xl px-[43px]">
+      <section className="lg:mt-[-8rem] w-full max-w-7xl px-[20px] md:px-[43px]">
         <Image src="/home-1.png" alt="Bouquet" width={1517} height={958} />
       </section>
-      <section className="my-[80px] lg:mt-[142px] lg:mb-[163px] w-full max-w-[415px] md:max-w-[699px] px-[43px]">
+      <section className="my-[80px] lg:mt-[142px] lg:mb-[163px] w-full max-w-[415px] md:max-w-[699px] px-[20px] md:px-[43px]">
         <div className="mb-[52px] lg:mb-[96px] flex flex-col justify-center items-center">
           <h1 className="heading-1 mb-[26px] lg:mb-[32px]">
             {homePageContent.section1Heading}
@@ -111,7 +111,7 @@ export default function Home() {
           </button>
         </div>
       </section>
-      <section className="w-full max-w-7xl px-[43px] flex justify-center items-center">
+      <section className="w-full max-w-7xl px-[20px] md:px-[43px] flex justify-center items-center">
         <Image src="/man-2.png" alt="people" width={934} height={773} />
       </section>
       <section className="hidden md:flex flex-col justify-center items-center px-[43px] w-full max-w-[699px] mt-[148px] mb-[204px]">
@@ -175,7 +175,7 @@ export default function Home() {
         </div>
       </section>
       <section className="hidden md:flex bg-[url(/stripes.png)] bg-cover bg-center w-full h-[427px] full-width-breakout"></section>
-      <section className="my-[80px] lg:mt-[204px] lg:mb-[194px] flex flex-col justify-center items-center w-full max-w-[413px] md:max-w-[699px] px-[43px]">
+      <section className="my-[80px] lg:mt-[204px] lg:mb-[194px] flex flex-col justify-center items-center w-full max-w-[413px] md:max-w-[699px] px-[20px] md:px-[43px]">
         <h1 className="heading-1">{homePageContent.section3Heading}</h1>
         <p className="body-text mt-[24px] lg:mt-[32px]">
           {homePageContent.section3Paragraph}
@@ -201,7 +201,7 @@ export default function Home() {
           alt="Lindsie Meek"
           width={472}
           height={613}
-          className="mix-blend-multiply max-w-[200px] md:max-w-none px-[43px]"
+          className="mix-blend-multiply max-w-[250px] md:max-w-none px-[20px] md:px-[43px]"
         />
       </section>
       <section className="mb-[80px] lg:mb-[64px]">
@@ -213,7 +213,7 @@ export default function Home() {
           className="w-full max-w-[318.58px] md:max-w-none px-[43px]"
         />
       </section>
-      <section className="w-full max-w-[520px] md:max-w-[650px] flex flex-col justify-center items-center mb-[64px] lg:mb-[204px] px-[48px]">
+      <section className="w-full max-w-[520px] md:max-w-[650px] flex flex-col justify-center items-center mb-[64px] lg:mb-[204px] px-[20px] md:px-[43px]">
         <h1 className="heading-1 mb-[48px] lg:mb-[86px]">
           for more support, check out our blog, or subscribe to receive our free
           printable note cards: Permission Notes for Being Human.

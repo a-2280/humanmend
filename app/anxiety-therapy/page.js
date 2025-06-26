@@ -33,7 +33,7 @@ export default function AnxietySpecialty() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="my-[51px] lg:mt-[240px] lg:mb-[114px] px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+      <section className="my-[51px] lg:mt-[240px] lg:mb-[114px] px-[19px] md:px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
         <h1 className="heading-1">{anxietyContent.section1Heading}</h1>
         <p className="my-[24px] lg:mt-[32px] lg:mb-[48px] body-text text-align-last">
           {anxietyContent.section1Paragraph}
@@ -67,9 +67,17 @@ export default function AnxietySpecialty() {
           alt="Vases"
           width={1635.32}
           height={592.56}
+          className="hidden md:flex"
+        />
+        <Image
+          src="/anxiety_page1.svg"
+          alt="flowers"
+          width={354}
+          height={199}
+          className="md:hidden"
         />
       </section>
-      <section className="my-[80px] lg:my-[204px] w-full max-w-[415px] md:max-w-[699px] px-[43px]">
+      <section className="my-[80px] lg:my-[204px] w-full max-w-[415px] md:max-w-[699px] px-[20px] md:px-[43px]">
         <div className="flex flex-col justify-center items-center">
           <h1 className="heading-1 mb-[26px] lg:mb-[32px]">
             {anxietyContent.section2Heading}
@@ -90,10 +98,10 @@ export default function AnxietySpecialty() {
         </div>
       </section>
       <section className="flex bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
-      <section className="my-[80px] lg:my-[204px] w-full max-w-[415px] md:max-w-[699px] px-[43px]">
+      <section className="my-[80px] lg:my-[204px] w-full max-w-[415px] md:max-w-[699px] px-[20px] md:px-[43px]">
         <div className="flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center">
-            <h1 className="heading-1 mb-[26px] lg:mb-[32px]">
+            <h1 className="heading-1 mb-[26px] lg:mb-[32px] w-full max-w-[250px] md:max-w-none">
               {anxietyContent.section3Heading}
             </h1>
             <p className="body-text">{anxietyContent.section3Paragraph}</p>
@@ -125,10 +133,10 @@ export default function AnxietySpecialty() {
           </p>
         </div>
       </section>
-      <section className="px-[43px] max-w-7xl">
-        <Image src="/flower-3.png" alt="flower" width={1054} height={403} />
+      <section className="px-[20px] md:px-[43px] max-w-7xl">
+        <Image src="/flower-3.png" alt="flowers" width={1054} height={403} />
       </section>
-      <section className="mt-[51px] mb-[80px] lg:mt-[204px] lg:mb-[156px] px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[685px] z-10">
+      <section className="mt-[51px] mb-[80px] lg:mt-[204px] lg:mb-[156px] px-[20px] md:px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[685px] z-10">
         <h1 className="heading-1">{anxietyContent.section4Heading}</h1>
         <p className="my-[24px] lg:my-[32px] body-text text-align-last">
           {anxietyContent.section4Paragraph}

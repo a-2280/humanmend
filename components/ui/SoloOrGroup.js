@@ -149,7 +149,7 @@ export default function SoloOrGroup({ isOpen, onClose, onSuccess }) {
             </div>
             <div className="flex-1 flex flex-col gap-2">
               <label htmlFor="phone" className="body-text text-cream">
-                What services are you interested in?
+                Are you interested in group or individual consultation?
               </label>
               <input
                 type="tel"

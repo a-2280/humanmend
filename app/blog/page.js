@@ -1,0 +1,209 @@
+"use client";
+
+import Footer from "@/components/ui/Footer";
+import Navbar from "@/components/ui/Navbar";
+import PreFooter from "@/components/ui/PreFooter";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { client } from "@/sanity/lib/client";
+
+export default function Blog() {
+  const [blogContent, setBlogContent] = useState(null);
+
+  useEffect(() => {
+    const query = `*[_type == "blog"][0]`;
+
+    client.fetch(query).then((data) => {
+      setBlogContent(data);
+    });
+  }, []);
+
+  if (!blogContent) {
+    return (
+      <div className="w-screen h-screen flex justify-center items-center">
+        <Image src="/footer.gif" alt="vase" width={100} height={100} />
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-col justify-center items-center w-full max-w-screen">
+      <Navbar />
+      <section className="mt-[51px] lg:mt-[240px] lg:mb-[166px] px-[20px] md:px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+        <h1 className="heading-1">{blogContent.section1Heading}</h1>
+        <p className="my-[24px] lg:my-[32px] body-text text-align-last">
+          {blogContent.section1Paragraph}
+        </p>
+        <h2 className="mb-[37px] lg:mb-[64px] heading-2 w-full max-w-[300px] md:max-w-[400px]">
+          {blogContent.section1Subheading}
+        </h2>
+
+        <form
+          className="w-full flex justify-center items-center mb-[48px] lg:mb-[145px]"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="enter your email"
+            required
+            className="border-b-1 border-dark-blue body-text placeholder:!text-blue py-2 w-full outline-0 focus:!placeholder-transparent"
+          />
+          <button type="submit">
+            <Image
+              src="/right-arrow.svg"
+              alt="right arrow"
+              width={24}
+              height={24}
+              className="min-w-[15px] md:min-w-[20px] ml-[-1rem] md:ml-[-1.5rem] cursor-pointer"
+            />
+          </button>
+        </form>
+
+        <Image
+          src="/man-5.png"
+          alt="Man"
+          width={117.4}
+          height={112}
+          className="w-full mt-[80px] mb-[90px] lg:my-0 max-w-[151px] lg:max-w-[143px]"
+        />
+      </section>
+      <section className="mt-[80px] lg:mt-[204px] px-[21px] md:px-[43px] lg:px-0 flex flex-col justify-center items-center w-full">
+        <div className="mb-[80px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
+          <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end">
+            <div className="lg:max-w-[400px] lg:mr-[231px] flex flex-col justify-center items-center">
+              <h1 className="heading-1">{blogContent.section2Heading}</h1>
+              <h2 className="heading-2 lg:my-[24px] max-w-[350px] lg:max-w-[400px]">
+                {blogContent.section2Subheading}
+              </h2>
+              <p className="body-text text-center my-[24px] lg:m-0">
+                {blogContent.section2Paragraph}
+              </p>
+              <button className="button-main lg:mt-[48px]">
+                {blogContent.section2Button}
+              </button>
+            </div>
+          </div>
+          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+            <Image
+              src="/blog-flower-3.png"
+              alt="man"
+              width={630}
+              height={502.85}
+              className="lg:w-[630px]"
+            />
+          </div>
+        </div>
+        <div className="mb-[80px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
+          <div className="mb-[80px] flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px]">
+            <h1 className="heading-1">{blogContent.section3Heading}</h1>
+            <h2 className="heading-2 lg:my-[24px] max-w-[300px] lg:max-w-[400px]">
+              {blogContent.section3Subheading}
+            </h2>
+            <p className="body-text text-center my-[24px] lg:m-0">
+              {blogContent.section3Paragraph}
+            </p>
+            <button className="button-main lg:mt-[48px]">
+              {blogContent.section3Button}
+            </button>
+          </div>
+          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+            <Image src="/man-2(2).png" alt="vase" width={670.23} height={595} />
+          </div>
+        </div>
+      </section>
+      <section className="mt-[80px] lg:mt-[204px] px-[21px] md:px-[43px] lg:px-0 flex flex-col justify-center items-center w-full">
+        <div className="mb-[80px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
+          <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end">
+            <div className="lg:max-w-[400px] lg:mr-[231px] flex flex-col justify-center items-center">
+              <h1 className="heading-1">{blogContent.section4Heading}</h1>
+              <h2 className="heading-2 lg:my-[24px] max-w-[350px] lg:max-w-[400px]">
+                {blogContent.section4Subheading}
+              </h2>
+              <p className="body-text text-center my-[24px] lg:m-0">
+                {blogContent.section4Paragraph}
+              </p>
+              <button className="button-main lg:mt-[48px]">
+                {blogContent.section4Button}
+              </button>
+            </div>
+          </div>
+          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+            <Image
+              src="/blog-flower-1.png"
+              alt="man"
+              width={630}
+              height={502.85}
+              className="lg:w-[630px]"
+            />
+          </div>
+        </div>
+        <div className="mb-[80px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
+          <div className="mb-[80px] flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px]">
+            <h1 className="heading-1">{blogContent.section5Heading}</h1>
+            <h2 className="heading-2 lg:my-[24px] max-w-[300px] lg:max-w-[400px]">
+              {blogContent.section5Subheading}
+            </h2>
+            <p className="body-text text-center my-[24px] lg:m-0">
+              {blogContent.section5Paragraph}
+            </p>
+            <button className="button-main lg:mt-[48px]">
+              {blogContent.section5Button}
+            </button>
+          </div>
+          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+            <Image src="/flower-4.png" alt="vase" width={670.23} height={595} />
+          </div>
+        </div>
+      </section>
+      <section className="mt-[80px] lg:my-[204px] px-[21px] md:px-[43px] lg:px-0 flex flex-col justify-center items-center w-full">
+        <div className="mb-[80px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
+          <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end">
+            <div className="lg:max-w-[400px] lg:mr-[231px] flex flex-col justify-center items-center">
+              <h1 className="heading-1">{blogContent.section6Heading}</h1>
+              <h2 className="heading-2 lg:my-[24px] max-w-[350px] lg:max-w-[400px]">
+                {blogContent.section6Subheading}
+              </h2>
+              <p className="body-text text-center my-[24px] lg:m-0">
+                {blogContent.section6Paragraph}
+              </p>
+              <button className="button-main lg:mt-[48px]">
+                {blogContent.section6Button}
+              </button>
+            </div>
+          </div>
+          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+            <Image
+              src="/blog-man-1.png"
+              alt="man"
+              width={630}
+              height={502.85}
+              className="lg:w-[630px]"
+            />
+          </div>
+        </div>
+        <div className="mb-[80px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
+          <div className="mb-[80px] flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px]">
+            <h1 className="heading-1">{blogContent.section7Heading}</h1>
+            <h2 className="heading-2 lg:my-[24px] max-w-[300px] lg:max-w-[400px]">
+              {blogContent.section7Subheading}
+            </h2>
+            <p className="body-text text-center my-[24px] lg:m-0">
+              {blogContent.section7Paragraph}
+            </p>
+            <button className="button-main lg:mt-[48px]">
+              {blogContent.section7Button}
+            </button>
+          </div>
+          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+            <Image src="/flower-2.png" alt="vase" width={670.23} height={595} />
+          </div>
+        </div>
+      </section>
+      <section className="mb-[80px] flex lg:hidden bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
+      <PreFooter />
+      <Footer />
+    </div>
+  );
+}

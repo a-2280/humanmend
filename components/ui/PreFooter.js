@@ -1,14 +1,13 @@
 import Image from "next/image";
 import Application from "./Application";
 import Success from "./Success";
-import MobileNavbar from "@/components/ui/MobileNavbar";
 import { useState } from "react";
 
 export default function PreFooter() {
   const [modalState, setModalState] = useState("closed");
 
   return (
-    <section className="w-full max-w-[520px] md:max-w-[650px] flex flex-col justify-center items-center mb-[64px] lg:mb-[204px] px-[48px]">
+    <section className="w-full max-w-[520px] md:max-w-[650px] flex flex-col justify-center items-center mb-[64px] lg:mb-[204px] px-[20px] md:px-[43px]">
       <Image
         src="/footer.gif"
         alt="Vase"

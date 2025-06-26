@@ -62,9 +62,11 @@
   .body-small {
     font-family: var(--font-family-outfit);
     color: var(--color-blue);
-    font-size: 14px;
-    line-height: 23.17px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
     letter-spacing: 0.04rem;
+    text-align: justify;
   }
 
   .button-main {
