@@ -76,16 +76,16 @@ export default function BlogPostTwo() {
             <div className="body-text flex">
               <p className="body-text mx-2">•</p>
               <p className="body-text">
-                “I'm interested in your perspective on using BMI as a health
+                {`“I'm interested in your perspective on using BMI as a health
                 measure given its non-medical origin. How do you balance BMI
-                with other health measures in your practice?”
+                with other health measures in your practice?”`}
               </p>
             </div>
             <div className="body-text flex">
               <p className="body-text mx-2">•</p>
               <p className="body-text">
-                “Would you treat these symptoms differently in a smaller-bodied
-                patient?” 
+                {`“Would you treat these symptoms differently in a smaller-bodied
+                patient?” `}
               </p>
             </div>
           </div>
@@ -94,15 +94,15 @@ export default function BlogPostTwo() {
             <div className="body-text flex">
               <p className="body-text mx-2">•</p>
               <p className="body-text">
-                Look for practitioners who use a Health at Every Size® (HAES)
-                approach—many cities now have directories to help.  
+                {`Look for practitioners who use a Health at Every Size® (HAES)
+                approach—many cities now have directories to help.  `}
               </p>
             </div>
             <div className="body-text flex">
               <p className="body-text mx-2">•</p>
               <p className="body-text">
-                Search keywords including “HAES”, “weight neutral”, “non-diet”
-                primary care doctor in your city. 
+                {`Search keywords including “HAES”, “weight neutral”, “non-diet”
+                primary care doctor in your city. `}
               </p>
             </div>
             <div className="body-text flex">
@@ -119,8 +119,8 @@ export default function BlogPostTwo() {
             <div className="body-text flex">
               <p className="body-text mx-2">•</p>
               <p className="body-text">
-                Whether it’s a friend, partner, or advocate, having someone with
-                you can help reinforce your boundaries and your voice. 
+                Whether it&#39;s a friend, partner, or advocate, having someone
+                with you can help reinforce your boundaries and your voice. 
               </p>
             </div>
           </div>
