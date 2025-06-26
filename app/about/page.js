@@ -40,8 +40,8 @@ export default function AnxietySpecialty() {
       title: "There is beauty in the broken.",
       content: (
         <p className="body-small mb-[24px]">
-          We are not here to "fix you." We're here to help support you on your
-          healing journey.
+          We are not here to &#34;fix you.&#34; We&#39;re here to help support
+          you on your healing journey.
         </p>
       ),
     },
@@ -49,8 +49,8 @@ export default function AnxietySpecialty() {
       title: "We treat the whole person, not just the diagnosis.",
       content: (
         <p className="body-small mb-[24px]">
-          We won’t put you in a box. Your experiences can't be reduced to a
-          collection of symptoms or a diagnostic label.
+          We won&#39;t put you in a box. Your experiences can&#39;t be reduced
+          to a collection of symptoms or a diagnostic label.
         </p>
       ),
     },
@@ -58,8 +58,8 @@ export default function AnxietySpecialty() {
       title: "All parts are welcome.",
       content: (
         <p className="body-small mb-[24px]">
-          You're the expert of your own life. Our role is to ask questions that
-          help illuminate the path you're already sensing.
+          You&#39;re the expert of your own life. Our role is to ask questions
+          that help illuminate the path you&#39;re already sensing.
         </p>
       ),
     },
@@ -86,7 +86,7 @@ export default function AnxietySpecialty() {
       title: "Health at Every Size (HAES).",
       content: (
         <p className="body-small mb-[24px]">
-          All bodies, shapes, and sizes are welcome here. Your worth isn't
+          All bodies, shapes, and sizes are welcome here. Your worth isn&#39;t
           determined by your appearance.
         </p>
       ),
@@ -95,8 +95,8 @@ export default function AnxietySpecialty() {
       title: "LGBTQIA+ Affirming.",
       content: (
         <p className="body-small mb-[24px]">
-          Even the aspects of yourself you've been taught to hide or reject have
-          wisdom to offer. We create space for all of you.
+          Even the aspects of yourself you&#39;ve been taught to hide or reject
+          have wisdom to offer. We create space for all of you.
         </p>
       ),
     },
@@ -109,12 +109,13 @@ export default function AnxietySpecialty() {
         <p className="body-small mb-[24px]">
           If the thought of recovery stirs up fear, know that this ambivalence
           is completely normal. Your eating disorder has been with you through
-          difficult times. It's been your coping strategy, your companion, your
-          way of feeling safe in an unpredictable world. We honor this
+          difficult times. It&#39;s been your coping strategy, your companion,
+          your way of feeling safe in an unpredictable world. We honor this
           relationship and understand that letting go happens gradually, not
-          overnight. You don't have to be "all in" to begin healing. Curiosity
-          is enough. The desire for something different is enough. We'll meet
-          you exactly where you are as we join you on your journey.
+          overnight. You don&#39;t have to be &#34;all in&#34; to begin healing.
+          Curiosity is enough. The desire for something different is enough.
+          We&#39;ll meet you exactly where you are as we join you on your
+          journey.
         </p>
       ),
     },
@@ -149,7 +150,7 @@ export default function AnxietySpecialty() {
       title: "What is the cost of therapy? Do you accept insurance?",
       content: (
         <p className="body-small mb-[24px]">
-          We've made an intentional choice to practice as out-of-network
+          We&#39;ve made an intentional choice to practice as out-of-network
           providers.  This allows us to focus entirely on your individualized
           treatment without the limitations of insurance regulations. At
           Humanmend, our rate is $225 per 50 minute session. Many insurance
@@ -174,7 +175,8 @@ export default function AnxietySpecialty() {
                 Thrizer
               </Link>{" "}
               to help support the claim submission and reimbursement process so
-              you don’t have to.   There is a minimal fee to use this service 
+              you don&#39;t have to.   There is a minimal fee to use this
+              service 
             </li>
             <li className="ml-4 md:m-0">
               <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
@@ -185,7 +187,7 @@ export default function AnxietySpecialty() {
           </ul>
           <p className="body-small">
             Please note, if we submit claims to insurance through Thrizer or if
-            you’d like a superbill, a diagnosis will need to be assigned.
+            you&#39;d like a superbill, a diagnosis will need to be assigned.
           </p>
           <p className="body-small mt-4">We accept multiple payment methods:</p>
           <ul className="body-small">
@@ -213,7 +215,7 @@ export default function AnxietySpecialty() {
         <p className="body-small mb-[24px]">
           Depending on what you are currently struggling with will determine our
           treatment trajectory.  All humans are different and unique and the
-          treatment should be as well. Though it’s hard to predict exact
+          treatment should be as well. Though it&#39;s hard to predict exact
           timelines, we typically see clients weekly for a minimum of six months
           to one+ years.  We have many long-term clients who continue to seek
           support and therapy to navigate healing in different areas of their
@@ -380,7 +382,7 @@ export default function AnxietySpecialty() {
         <p className="body-text my-[24px]">
           My therapeutic approach has been shaped by diverse training that
           allows me to meet you where you are. While these approaches inform my
-          work, our sessions won't be about rigidly applying techniques.
+          work, our sessions won&#39;t be about rigidly applying techniques.
           Instead, I draw from these frameworks flexibly, adapting to what feels
           most supportive and effective for your unique journey.
         </p>
