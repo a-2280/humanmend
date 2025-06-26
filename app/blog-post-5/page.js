@@ -78,8 +78,8 @@ export default function BlogPostFive() {
                   i.
                 </p>
                 <p className="body-text">
-                  S: Stop. Just pause. Notice that you're caught in a thought
-                  spiral. Recognize this familiar pattern.
+                  {`S: Stop. Just pause. Notice that you're caught in a thought
+                  spiral. Recognize this familiar pattern.`}
                 </p>
               </div>
               <div className="body-text flex ml-18">
@@ -234,7 +234,7 @@ export default function BlogPostFive() {
             </div>
             <div className="my-[24px] flex flex-col justify-center items-start">
               <h2 className="heading-2">
-                04. The "Would I Say This to a Friend?" Check
+                {`04. The "Would I Say This to a Friend?" Check`}
               </h2>
               <div className="body-text flex">
                 <p className="body-text mx-2">•</p>
@@ -280,11 +280,11 @@ export default function BlogPostFive() {
                   i.
                 </p>
                 <p className="body-text">
-                  Example: If you find yourself obsessing, "I ruined that
+                  {`Example: If you find yourself obsessing, "I ruined that
                   presentation completely," try saying, "My mind is telling me
                   the story that I ruined the presentation." Notice how this
                   creates distance between you and the thought, making it feel
-                  less overwhelming and absolute.
+                  less overwhelming and absolute.`}
                 </p>
               </div>
             </div>
