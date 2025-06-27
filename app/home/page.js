@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center max-w-screen">
       <Navbar />
-      <section className="mt-[51px] lg:mt-[240px] px-[20px] md:px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+      <section className="mt-[51px] lg:mt-[114px] px-[20px] md:px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
         <h1 className="heading-1">{homePageContent.heroHeading}</h1>
         <p className="my-[24px] lg:my-[32px] body-text text-align-last">
           {homePageContent.heroParagraph}
