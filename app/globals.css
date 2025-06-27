@@ -52,7 +52,7 @@
   .body-text {
     font-family: var(--font-family-outfit);
     color: var(--color-blue);
-    font-size: 12px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 21px;
     letter-spacing: 0.04rem;
@@ -198,6 +198,7 @@ hr {
 
   .button-small {
     font-size: 14px;
+    font-weight: 600;
     line-height: 23.2px;
     letter-spacing: 0.09rem;
     border-bottom: 1.5px solid var(--color-blue);
