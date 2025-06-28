@@ -30,17 +30,17 @@ export default function BlogPostTwo() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="mt-[51px] lg:mt-[240px] mb-[40px] lg:mb-[96px] flex flex-col justify-center items-center px-[20px] md:px-[43px]">
+      <section className="mt-[51px] lg:mt-[240px] mb-[40px] lg:mb-[96px] flex flex-col justify-center items-center px-[44px]">
         <h1 className="heading-1">{blog2Content.title}</h1>
         <h2 className="heading-2 mt-1 lg:mt-[24px] mb-[24px] lg:mb-[48px]">
           {blog2Content.subtitle}
         </h2>
         <p className="body-small">{blog2Content.author}</p>
       </section>
-      <section className="px-[20px] md:px-[43px]">
+      <section className="px-[44px]">
         <Image src="/man-2(2).png" alt="flowers" width={692} height={490} />
       </section>
-      <section className="px-[20px] md:px-[43px] mt-[40px] lg:mt-[96px] mb-[80px] lg:mb-[64px] flex flex-col justify-center items-center lg:max-w-[700px]">
+      <section className="px-[44px] mt-[40px] lg:mt-[96px] mb-[80px] lg:mb-[64px] flex flex-col justify-center items-center lg:max-w-[700px]">
         <div className="flex flex-col justify-center items-center">
           <div>
             <p className="body-text">{blog2Content.section1Paragraph}</p>
@@ -85,7 +85,7 @@ export default function BlogPostTwo() {
               <p className="body-text mx-2">•</p>
               <p className="body-text">
                 {`“Would you treat these symptoms differently in a smaller-bodied
-                patient?” `}
+                patient?”`}
               </p>
             </div>
           </div>
@@ -95,14 +95,14 @@ export default function BlogPostTwo() {
               <p className="body-text mx-2">•</p>
               <p className="body-text">
                 {`Look for practitioners who use a Health at Every Size® (HAES)
-                approach—many cities now have directories to help.  `}
+                approach—many cities now have directories to help.`}
               </p>
             </div>
             <div className="body-text flex">
               <p className="body-text mx-2">•</p>
               <p className="body-text">
                 {`Search keywords including “HAES”, “weight neutral”, “non-diet”
-                primary care doctor in your city. `}
+                primary care doctor in your city.`}
               </p>
             </div>
             <div className="body-text flex">
@@ -110,7 +110,7 @@ export default function BlogPostTwo() {
               <p className="body-text">
                 Mary Lambert compiled an incredible list of nationwide resources
                 to help you begin your search for a weight neutral provider{" "}
-                <Link href="#">Weight Neutral Providers Lead List. </Link>
+                <Link href="#">Weight Neutral Providers Lead List.</Link>
               </p>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function BlogPostTwo() {
               <p className="body-text mx-2">•</p>
               <p className="body-text">
                 Whether it&#39;s a friend, partner, or advocate, having someone
-                with you can help reinforce your boundaries and your voice. 
+                with you can help reinforce your boundaries and your voice.
               </p>
             </div>
           </div>
@@ -130,7 +130,7 @@ export default function BlogPostTwo() {
               <p className="body-text mx-2">•</p>
               <p className="body-text">
                 You can decline to be weighed. You can ask for a blind weight.
-                You can say, &#34;Let&#39;s focus on what I came in for.&#34; 
+                You can say, &#34;Let&#39;s focus on what I came in for.&#34;
               </p>
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function BlogPostTwo() {
           <p className="body-text">{blog2Content.section5Paragraph1}</p>
         </div>
       </section>
-      <section className="mb-[80px] lg:mb-[156px] px-[20px] md:px-[43px] flex flex-col justify-center items-center lg:max-w-[700px]">
+      <section className="mb-[80px] lg:mb-[156px] px-[44px] flex flex-col justify-center items-center lg:max-w-[700px]">
         <h1 className="heading-1 mb-[37px] max-w-[200px]">
           {blog2Content.referenceHeading}
         </h1>

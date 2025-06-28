@@ -30,11 +30,17 @@ export default function Footer() {
       <div className="hidden w-full md:flex gap-8 justify-between items-center px-[43px]">
         <p className="heading-1 text-cream">© HUMANMEND 2025</p>
         <div className="flex justify-center items-baseline gap-2">
-          <Link href="#" className="button-main !border-cream text-cream">
+          <Link
+            href="#"
+            className="button-main !border-cream text-cream no-hover"
+          >
             Instagram
           </Link>
           <p className="body-text text-cream">/</p>
-          <Link href="#" className="button-main !border-cream text-cream">
+          <Link
+            href="#"
+            className="button-main !border-cream text-cream no-hover"
+          >
             Email
           </Link>
         </div>

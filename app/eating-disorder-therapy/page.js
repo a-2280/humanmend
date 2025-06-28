@@ -162,7 +162,7 @@ export default function AnxietySpecialty() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="my-[51px] lg:mt-[240px] lg:mb-[97px] px-[20px] md:px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+      <section className="my-[51px] lg:mt-[240px] lg:mb-[97px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
         <h1 className="heading-1 max-w-[250px] md:max-w-none">
           {eatingDisorderContent.section1Heading}
         </h1>
@@ -193,26 +193,40 @@ export default function AnxietySpecialty() {
         )}
       </section>
       <section className="flex bg-[url(/ed-1.png)] bg-cover bg-center w-full h-[200px] md:h-[427px] full-width-breakout"></section>
-      <section className="my-[80px] lg:my-[204px] w-full max-w-[415px] md:max-w-[699px] px-[20px] md:px-[43px]">
+      <section className="my-[80px] lg:my-[204px] w-full max-w-[415px] md:max-w-[699px] px-[44px]">
         <div className="flex flex-col justify-center items-center">
           <h1 className="heading-1 mb-[26px] lg:mb-[32px]">
             {eatingDisorderContent.section2Heading}
           </h1>
           <p className="body-text">{eatingDisorderContent.section2Paragraph}</p>
-          <p className="body-text">
+          <p className="body-text md:hidden">
+            <span className="ml-4"></span>
+            {`That shame that washes over you after eating — the belief that
+            you’ve failed if you don’t follow every food rule perfectly — isn’t
+            weakness. It’s what happens when perfectionism runs the show. Many
+            of our clients describe living in a constant state of
+            not-enoughness. Not disciplined enough. Not small enough. Not worthy
+            enough. Perfectionism promises control but delivers the opposite — a
+            life ruled by impossible standards and relentless shame. Shame so
+            deep, it can make you want to shrink yourself, take up less space,
+            and disappear beneath it all. We understand this cycle. And we know
+            the way out isn’t more control — it’s self-compassion, curiosity,
+            and uncovering the deeper needs behind the patterns.`}
+          </p>
+          <p className="body-text hidden md:block">
             <span className="ml-4"></span>
             {eatingDisorderContent.section2Paragraph1}
           </p>
-          <p className="body-text">
+          <p className="body-text hidden md:block">
             <span className="ml-4"></span>
             {eatingDisorderContent.section2Paragraph2}
           </p>
         </div>
       </section>
-      <section className="px-[20px] md:px-[43px] max-w-7xl">
+      <section className="px-[44px] max-w-7xl">
         <Image src="/man-1.png" alt="Man" width={626} height={547} />
       </section>
-      <section className="my-[80px] lg:my-[204px] w-full max-w-[415px] md:max-w-[1310px] px-[16px] md:px-[43px]">
+      <section className="my-[80px] lg:my-[204px] w-full max-w-[415px] md:max-w-[1310px] px-[44px]">
         <h1 className="heading-1 mb-[32px] lg:mb-[86px]">
           We&apos;ve got secrets (that aren&apos;t really secret)
         </h1>
@@ -238,7 +252,7 @@ export default function AnxietySpecialty() {
         </ul>
       </section>
       <section className="flex bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
-      <section className="mt-[51px] mb-[80px] lg:mt-[204px] lg:mb-[156px] px-[20px] md:px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[700px] z-10">
+      <section className="mt-[51px] mb-[80px] lg:mt-[204px] lg:mb-[156px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[700px] z-10">
         <h1 className="heading-1">{eatingDisorderContent.section3Heading}</h1>
         <p className="mt-[24px] lg:mt-[32px] body-text">
           {eatingDisorderContent.section3Paragraph}

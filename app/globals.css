@@ -30,7 +30,7 @@
   .heading-1 {
     font-family: var(--font-family-outfitMedium);
     color: var(--color-blue);
-    font-size: 12px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 0.18rem;
@@ -41,7 +41,7 @@
   .heading-2 {
     font-family: var(--font-family-outfitMedium);
     color: var(--color-blue);
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 16px;
     letter-spacing: 0.17rem;
@@ -62,37 +62,29 @@
   .body-small {
     font-family: var(--font-family-outfit);
     color: var(--color-blue);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 21px;
     letter-spacing: 0.04rem;
     text-align: justify;
   }
 
-  .button-main {
-    font-family: var(--font-family-pitch);
-    color: var(--color-blue);
-    font-size: 12px;
-    line-height: 10.46px;
-    letter-spacing: 0.09rem;
-    border-bottom: 1px solid var(--color-blue);
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-
+  .button-main,
   .button-small {
     font-family: var(--font-family-pitch);
     color: var(--color-blue);
     font-size: 14px;
-    line-height: 23.2px;
+    font-weight: 600;
+    line-height: 10.46px;
     letter-spacing: 0.09rem;
-    border-bottom: 1px solid var(--color-blue);
+    text-transform: uppercase;
+    cursor: pointer;
   }
 
   .numbers-text {
     font-family: var(--font-family-outfit);
     color: var(--color-blue);
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 16px;
     letter-spacing: 0.17rem;
@@ -153,6 +145,54 @@ hr {
   width: 100%;
 }
 
+button,
+a,
+[data-nextjs-route],
+[href] {
+  text-decoration: none !important;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+button::after,
+a::after,
+[data-nextjs-route]::after,
+[href]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--color-blue);
+}
+
+button:hover,
+a:hover,
+[data-nextjs-route]:hover,
+[href]:hover {
+  color: #a7c1d2 !important;
+}
+
+button:hover::after,
+a:hover::after,
+[data-nextjs-route]:hover::after,
+[href]:hover::after {
+  background-color: #a7c1d2 !important;
+}
+
+.no-underline::after {
+  display: none !important;
+}
+
+.no-hover:hover,
+.no-hover:hover::after {
+  color: var(--color-cream) !important;
+  background-color: var(--color-blue) !important;
+}
+
 @media (min-width: 768px) {
   .heading-1 {
     font-size: 1rem;
@@ -191,7 +231,6 @@ hr {
     font-weight: 600;
     line-height: 21px;
     letter-spacing: 0.09rem;
-    border-bottom: 1.5px solid var(--color-blue);
     text-transform: uppercase;
     cursor: pointer;
   }
@@ -201,7 +240,6 @@ hr {
     font-weight: 600;
     line-height: 23.2px;
     letter-spacing: 0.09rem;
-    border-bottom: 1.5px solid var(--color-blue);
     text-transform: uppercase;
     cursor: pointer;
   }

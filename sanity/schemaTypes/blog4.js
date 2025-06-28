@@ -123,6 +123,12 @@ export default {
       title: "Section 6 Paragraph 1",
       type: "text",
     },
+
+    {
+      name: "section6Paragraph2",
+      title: "Section 6 Paragraph 2",
+      type: "text",
+    },
     {
       name: "section7Heading",
       title: "Section 7 Heading",

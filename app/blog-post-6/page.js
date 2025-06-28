@@ -29,22 +29,22 @@ export default function BlogPostSix() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="mt-[51px] lg:mt-[240px] mb-[40px] lg:mb-[96px] flex flex-col justify-center items-center px-[20px] md:px-[43px]">
+      <section className="mt-[51px] lg:mt-[240px] mb-[40px] lg:mb-[96px] flex flex-col justify-center items-center px-[44px]">
         <h1 className="heading-1">{blog6Content.title}</h1>
         <h2 className="heading-2 mt-1 lg:mt-[24px] mb-[24px] lg:mb-[48px]">
           {blog6Content.subtitle}
         </h2>
         <p className="body-small">{blog6Content.author}</p>
       </section>
-      <section className="px-[20px] md:px-[43px]">
+      <section className="px-[44px]">
         <Image src="/flower-2.png" alt="flowers" width={692} height={490} />
       </section>
-      <section className="px-[20px] md:px-[43px] mt-[40px] lg:mt-[96px] mb-[80px] lg:mb-[64px] flex flex-col justify-center items-center lg:max-w-[700px]">
+      <section className="px-[44px] mt-[40px] lg:mt-[96px] mb-[80px] lg:mb-[64px] flex flex-col justify-center items-center lg:max-w-[700px]">
         <div className="flex flex-col justify-center items-center">
           <div>
             <p className="body-text">{blog6Content.section1Paragraph}</p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog6Content.section1Paragraph1}
             </p>
           </div>
@@ -54,11 +54,11 @@ export default function BlogPostSix() {
           <div>
             <p className="body-text">{blog6Content.section2Paragraph}</p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog6Content.section2Paragraph1}
             </p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog6Content.section2Paragraph2}
             </p>
           </div>
@@ -83,7 +83,7 @@ export default function BlogPostSix() {
                 Avoiding social plans tied to water, sun, or exposure
               </p>
             </div>
-            <div className="body-text flex mb-[24px]">
+            <div className="body-text flex">
               <p className="body-text mx-2">•</p>
               <p className="body-text">
                 Feeling stuck in a loop of negative self-talk
@@ -108,7 +108,7 @@ export default function BlogPostSix() {
           <div>
             <p className="body-text">{blog6Content.section4Paragraph}</p>
             <div className="my-[24px] flex flex-col justify-center items-start">
-              <h2 className="heading-2">
+              <h2 className="heading-2 text-left">
                 01. Curate a body-neutral media space
               </h2>
               <div className="body-text flex">
@@ -117,12 +117,12 @@ export default function BlogPostSix() {
                   Pay attention to the accounts or content that stir up
                   comparison or self-doubt. Unfollow, mute, or take a break.
                   Instead, follow creators who celebrate all bodies or who focus
-                  on summer fun without tying it to appearance. 
+                  on summer fun without tying it to appearance.
                 </p>
               </div>
             </div>
             <div className="my-[24px] flex flex-col justify-center items-start">
-              <h2 className="heading-2">
+              <h2 className="heading-2 text-left">
                 02. Practice compassionate self-talk
               </h2>
               <div className="body-text flex">
@@ -137,7 +137,7 @@ export default function BlogPostSix() {
               </div>
             </div>
             <div className="my-[24px] flex flex-col justify-center items-start">
-              <h2 className="heading-2">
+              <h2 className="heading-2 text-left">
                 03. Build a joyful, affirming summer wardrobe
               </h2>
               <div className="body-text flex">
@@ -151,8 +151,10 @@ export default function BlogPostSix() {
                 </p>
               </div>
             </div>
-            <div className="my-[24px] flex flex-col justify-center items-start">
-              <h2 className="heading-2">04. Prepare for body comments</h2>
+            <div className="mt-[24px] flex flex-col justify-center items-start">
+              <h2 className="heading-2 text-left">
+                04. Prepare for body comments
+              </h2>
               <div className="body-text flex">
                 <p className="body-text mx-2">•</p>
                 <p className="body-text">
@@ -201,7 +203,7 @@ export default function BlogPostSix() {
               </p>
               <p className="body-text">
                 Or even a simple and direct: “I’m not comfortable with body
-                comments.” 
+                comments.”
               </p>
             </div>
             <div className="my-[24px] flex flex-col justify-center items-start">
@@ -233,7 +235,7 @@ export default function BlogPostSix() {
           <p className="body-text">{blog6Content.section6Paragraph}</p>
         </div>
       </section>
-      <section className="mb-[80px] lg:mb-[156px] px-[20px] md:px-[43px] flex flex-col justify-center items-center lg:max-w-[700px]">
+      <section className="mb-[80px] lg:mb-[156px] px-[44px] flex flex-col justify-center items-center w-full lg:max-w-[700px]">
         <h1 className="heading-1 mb-[37px] max-w-[200px]">
           {blog6Content.referenceHeading}
         </h1>
@@ -242,7 +244,9 @@ export default function BlogPostSix() {
           blog6Content.listItems.map((item, index) => (
             <div key={index} className="w-full">
               <div className="flex justify-start items-start w-full">
-                <p className="body-small !text-left">{item}</p>
+                <p className="body-small !text-left w-full break-words">
+                  {item}
+                </p>
               </div>
               {index < blog6Content.listItems.length - 1 && (
                 <hr className="my-[15px] lg:my-[24px]" />

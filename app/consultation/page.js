@@ -29,7 +29,7 @@ export default function Consultation() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="px-[20px] md:px-[43px] mb-[64px] mt-[51px] flex flex-col justify-center items-center max-w-[550px] lg:max-w-[650px] lg:mt-[240px] lg:mb-[194px]">
+      <section className="px-[44px] mb-[64px] mt-[51px] flex flex-col justify-center items-center max-w-[550px] lg:max-w-[650px] lg:mt-[240px] lg:mb-[194px]">
         <h1 className="heading-1">{consultationContent.section1Heading}</h1>
         <p className="body-text text-align-last mt-[24px] mb-[37px] lg:mt-[32px] lg:mb-[48px]">
           {consultationContent.section1Paragraph}
@@ -38,10 +38,10 @@ export default function Consultation() {
           {consultationContent.section1Button}
         </button>
       </section>
-      <section className="px-[20px] md:px-[43px] max-w-7xl">
+      <section className="px-[44px] max-w-7xl">
         <Image src="/flower-6.png" alt="Flower" width={1006} height={403} />
       </section>
-      <section className="px-[20px] md:px-[43px] lg:mt-[204px] lg:max-w-[750px] lg:flex lg:flex-col lg:justify-center lg:items-center">
+      <section className="px-[44px] lg:mt-[204px] lg:max-w-[750px] lg:flex lg:flex-col lg:justify-center lg:items-center">
         <h1 className="heading-1 mb-[24px] mt-[64px] lg:my-[48px] lg:max-w-[400px]">
           {consultationContent.section2Heading}
         </h1>
@@ -61,7 +61,7 @@ export default function Consultation() {
           <p className="body-text">{consultationContent.section4Paragraph}</p>
         </div>
       </section>
-      <section className="mb-[80px] mt-[80px] lg:mt-[96px] lg:mb-[204px] px-[20px] md:px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[700px]">
+      <section className="mb-[80px] mt-[80px] lg:mt-[96px] lg:mb-[204px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[700px]">
         <h1 className="heading-1">Investments</h1>
         <hr className="mb-[24px] mt-[37px] lg:mt-[56px]" />
         <div className="w-full flex justify-start items-start gap-[24px] lg:gap-[50px]">

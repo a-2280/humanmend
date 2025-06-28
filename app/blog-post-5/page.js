@@ -29,30 +29,30 @@ export default function BlogPostFive() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="mt-[51px] lg:mt-[240px] mb-[40px] lg:mb-[96px] flex flex-col justify-center items-center px-[20px] md:px-[43px]">
+      <section className="mt-[51px] lg:mt-[240px] mb-[40px] lg:mb-[96px] flex flex-col justify-center items-center px-[44px]">
         <h1 className="heading-1">{blog5Content.title}</h1>
         <h2 className="heading-2 mt-1 lg:mt-[24px] mb-[24px] lg:mb-[48px]">
           {blog5Content.subtitle}
         </h2>
         <p className="body-small">{blog5Content.author}</p>
       </section>
-      <section className="px-[20px] md:px-[43px]">
+      <section className="px-[44px]">
         <Image src="/blog-man-1.png" alt="flowers" width={692} height={490} />
       </section>
-      <section className="px-[20px] md:px-[43px] mt-[40px] lg:mt-[96px] mb-[80px] lg:mb-[64px] flex flex-col justify-center items-center lg:max-w-[700px]">
+      <section className="px-[44px] mt-[40px] lg:mt-[96px] mb-[80px] lg:mb-[64px] flex flex-col justify-center items-center lg:max-w-[700px]">
         <div className="flex flex-col justify-center items-center">
           <div>
             <p className="body-text">{blog5Content.section1Paragraph}</p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog5Content.section1Paragraph1}
             </p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog5Content.section1Paragraph2}
             </p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog5Content.section1Paragraph3}
             </p>
           </div>
@@ -233,7 +233,7 @@ export default function BlogPostFive() {
               </div>
             </div>
             <div className="my-[24px] flex flex-col justify-center items-start">
-              <h2 className="heading-2">
+              <h2 className="heading-2 text-left">
                 {`04. The "Would I Say This to a Friend?" Check`}
               </h2>
               <div className="body-text flex">
@@ -289,7 +289,7 @@ export default function BlogPostFive() {
               </div>
             </div>
             <div className="my-[24px] flex flex-col justify-center items-start">
-              <h2 className="heading-2">
+              <h2 className="heading-2 text-left">
                 06. Give The Most Generous Assumption
               </h2>
               <div className="body-text flex">
@@ -301,7 +301,7 @@ export default function BlogPostFive() {
                   extending "the most generous interpretation possible to the
                   intentions, words, and actions of others" (Brown, 2015). This
                   practice isn't about naive optimism — it's about recognizing
-                  that our anxious minds often  automatically jump to the least
+                  that our anxious minds often automatically jump to the least
                   generous interpretation, when there are usually many other
                   explanations that are equally or more likely. By deliberately
                   considering alternative, more generous possibilities, you
@@ -342,7 +342,6 @@ export default function BlogPostFive() {
           <div className="body-text flex mt-[24px]">
             <p className="body-text mx-2">•</p>
             <p className="body-text">
-               
               {`Daily mindfulness moments: Even just 5 minutes of noticing your
               breath helps you catch spirals earlier. It's like training your
               brain to recognize when it's being hijacked.`}
@@ -376,12 +375,12 @@ export default function BlogPostFive() {
           </div>
           <p className="body-text">{blog5Content.section3Paragraph1}</p>
           <p className="body-text">
-            <span className="lg:ml-4"></span>
+            <span className="ml-4"></span>
             {blog5Content.section3Paragraph2}
           </p>
         </div>
       </section>
-      <section className="mb-[80px] lg:mb-[156px] px-[20px] md:px-[43px] flex flex-col justify-center items-center lg:max-w-[700px]">
+      <section className="mb-[80px] lg:mb-[156px] px-[44px] flex flex-col justify-center items-center lg:max-w-[700px]">
         <h1 className="heading-1 mb-[37px] max-w-[200px]">
           {blog5Content.referenceHeading}
         </h1>

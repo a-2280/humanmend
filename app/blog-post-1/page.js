@@ -36,7 +36,7 @@ export default function BlogPostOne() {
         </h2>
         <p className="body-small">{blog1Content.author}</p>
       </section>
-      <section className="px-[20px] md:px-[43px]">
+      <section className="px-[44px]">
         <Image
           src="/blog-flower-3.png"
           alt="flowers"
@@ -44,12 +44,12 @@ export default function BlogPostOne() {
           height={490}
         />
       </section>
-      <section className="px-[20px] md:px-[43px] mt-[40px] lg:mt-[96px] mb-[80px] lg:mb-[64px] flex flex-col justify-center items-center lg:max-w-[700px]">
+      <section className="px-[44px] mt-[40px] lg:mt-[96px] mb-[80px] lg:mb-[64px] flex flex-col justify-center items-center lg:max-w-[700px]">
         <div className="flex flex-col justify-center items-center">
           <div>
             <p className="body-text">{blog1Content.section1Paragraph}</p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog1Content.section1Paragraph1}
             </p>
           </div>
@@ -59,7 +59,7 @@ export default function BlogPostOne() {
           <div>
             <p className="body-text">{blog1Content.section2Paragraph}</p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog1Content.section2Paragraph1}
             </p>
           </div>
@@ -69,7 +69,7 @@ export default function BlogPostOne() {
           <div>
             <p className="body-text">{blog1Content.section3Paragraph}</p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog1Content.section3Paragraph1}
             </p>
           </div>
@@ -164,7 +164,7 @@ export default function BlogPostOne() {
         <div>
           <p className="body-text">{blog1Content.section5Paragraph}</p>
           <p className="body-text">
-            <span className="lg:ml-4"></span>
+            <span className="ml-4"></span>
             {blog1Content.section5Paragraph1}
           </p>
         </div>
@@ -175,16 +175,16 @@ export default function BlogPostOne() {
         <div>
           <p className="body-text">{blog1Content.section6Paragraph}</p>
           <p className="body-text">
-            <span className="lg:ml-4"></span>
+            <span className="ml-4"></span>
             {blog1Content.section6Paragraph1}
           </p>
           <p className="body-text">
-            <span className="lg:ml-4"></span>
+            <span className="ml-4"></span>
             {blog1Content.section6Paragraph2}
           </p>
         </div>
       </section>
-      <section className="mb-[80px] lg:mb-[156px] px-[20px] md:px-[43px] flex flex-col justify-center items-center lg:max-w-[700px]">
+      <section className="mb-[80px] lg:mb-[156px] px-[44px] flex flex-col justify-center items-center lg:max-w-[700px]">
         <h1 className="heading-1 mb-[37px] max-w-[200px]">
           {blog1Content.referenceHeading}
         </h1>

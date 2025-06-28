@@ -29,15 +29,20 @@ export default function Contact() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="px-[20px] md:px-[43px] mb-[64px] mt-[51px] flex flex-col justify-center items-center max-w-[550px] lg:mt-[240px] lg:mb-[194px]">
+      <section className="px-[44px] mb-[64px] mt-[51px] flex flex-col justify-center items-center max-w-[550px] lg:mt-[240px] lg:mb-[194px]">
         <h1 className="heading-1">{contactContent.section1Heading}</h1>
-        <p className="body-text text-align-last mt-[24px] mb-[37px] lg:mt-[32px] lg:mb-[48px]">
+        <p className="body-text text-align-last mt-[24px] mb-[37px] lg:mt-[32px] lg:mb-[48px] md:hidden">
+          {`To help us support you best, please use the specialized contact forms
+          listed on this page. If you just have a general question, feel free to
+          click the link directly below.`}
+        </p>
+        <p className="body-text text-align-last mt-[24px] mb-[37px] lg:mt-[32px] lg:mb-[48px] hidden md:block">
           {contactContent.section1Paragraph}
         </p>
         <button className="button-main">{contactContent.section1Button}</button>
       </section>
       <section className="flex bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
-      <section className="mb-[80px] mt-[80px] lg:mt-[204px] lg:mb-[166px] px-[20px] md:px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[700px]">
+      <section className="mb-[80px] mt-[80px] lg:mt-[204px] lg:mb-[166px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[700px]">
         <h1 className="heading-1">THERAPEUTIC APPROACHES</h1>
         <hr className="mb-[24px] mt-[37px] lg:mt-[56px]" />
         <div className="w-full flex justify-start items-start gap-[24px] lg:gap-[50px]">

@@ -21,7 +21,9 @@ export default function Navbar(props) {
           onMouseLeave={() => setServicesOpen(false)}
           className=""
         >
-          <Link href={""}>Services</Link>
+          <Link href={""} className="cursor-default">
+            Services
+          </Link>
           {servicesOpen && (
             <ul className="absolute pt-4 flex flex-col gap-4 z-999">
               <li className="w-fit">
@@ -45,17 +47,17 @@ export default function Navbar(props) {
           onMouseEnter={() => setAboutOpen(true)}
           onMouseLeave={() => setAboutOpen(false)}
         >
-          <Link href={""}>About</Link>
+          <Link href={"/about"}>About</Link>
           {aboutOpen && (
             <ul className="absolute pt-4 z-999">
               <li className="w-fit">
-                <Link href={"/about"}>FAQs</Link>
+                <Link href={"#FAQ"}>FAQs</Link>
               </li>
             </ul>
           )}
         </li>
       </ul>
-      <Link href={"/home"} className="mx-12">
+      <Link href={"/home"} className="mx-12 no-underline">
         <Image
           src={"/blue_logotype.svg"}
           alt="logotype"

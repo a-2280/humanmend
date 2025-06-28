@@ -164,7 +164,7 @@ export default function AnxietySpecialty() {
       title: "How do I submit for reimbursement?",
       content: (
         <div className="mb-[24px]">
-          <p className="body-small">We have two options </p>
+          <p className="body-small">We have two options</p>
           <ul className="body-small">
             <li className="ml-4 md:ml-5 lg:m-0">
               <span className="body-text ml-[-1rem] mr-2 md:ml-[-.75rem] lg:mx-2">
@@ -175,8 +175,7 @@ export default function AnxietySpecialty() {
                 Thrizer
               </Link>{" "}
               to help support the claim submission and reimbursement process so
-              you don&#39;t have to.   There is a minimal fee to use this
-              service 
+              you don&#39;t have to. There is a minimal fee to use this service
             </li>
             <li className="ml-4 md:m-0">
               <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
@@ -214,13 +213,13 @@ export default function AnxietySpecialty() {
       content: (
         <p className="body-small mb-[24px]">
           Depending on what you are currently struggling with will determine our
-          treatment trajectory.  All humans are different and unique and the
+          treatment trajectory. All humans are different and unique and the
           treatment should be as well. Though it&#39;s hard to predict exact
           timelines, we typically see clients weekly for a minimum of six months
-          to one+ years.  We have many long-term clients who continue to seek
+          to one+ years. We have many long-term clients who continue to seek
           support and therapy to navigate healing in different areas of their
           life, even after the original symptoms have decreased. We can assess
-          this together! 
+          this together!
         </p>
       ),
     },
@@ -229,8 +228,8 @@ export default function AnxietySpecialty() {
       content: (
         <p className="body-small mb-[24px]">
           We utilize an individualized (vs one size fits all) approach
-          throughout your treatment.  We will check in regularly to reassess
-          goals, as we go, and determine next steps. See the{" "}
+          throughout your treatment. We will check in regularly to reassess
+          goals, as we go, and determine next steps. See the{" "}
           <Link href="/about" className="border-b-1">
             about page
           </Link>{" "}
@@ -256,7 +255,7 @@ export default function AnxietySpecialty() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="mt-[51px] lg:mt-[240px] px-[20px] md:px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+      <section className="mt-[51px] lg:mt-[240px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
         <h1 className="heading-1">{aboutContent.section1Heading}</h1>
         <p className="my-[24px] lg:my-[32px] body-text text-align-last">
           {aboutContent.section1Paragraph}
@@ -294,7 +293,7 @@ export default function AnxietySpecialty() {
           />
         )}
       </section>
-      <section className="mt-[80px] lg:mt-[204px] px-[21px] md:px-[43px] lg:px-0 flex flex-col justify-center items-center w-full">
+      <section className="mt-[80px] lg:mt-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
         <div className="mb-[50px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
           <div className="mb-[35px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end">
             <div className="lg:max-w-[400px] lg:mr-[231px]">
@@ -340,7 +339,7 @@ export default function AnxietySpecialty() {
           </div>
         </div>
       </section>
-      <section className="mb-[80px] lg:mt-[204px] px-[21px] md:px-[43px] flex flex-col lg:flex-row justify-center items-center w-full max-w-[415px] md:max-w-[650px] lg:max-w-none">
+      <section className="mb-[80px] lg:mt-[204px] px-[44px] flex flex-col lg:flex-row justify-center items-center w-full max-w-[415px] md:max-w-[650px] lg:max-w-none">
         <div className="mb-[80px] lg:w-1/2 lg:flex lg:justify-center lg:items-center">
           <div className="lg:max-w-[400px]">
             <h1 className="heading-1">{aboutContent.section4Heading}</h1>
@@ -377,7 +376,7 @@ export default function AnxietySpecialty() {
           />
         </div>
       </section>
-      <section className="mb-[80px] lg:mt-[204px] lg:mb-[194px] px-[19px] md:px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[700px]">
+      <section className="mb-[80px] lg:mt-[204px] lg:mb-[194px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[700px]">
         <h1 className="heading-1">THERAPEUTIC APPROACHES</h1>
         <p className="body-text my-[24px]">
           My therapeutic approach has been shaped by diverse training that
@@ -497,7 +496,7 @@ export default function AnxietySpecialty() {
         </h2>
         <button className="button-main">Contact Us</button>
       </section>
-      <section className="px-[20px] md:px-[43px] max-w-7xl">
+      <section className="px-[44px] max-w-7xl">
         <Image
           src="/flower-1.png"
           alt="flower"
@@ -506,7 +505,7 @@ export default function AnxietySpecialty() {
           className="w-full max-w-[354.19px] lg:max-w-[960.83px]"
         />
       </section>
-      <section className="my-[80px] lg:mt-[204px] lg:mb-[194px] w-full max-w-[415px] md:max-w-[1310px] px-[20px] md:px-[43px]">
+      <section className="my-[80px] lg:mt-[204px] lg:mb-[194px] w-full max-w-[415px] md:max-w-[1310px] px-[44px]">
         <h1 className="heading-1 mb-[32px] lg:mb-[86px]">OUR VALUES</h1>
         <hr />
         <ul>
@@ -537,7 +536,10 @@ export default function AnxietySpecialty() {
         </div>
       </section>
       <section className="flex bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
-      <section className="my-[80px] lg:mt-[204px] lg:mb-[166px] w-full max-w-[415px] md:max-w-[1310px] px-[20px] md:px-[43px]">
+      <section
+        className="my-[80px] lg:mt-[204px] lg:mb-[166px] w-full max-w-[415px] md:max-w-[1310px] px-[44px]"
+        id="FAQ"
+      >
         <h1 className="heading-1 mb-[32px] lg:mb-[86px]">
           FREQUENTLY ASKED QUESTIONS
         </h1>

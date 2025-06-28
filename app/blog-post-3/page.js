@@ -29,14 +29,14 @@ export default function BlogPostThree() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="mt-[51px] lg:mt-[240px] mb-[40px] lg:mb-[96px] flex flex-col justify-center items-center px-[20px] md:px-[43px]">
+      <section className="mt-[51px] lg:mt-[240px] mb-[40px] lg:mb-[96px] flex flex-col justify-center items-center px-[44px]">
         <h1 className="heading-1">{blog3Content.title}</h1>
         <h2 className="heading-2 mt-1 lg:mt-[24px] mb-[24px] lg:mb-[48px]">
           {blog3Content.subtitle}
         </h2>
         <p className="body-small">{blog3Content.author}</p>
       </section>
-      <section className="px-[20px] md:px-[43px]">
+      <section className="px-[44px]">
         <Image
           src="/blog-flower-1.png"
           alt="flowers"
@@ -44,12 +44,12 @@ export default function BlogPostThree() {
           height={490}
         />
       </section>
-      <section className="px-[20px] md:px-[43px] mt-[40px] lg:mt-[96px] mb-[80px] lg:mb-[64px] flex flex-col justify-center items-center lg:max-w-[700px]">
+      <section className="px-[44px] mt-[40px] lg:mt-[96px] mb-[80px] lg:mb-[64px] flex flex-col justify-center items-center lg:max-w-[700px]">
         <div className="flex flex-col justify-center items-center">
           <div>
             <p className="body-text">{blog3Content.section1Paragraph}</p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog3Content.section1Paragraph1}
             </p>
           </div>
@@ -59,11 +59,11 @@ export default function BlogPostThree() {
           <div>
             <p className="body-text">{blog3Content.section2Paragraph}</p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog3Content.section2Paragraph1}
             </p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog3Content.section2Paragraph2}
             </p>
           </div>
@@ -73,11 +73,11 @@ export default function BlogPostThree() {
           <div>
             <p className="body-text">{blog3Content.section3Paragraph}</p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog3Content.section3Paragraph1}
             </p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog3Content.section3Paragraph2}
             </p>
           </div>
@@ -88,11 +88,11 @@ export default function BlogPostThree() {
           <div>
             <p className="body-text">{blog3Content.section4Paragraph}</p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog3Content.section4Paragraph1}
             </p>
             <p className="body-text">
-              <span className="lg:ml-4"></span>
+              <span className="ml-4"></span>
               {blog3Content.section4Paragraph2}
             </p>
           </div>
@@ -104,7 +104,7 @@ export default function BlogPostThree() {
         <div>
           <p className="body-text">{blog3Content.section5Paragraph}</p>
           <p className="body-text">
-            <span className="lg:ml-4"></span>
+            <span className="ml-4"></span>
             {blog3Content.section5Paragraph1}
           </p>
         </div>
@@ -116,7 +116,7 @@ export default function BlogPostThree() {
           <p className="body-text">{blog3Content.section6Paragraph}</p>
         </div>
       </section>
-      <section className="mb-[80px] lg:mb-[156px] px-[20px] md:px-[43px] flex flex-col justify-center items-center lg:max-w-[700px]">
+      <section className="mb-[80px] lg:mb-[156px] px-[44px] flex flex-col justify-center items-center lg:max-w-[700px]">
         <h1 className="heading-1 mb-[37px] max-w-[200px]">
           {blog3Content.referenceHeading}
         </h1>

@@ -33,9 +33,16 @@ export default function AnxietySpecialty() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="my-[51px] lg:mt-[240px] lg:mb-[114px] px-[19px] md:px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+      <section className="my-[51px] lg:mt-[240px] lg:mb-[114px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
         <h1 className="heading-1">{anxietyContent.section1Heading}</h1>
-        <p className="my-[24px] lg:mt-[32px] lg:mb-[48px] body-text text-align-last">
+        <p className="my-[24px] lg:mt-[32px] lg:mb-[48px] body-text text-align-last md:hidden">
+          {`When anxiety takes over, even the simplest moments can feel
+          overwhelming. Your mind races, replays, and doubts, leaving you stuck
+          in overthinking and self-criticism. But this isn't all there is. With
+          the right support, you can quiet the noise, reconnect with yourself,
+          and find steadier ground.`}
+        </p>
+        <p className="my-[24px] lg:mt-[32px] lg:mb-[48px] body-text text-align-last hidden md:block">
           {anxietyContent.section1Paragraph}
         </p>
         <button
@@ -61,7 +68,7 @@ export default function AnxietySpecialty() {
           />
         )}
       </section>
-      <section className="px-[43px] max-w-7xl">
+      <section className="px-[44px] max-w-7xl">
         <Image
           src="/anxiety-1.png"
           alt="Vases"
@@ -77,7 +84,7 @@ export default function AnxietySpecialty() {
           className="md:hidden"
         />
       </section>
-      <section className="my-[80px] lg:my-[204px] w-full max-w-[415px] md:max-w-[699px] px-[20px] md:px-[43px]">
+      <section className="my-[80px] lg:my-[204px] w-full max-w-[415px] md:max-w-[699px] px-[44px]">
         <div className="flex flex-col justify-center items-center">
           <h1 className="heading-1 mb-[26px] lg:mb-[32px]">
             {anxietyContent.section2Heading}
@@ -98,14 +105,31 @@ export default function AnxietySpecialty() {
         </div>
       </section>
       <section className="flex bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
-      <section className="my-[80px] lg:my-[204px] w-full max-w-[415px] md:max-w-[699px] px-[20px] md:px-[43px]">
+      <section className="my-[80px] lg:my-[204px] w-full max-w-[415px] md:max-w-[699px] px-[44px]">
         <div className="flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center">
             <h1 className="heading-1 mb-[26px] lg:mb-[32px] w-full max-w-[250px] md:max-w-none">
               {anxietyContent.section3Heading}
             </h1>
-            <p className="body-text">{anxietyContent.section3Paragraph}</p>
+            <p className="body-text md:hidden">
+              {`This is a space where your feelings and needs matter. You don’t
+              have to perform, over-explain, or manage anyone’s impression of
+              you. It’s a 110% judgment-free zone.`}
+            </p>
+            <p className="body-text hidden md:block">
+              {anxietyContent.section3Paragraph}
+            </p>
             <p className="body-text">
+              <span className="ml-4 md:hidden"></span>
+              {`We blend evidence-based practices with compassionate curiosity. We
+              won’t just focus on surface-level coping strategies (though we’ll
+              build those too), we’ll also explore the deeper roots of your
+              anxiety. We’ll move at a pace that’s challenging but not
+              overwhelming, with the understanding that real, lasting change
+              happens through steady, manageable steps, not overnight fixes. We
+              will work to:`}
+            </p>
+            <p className="body-text hidden md:block">
               <span className="ml-4"></span>
               {anxietyContent.section3Paragraph1}
             </p>
@@ -127,16 +151,12 @@ export default function AnxietySpecialty() {
             <hr className="mt-[24px] mb-[32px]" />
           </div>
           <p className="body-text">{anxietyContent.section3Paragraph2}</p>
-          <p className="body-text">
-            <span className="ml-4"></span>
-            {anxietyContent.section3Paragraph3}
-          </p>
         </div>
       </section>
-      <section className="px-[20px] md:px-[43px] max-w-7xl">
+      <section className="px-[44px] max-w-7xl">
         <Image src="/flower-3.png" alt="flowers" width={1054} height={403} />
       </section>
-      <section className="mt-[51px] mb-[80px] lg:mt-[204px] lg:mb-[156px] px-[20px] md:px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[685px] z-10">
+      <section className="mt-[51px] mb-[80px] lg:mt-[204px] lg:mb-[156px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[685px] z-10">
         <h1 className="heading-1">{anxietyContent.section4Heading}</h1>
         <p className="my-[24px] lg:my-[32px] body-text text-align-last">
           {anxietyContent.section4Paragraph}

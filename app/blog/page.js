@@ -29,7 +29,7 @@ export default function Blog() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="mt-[51px] lg:mt-[240px] lg:mb-[166px] px-[20px] md:px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+      <section className="mt-[51px] lg:mt-[240px] lg:mb-[166px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
         <h1 className="heading-1">{blogContent.section1Heading}</h1>
         <p className="my-[24px] lg:my-[32px] body-text text-align-last">
           {blogContent.section1Paragraph}
@@ -69,7 +69,7 @@ export default function Blog() {
           className="w-full mt-[80px] mb-[90px] lg:my-0 max-w-[151px] lg:max-w-[143px]"
         />
       </section>
-      <section className="mt-[80px] lg:mt-[204px] px-[21px] md:px-[43px] lg:px-0 flex flex-col justify-center items-center w-full">
+      <section className="mt-[80px] lg:mt-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
         <div className="mb-[80px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
           <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end">
             <div className="lg:max-w-[400px] lg:mr-[231px] flex flex-col justify-center items-center">
@@ -113,7 +113,7 @@ export default function Blog() {
           </div>
         </div>
       </section>
-      <section className="mt-[80px] lg:mt-[204px] px-[21px] md:px-[43px] lg:px-0 flex flex-col justify-center items-center w-full">
+      <section className="mt-[80px] lg:mt-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
         <div className="mb-[80px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
           <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end">
             <div className="lg:max-w-[400px] lg:mr-[231px] flex flex-col justify-center items-center">
@@ -157,7 +157,7 @@ export default function Blog() {
           </div>
         </div>
       </section>
-      <section className="mt-[80px] lg:my-[204px] px-[21px] md:px-[43px] lg:px-0 flex flex-col justify-center items-center w-full">
+      <section className="mt-[80px] lg:my-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
         <div className="mb-[80px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
           <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end">
             <div className="lg:max-w-[400px] lg:mr-[231px] flex flex-col justify-center items-center">
