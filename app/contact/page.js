@@ -13,7 +13,10 @@ export default function Contact() {
   useEffect(() => {
     const query = `*[_type == "contact"][0]`;
 
-    client.fetch(query).then((data) => {
+    Promise.all([
+      client.fetch(query),
+      new Promise((resolve) => setTimeout(resolve, 3000)),
+    ]).then(([data]) => {
       setContactContent(data);
     });
   }, []);
@@ -29,7 +32,7 @@ export default function Contact() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="px-[44px] mb-[64px] mt-[51px] flex flex-col justify-center items-center max-w-[550px] lg:mt-[240px] lg:mb-[194px]">
+      <section className="px-[44px] mb-[64px] mt-[51px] flex flex-col justify-center items-center max-w-[550px] lg:mt-[150px] lg:mb-[194px]">
         <h1 className="heading-1">{contactContent.section1Heading}</h1>
         <p className="body-text text-align-last mt-[24px] mb-[37px] lg:mt-[32px] lg:mb-[48px] md:hidden">
           {`To help us support you best, please use the specialized contact forms

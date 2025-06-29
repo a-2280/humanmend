@@ -17,7 +17,10 @@ export default function Home() {
   useEffect(() => {
     const query = `*[_type == "home"][0]`;
 
-    client.fetch(query).then((data) => {
+    Promise.all([
+      client.fetch(query),
+      new Promise((resolve) => setTimeout(resolve, 3000)),
+    ]).then(([data]) => {
       setHomePageContent(data);
     });
   }, []);
@@ -33,7 +36,7 @@ export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center max-w-screen">
       <Navbar />
-      <section className="mt-[51px] lg:mt-[150px] px-[20px] md:px-[43px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+      <section className="mt-[51px] lg:mt-[150px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
         <h1 className="heading-1">{homePageContent.heroHeading}</h1>
         <p className="my-[24px] lg:my-[32px] body-text text-align-last">
           {homePageContent.heroParagraph}
@@ -63,10 +66,10 @@ export default function Home() {
           />
         )}
       </section>
-      <section className="lg:mt-[-8rem] w-full max-w-7xl px-[20px] md:px-[43px]">
+      <section className="lg:mt-[-8rem] w-full max-w-7xl px-[44px]">
         <Image src="/home-1.png" alt="Bouquet" width={1517} height={958} />
       </section>
-      <section className="my-[80px] lg:mt-[142px] lg:mb-[163px] w-full max-w-[415px] md:max-w-[699px] px-[20px] md:px-[43px]">
+      <section className="my-[80px] lg:mt-[142px] lg:mb-[163px] w-full max-w-[415px] md:max-w-[699px] px-[44px]">
         <div className="mb-[52px] lg:mb-[96px] flex flex-col justify-center items-center">
           <h1 className="heading-1 mb-[26px] lg:mb-[32px]">
             {homePageContent.section1Heading}
@@ -111,10 +114,10 @@ export default function Home() {
           </button>
         </div>
       </section>
-      <section className="w-full max-w-7xl px-[20px] md:px-[43px] flex justify-center items-center">
+      <section className="w-full max-w-7xl px-[44px] flex justify-center items-center">
         <Image src="/man-2.png" alt="people" width={934} height={773} />
       </section>
-      <section className="hidden md:flex flex-col justify-center items-center px-[43px] w-full max-w-[699px] mt-[148px] mb-[204px]">
+      <section className="hidden md:flex flex-col justify-center items-center px-[44px] w-full max-w-[699px] mt-[148px] mb-[204px]">
         <h1 className="heading-1">OUR SPECIALITIES</h1>
         <div className="w-full">
           <hr className="mt-[48px] mb-[24px]" />
@@ -175,7 +178,7 @@ export default function Home() {
         </div>
       </section>
       <section className="hidden md:flex bg-[url(/stripes.png)] bg-cover bg-center w-full h-[427px] full-width-breakout"></section>
-      <section className="my-[80px] lg:mt-[204px] lg:mb-[194px] flex flex-col justify-center items-center w-full max-w-[413px] md:max-w-[699px] px-[20px] md:px-[43px]">
+      <section className="my-[80px] lg:mt-[204px] lg:mb-[194px] flex flex-col justify-center items-center w-full max-w-[413px] md:max-w-[699px] px-[44px]">
         <h1 className="heading-1">{homePageContent.section3Heading}</h1>
         <p className="body-text mt-[24px] lg:mt-[32px]">
           {homePageContent.section3Paragraph}
@@ -184,7 +187,16 @@ export default function Home() {
           <span className="ml-4"></span>
           {homePageContent.section3Paragraph2}
         </p>
-        <p className="body-text mb-[24px] lg:mb-[32px]">
+        <p className="body-text mb-[24px] lg:mb-[32px] md:hidden">
+          <span className="ml-4"></span>
+          {`When I’m not in session, you’ll find me on the search for unique
+          stationery, devouring audiobooks at 1.5x speed (yes, I’m that person),
+          or planning my next trip to somewhere warmer than wherever I am —
+          usually with a slice of margherita pizza in hand. I have a soft spot
+          for beautiful interiors: the kind of spaces that feel like an exhale,
+          with vintage touches and one-of-a-kind pieces.`}
+        </p>
+        <p className="body-text mb-[24px] lg:mb-[32px] hidden md:block">
           <span className="ml-4"></span>
           {homePageContent.section3Paragraph3}
         </p>
@@ -201,7 +213,7 @@ export default function Home() {
           alt="Lindsie Meek"
           width={472}
           height={613}
-          className="mix-blend-multiply max-w-[250px] md:max-w-none px-[20px] md:px-[43px]"
+          className="mix-blend-multiply max-w-[250px] md:max-w-none px-[44px]"
         />
       </section>
       <section className="mb-[80px] lg:mb-[64px]">
@@ -210,10 +222,10 @@ export default function Home() {
           alt="You deserve to take up space"
           width={964}
           height={699}
-          className="w-full max-w-[318.58px] md:max-w-none px-[43px]"
+          className="w-full max-w-[318.58px] md:max-w-none px-[44px]"
         />
       </section>
-      <section className="w-full max-w-[520px] md:max-w-[650px] flex flex-col justify-center items-center mb-[64px] lg:mb-[204px] px-[20px] md:px-[43px]">
+      <section className="w-full max-w-[520px] md:max-w-[650px] flex flex-col justify-center items-center mb-[64px] lg:mb-[204px] px-[44px]">
         <h1 className="heading-1 mb-[48px] lg:mb-[86px]">
           for more support, check out our blog, or subscribe to receive our free
           printable note cards: Permission Notes for Being Human.
@@ -236,7 +248,7 @@ export default function Home() {
               alt="right arrow"
               width={24}
               height={24}
-              className="min-w-[15px] md:min-w-[20px] ml-[-1rem] md:ml-[-1.5rem] cursor-pointer"
+              className="min-w-[15px] md:min-w-[20px] ml-[-1rem] md:ml-[-1.5rem]"
             />
           </button>
         </form>
@@ -247,7 +259,7 @@ export default function Home() {
           <h2 className="text-[12px] md:text-[14px] leading-[16px] md:leading-[23.17px] tracking-[0.04rem] md:tracking-[0.15rem] text-justify text-blue font-family-outfit md:uppercase text-nowrap">
             Interested in joining our team? inquire{" "}
             <button
-              className="text-[12px] md:text-[14px] leading-[16px] tracking-size[0.04rem] md:tracking-size[0.15rem] text-justify text-blue font-family-outfit md:uppercase md:border-b-1 cursor-pointer"
+              className="text-[12px] md:text-[14px] leading-[16px] tracking-size[0.04rem] md:tracking-size[0.15rem] text-justify text-blue font-family-outfit md:uppercase md:border-b-1"
               onClick={() => setModalState("application")}
             >
               here

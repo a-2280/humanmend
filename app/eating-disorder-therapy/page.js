@@ -21,7 +21,10 @@ export default function AnxietySpecialty() {
   useEffect(() => {
     const query = `*[_type == "eating-disorder"][0]`;
 
-    client.fetch(query).then((data) => {
+    Promise.all([
+      client.fetch(query),
+      new Promise((resolve) => setTimeout(resolve, 3000)),
+    ]).then(([data]) => {
       setEatingDisorderContent(data);
     });
   }, []);
@@ -162,7 +165,7 @@ export default function AnxietySpecialty() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="my-[51px] lg:mt-[240px] lg:mb-[97px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+      <section className="my-[51px] lg:mt-[150px] lg:mb-[97px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
         <h1 className="heading-1 max-w-[250px] md:max-w-none">
           {eatingDisorderContent.section1Heading}
         </h1>
@@ -235,7 +238,7 @@ export default function AnxietySpecialty() {
           {accordionItems.map((item, index) => (
             <li key={index}>
               <div
-                className="body-text cursor-pointer py-[24px] flex items-start"
+                className="body-text py-[24px] flex items-start"
                 onClick={() => toggleExpand(index)}
               >
                 <span className="body-text mr-[24px] select-none">

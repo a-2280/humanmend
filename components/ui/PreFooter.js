@@ -37,7 +37,7 @@ export default function PreFooter() {
             alt="right arrow"
             width={24}
             height={24}
-            className="min-w-[15px] md:min-w-[20px] ml-[-1rem] md:ml-[-1.5rem] cursor-pointer"
+            className="min-w-[15px] md:min-w-[20px] ml-[-1rem] md:ml-[-1.5rem]"
           />
         </button>
       </form>
@@ -48,7 +48,7 @@ export default function PreFooter() {
         <h2 className="text-[12px] md:text-[14px] leading-[16px] md:leading-[23.17px] tracking-[0.04rem] md:tracking-[0.15rem] text-justify text-blue font-family-outfit md:uppercase text-nowrap">
           Interested in joining our team? inquire{" "}
           <button
-            className="text-[12px] md:text-[14px] leading-[16px] tracking-size[0.04rem] md:tracking-size[0.15rem] text-justify text-blue font-family-outfit md:uppercase md:border-b-1 cursor-pointer"
+            className="text-[12px] md:text-[14px] leading-[16px] tracking-size[0.04rem] md:tracking-size[0.15rem] text-justify text-blue font-family-outfit md:uppercase md:border-b-1"
             onClick={() => setModalState("application")}
           >
             here

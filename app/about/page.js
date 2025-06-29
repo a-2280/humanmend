@@ -18,7 +18,10 @@ export default function AnxietySpecialty() {
   useEffect(() => {
     const query = `*[_type == "about"][0]`;
 
-    client.fetch(query).then((data) => {
+    Promise.all([
+      client.fetch(query),
+      new Promise((resolve) => setTimeout(resolve, 3000)),
+    ]).then(([data]) => {
       setAboutContent(data);
     });
   }, []);
@@ -255,7 +258,7 @@ export default function AnxietySpecialty() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="mt-[51px] lg:mt-[240px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+      <section className="mt-[51px] lg:mt-[150px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
         <h1 className="heading-1">{aboutContent.section1Heading}</h1>
         <p className="my-[24px] lg:my-[32px] body-text text-align-last">
           {aboutContent.section1Paragraph}
@@ -512,7 +515,7 @@ export default function AnxietySpecialty() {
           {accordionItems.map((item, index) => (
             <li key={index}>
               <div
-                className="body-text cursor-pointer py-[24px] flex items-start"
+                className="body-text py-[24px] flex items-start"
                 onClick={() => toggleExpand(index)}
               >
                 <span className="body-text mr-[24px] select-none">
@@ -548,7 +551,7 @@ export default function AnxietySpecialty() {
           {accordionItems2.map((item, index) => (
             <li key={index}>
               <div
-                className="body-text cursor-pointer py-[24px] flex items-start"
+                className="body-text py-[24px] flex items-start"
                 onClick={() => toggleExpand(index)}
               >
                 <span className="body-text mr-[24px] select-none">

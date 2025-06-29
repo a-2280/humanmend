@@ -21,7 +21,7 @@ export default function Navbar(props) {
           onMouseLeave={() => setServicesOpen(false)}
           className=""
         >
-          <Link href={""} className="cursor-default">
+          <Link href={""} className="!cursor-[url('/cursor.svg')_12_12,auto]">
             Services
           </Link>
           {servicesOpen && (
@@ -82,7 +82,7 @@ export default function Navbar(props) {
         alt="burger menu"
         width={30}
         height={30}
-        className="absolute right-12 lg:hidden cursor-pointer w-full max-w-[25px] md:max-w-[30px]"
+        className="absolute right-12 lg:hidden w-full max-w-[25px] md:max-w-[30px]"
         onClick={() => setMobileOpen(!mobileOpen)}
       />
       {mobileOpen && <MobileNavbar onClose={() => setMobileOpen(false)} />}
