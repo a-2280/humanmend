@@ -10,6 +10,7 @@ import SoloOrGroup from "@/components/ui/SoloOrGroup";
 import Popup from "@/components/ui/Popup";
 import GetInTouch from "@/components/ui/GetInTouch";
 import Application from "@/components/ui/Application";
+import Success from "@/components/ui/Success";
 
 export default function Contact() {
   const [modalState, setModalState] = useState("closed");

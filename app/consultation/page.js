@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
 import FreeConsult from "@/components/ui/FreeConsult";
 import GetInTouch from "@/components/ui/GetInTouch";
+import Success from "@/components/ui/Success";
 
 export default function Consultation() {
   const [modalState, setModalState] = useState("closed");
