@@ -28,10 +28,10 @@ export default function MobileNavbar({ onClose }) {
   return (
     <nav className="bg-blue h-screen w-screen z-50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       <div
-        className="w-full h-full flex flex-col justify-start items-center"
+        className="w-full h-full flex flex-col justify-start items-center mt-[61px]"
         onClick={handleBackgroundClick}
       >
-        <Link href={"/home"} className="mt-[61px] mb-[91px]">
+        <Link href={"/home"} className="mb-[91px]">
           <Image
             src="/cream_logotype.svg"
             alt="Humanmend"
@@ -101,7 +101,7 @@ export default function MobileNavbar({ onClose }) {
               href={"/about"}
               className="button-main text-cream !border-cream"
             >
-              FAQ
+              About
             </Link>
           </li>
         </ul>

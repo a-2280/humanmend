@@ -301,7 +301,7 @@ export default function AnxietySpecialty() {
       <section className="mt-[80px] lg:mt-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
         <div className="mb-[50px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
           <div className="mb-[35px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end lg:pl-[44px]">
-            <div className="lg:max-w-[400px] lg:mr-[231px]">
+            <div className="lg:max-w-[400px] lg:mr-[231px] bg-blue-400/25">
               <h1 className="heading-1">{aboutContent.section2Heading}</h1>
               <p className="body-text mt-[24px] lg:mt-[32px]">
                 {aboutContent.section2Paragraph}
@@ -316,7 +316,7 @@ export default function AnxietySpecialty() {
               </p>
             </div>
           </div>
-          <div className="mt-[24px] lg:mt-[80px] lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pr-[44px]">
+          <div className="mt-[24px] lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pr-[44px]">
             <Image
               src="/man-3.png"
               alt="man"
@@ -339,7 +339,7 @@ export default function AnxietySpecialty() {
               {aboutContent.section3Button}
             </Link>
           </div>
-          <div className="mt-[24px] lg:mt-[80px] lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pl-[44px]">
+          <div className="mt-[24px]  lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pl-[44px]">
             <Image src="/vase-1.png" alt="vase" width={670.23} height={595} />
           </div>
         </div>

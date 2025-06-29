@@ -100,7 +100,7 @@ export default function Blog() {
           </div>
         </div>
         <div className="mb-[80px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
-          <div className="mb-[80px] flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px] lg:pr-[44px]">
+          <div className="mb-[80px] lg:m-0 flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px] lg:pr-[44px]">
             <h1 className="heading-1">{blogContent.section3Heading}</h1>
             <h2 className="heading-2 lg:my-[24px] max-w-[300px] lg:max-w-[400px]">
               {blogContent.section3Subheading}
@@ -118,7 +118,7 @@ export default function Blog() {
         </div>
       </section>
       <section className="mt-[80px] lg:mt-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
-        <div className="mb-[80px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
+        <div className="mb-[80px] lg:m-0 lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
           <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end lg:pl-[44px]">
             <div className="lg:max-w-[400px] lg:mr-[231px] flex flex-col justify-center items-center">
               <h1 className="heading-1">{blogContent.section4Heading}</h1>
@@ -144,7 +144,7 @@ export default function Blog() {
           </div>
         </div>
         <div className="mb-[80px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
-          <div className="mb-[80px] flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px] lg:pr-[44px]">
+          <div className="mb-[80px] lg:m-0 flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px] lg:pr-[44px]">
             <h1 className="heading-1">{blogContent.section5Heading}</h1>
             <h2 className="heading-2 lg:my-[24px] max-w-[300px] lg:max-w-[400px]">
               {blogContent.section5Subheading}
@@ -162,7 +162,7 @@ export default function Blog() {
         </div>
       </section>
       <section className="mt-[80px] lg:my-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
-        <div className="mb-[80px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
+        <div className="mb-[80px] lg:m-0 lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
           <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end lg:pl-[44px]">
             <div className="lg:max-w-[400px] lg:mr-[231px] flex flex-col justify-center items-center">
               <h1 className="heading-1">{blogContent.section6Heading}</h1>
@@ -188,7 +188,7 @@ export default function Blog() {
           </div>
         </div>
         <div className="mb-[80px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
-          <div className="mb-[80px] flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px] lg:pr-[44px]">
+          <div className="mb-[80px] lg:m-0 flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px] lg:pr-[44px]">
             <h1 className="heading-1">{blogContent.section7Heading}</h1>
             <h2 className="heading-2 lg:my-[24px] max-w-[300px] lg:max-w-[400px]">
               {blogContent.section7Subheading}

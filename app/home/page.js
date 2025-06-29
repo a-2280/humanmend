@@ -228,10 +228,10 @@ export default function Home() {
         />
       </section>
       <section className="w-full max-w-[520px] md:max-w-[650px] flex flex-col justify-center items-center mb-[64px] lg:mb-[204px] px-[44px]">
-        <h2 className="heading-2 mb-[48px] lg:mb-[86px] leading-3">
+        <h1 className="heading-1 mb-[48px] lg:mb-[86px] leading-3">
           for more support, check out our blog, or subscribe to receive our free
           printable note cards: Permission Notes for Being Human.
-        </h2>
+        </h1>
         <form
           className="w-full flex justify-center items-center mb-[48px] lg:mb-[96px]"
           action="https://formspree.io/f/YOUR_FORM_ID"
