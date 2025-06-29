@@ -57,7 +57,7 @@ export default function GetInTouch({
     <div className="bg-black/50 fixed top-0 left-0 h-screen w-full max-w-screen flex justify-center items-start z-50 overflow-y-auto hide-scrollbar">
       <div className="bg-dark-blue p-[43px] pt-[75px] md:p-[86px] md:m-[86px] w-[54rem] max-w-full relative">
         <p
-          className="heading-1 text-cream absolute top-8 right-8 cursor-pointer"
+          className="heading-1 text-cream absolute top-8 right-8 !cursor-[url('/cursorButton.svg')_12_12,auto]"
           onClick={onClose}
         >
           X
@@ -217,7 +217,7 @@ export default function GetInTouch({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="button-main text-cream border-b-[1.5px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed !border-cream"
+              className="button-main text-cream border-b-[1.5px] disabled:opacity-50 disabled:cursor-not-allowed !border-cream"
             >
               {isSubmitting ? "Submitting..." : "Submit"}
             </button>

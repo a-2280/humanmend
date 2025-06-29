@@ -32,14 +32,14 @@ export default function Footer() {
         <div className="flex justify-center items-baseline gap-2">
           <Link
             href="#"
-            className="button-main !border-cream text-cream no-hover"
+            className="button-main !border-cream text-cream no-hover no-color"
           >
             Instagram
           </Link>
           <p className="body-text text-cream">/</p>
           <Link
-            href="#"
-            className="button-main !border-cream text-cream no-hover"
+            href="mailto:info@humanmend.com"
+            className="button-main !border-cream text-cream no-hover no-color"
           >
             Email
           </Link>

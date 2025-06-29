@@ -9,6 +9,8 @@ import { client } from "@/sanity/lib/client";
 import SoloOrGroup from "@/components/ui/SoloOrGroup";
 import Success from "@/components/ui/Success";
 import Link from "next/link";
+import Popup from "@/components/ui/Popup";
+import GetInTouch from "@/components/ui/GetInTouch";
 
 export default function AnxietySpecialty() {
   const [modalState, setModalState] = useState("closed");
@@ -174,7 +176,7 @@ export default function AnxietySpecialty() {
                 •
               </span>
               Thrizer: We have partnered with{" "}
-              <Link href="#" className="border-b-1">
+              <Link href="https://www.thrizer.com/" className="border-b-1">
                 Thrizer
               </Link>{" "}
               to help support the claim submission and reimbursement process so
@@ -298,7 +300,7 @@ export default function AnxietySpecialty() {
       </section>
       <section className="mt-[80px] lg:mt-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
         <div className="mb-[50px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
-          <div className="mb-[35px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end">
+          <div className="mb-[35px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end lg:pl-[44px]">
             <div className="lg:max-w-[400px] lg:mr-[231px]">
               <h1 className="heading-1">{aboutContent.section2Heading}</h1>
               <p className="body-text mt-[24px] lg:mt-[32px]">
@@ -314,7 +316,7 @@ export default function AnxietySpecialty() {
               </p>
             </div>
           </div>
-          <div className="mt-[24px] lg:mt-[80px] lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+          <div className="mt-[24px] lg:mt-[80px] lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pr-[44px]">
             <Image
               src="/man-3.png"
               alt="man"
@@ -325,7 +327,7 @@ export default function AnxietySpecialty() {
           </div>
         </div>
         <div className="mb-[50px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
-          <div className="flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px]">
+          <div className="flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px] lg:pr-[44px]">
             <h1 className="heading-1">{aboutContent.section3Heading}</h1>
             <p className="body-text my-[24px] lg:my-[32px]">
               {aboutContent.section3Paragraph}
@@ -333,11 +335,11 @@ export default function AnxietySpecialty() {
             <h2 className="heading-2 mb-[24px] lg:mb-[32px] max-w-[300px] lg:max-w-[400px]">
               {aboutContent.section3Subheading}
             </h2>
-            <button className="button-main">
+            <Link href={"/blog-post-1"} className="button-main">
               {aboutContent.section3Button}
-            </button>
+            </Link>
           </div>
-          <div className="mt-[24px] lg:mt-[80px] lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+          <div className="mt-[24px] lg:mt-[80px] lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pl-[44px]">
             <Image src="/vase-1.png" alt="vase" width={670.23} height={595} />
           </div>
         </div>
@@ -385,8 +387,8 @@ export default function AnxietySpecialty() {
           My therapeutic approach has been shaped by diverse training that
           allows me to meet you where you are. While these approaches inform my
           work, our sessions won&#39;t be about rigidly applying techniques.
-          Instead, I draw from these frameworks flexibly, adapting to what feels
-          most supportive and effective for your unique journey.
+          Instead, I draw from these frameworks flexibly, adapting to what
+          feelsx most supportive and effective for your unique journey.
         </p>
         <hr className="mb-[24px]" />
         <div className="w-full flex justify-start items-start gap-[24px] lg:gap-[50px]">
@@ -398,9 +400,22 @@ export default function AnxietySpecialty() {
                 to develop insight into recurring patterns
               </p>
             </div>
-            <button className="button-small mt-[15px] md:mt-[24px] lg:m-0">
+            <button
+              className="button-small mt-[15px] md:mt-[24px] lg:m-0"
+              onClick={() => setModalState("popup")}
+            >
               Read More
             </button>
+            {modalState === "popup" && (
+              <Popup
+                isOpen={true}
+                onClose={() => setModalState("closed")}
+                title={"PSYCHODYNAMIC THERAPY"}
+                text={
+                  "This approach helps us look inward and get curious about the patterns we repeat — especially the ones that seem to come out of nowhere. It’s based on the idea that our early relationships and past experiences shape how we show up today. Through insight, reflection, and a trusting relationship with your therapist, psychodynamic work helps connect the dots between your past and present so you can shift patterns that no longer serve you. It’s especially helpful for folks who want to understand themselves on a deeper level."
+                }
+              />
+            )}
           </div>
         </div>
         <hr className="my-[24px]" />
@@ -417,9 +432,22 @@ export default function AnxietySpecialty() {
                 resources
               </p>
             </div>
-            <button className="button-small mt-[15px] md:mt-[24px] lg:m-0">
+            <button
+              className="button-small mt-[15px] md:mt-[24px] lg:m-0"
+              onClick={() => setModalState("popup2")}
+            >
               Read More
             </button>
+            {modalState === "popup2" && (
+              <Popup
+                isOpen={true}
+                onClose={() => setModalState("closed")}
+                title={"Attachment-Focused EMDR (AF-EMDR)"}
+                text={
+                  "Sometimes, talk alone isn’t enough, especially when trauma is stored deep in the body. EMDR (Eye Movement Desensitization and Reprocessing) helps the brain reprocess distressing memories and beliefs—especially the ones that feel deeply rooted. The attachment-focused lens brings extra care and attunement to the relational wounds behind those beliefs, helping us heal with more safety and connection. EMDR is evidence-based and especially effective for trauma, anxiety, and negative core beliefs that feel hard to shake."
+                }
+              />
+            )}
           </div>
         </div>
         <hr className="my-[24px]" />
@@ -434,9 +462,22 @@ export default function AnxietySpecialty() {
                 to understand thought-emotion-behavior patterns
               </p>
             </div>
-            <button className="button-small mt-[15px] md:mt-[24px] lg:m-0">
+            <button
+              className="button-small mt-[15px] md:mt-[24px] lg:m-0"
+              onClick={() => setModalState("popup3")}
+            >
               Read More
             </button>
+            {modalState === "popup3" && (
+              <Popup
+                isOpen={true}
+                onClose={() => setModalState("closed")}
+                title={"Cognitive Behavioral Therapy (CBT)"}
+                text={
+                  "CBT is a practical, structured approach that helps us understand the connection between our thoughts, emotions, and behaviors. When anxiety or unhelpful thinking patterns take over, CBT offers tools to challenge them and respond in new ways. It’s evidence-based and highly effective for anxiety, depression, and eating disorders, and can be tailored to meet your specific needs and goals."
+                }
+              />
+            )}
           </div>
         </div>
         <hr className="my-[24px]" />
@@ -451,9 +492,22 @@ export default function AnxietySpecialty() {
                 to help you live according to your values
               </p>
             </div>
-            <button className="button-small mt-[15px] md:mt-[24px] lg:m-0">
+            <button
+              className="button-small mt-[15px] md:mt-[24px] lg:m-0"
+              onClick={() => setModalState("popup4")}
+            >
               Read More
             </button>
+            {modalState === "popup4" && (
+              <Popup
+                isOpen={true}
+                onClose={() => setModalState("closed")}
+                title={"Acceptance and Commitment Therapy (ACT)"}
+                text={
+                  "ACT blends mindfulness with behavior change, helping us move through painful thoughts and emotions without getting stuck in them. Instead of fighting what we feel, ACT invites us to make space for it — and to take meaningful steps in the direction of our values. It’s a flexible, compassionate approach that helps us live with more intention, even when life feels hard."
+                }
+              />
+            )}
           </div>
         </div>
         <hr className="my-[24px]" />
@@ -469,9 +523,22 @@ export default function AnxietySpecialty() {
                 relationships.
               </p>
             </div>
-            <button className="button-small mt-[15px] md:mt-[24px] lg:m-0">
+            <button
+              className="button-small mt-[15px] md:mt-[24px] lg:m-0"
+              onClick={() => setModalState("popup5")}
+            >
               Read More
             </button>
+            {modalState === "popup5" && (
+              <Popup
+                isOpen={true}
+                onClose={() => setModalState("closed")}
+                title={"Dialectical Behavior Therapy (DBT)"}
+                text={
+                  "DBT is especially helpful when emotions feel intense, overwhelming, or hard to manage. It teaches practical skills for staying present, regulating emotions, navigating relationships, and tolerating distress without making things worse. Originally developed to support people with big emotional swings or high sensitivity, it’s now widely used for anxiety, eating disorders, and more. DBT balances acceptance with change—helping us build a life that feels more steady, connected, and aligned."
+                }
+              />
+            )}
           </div>
         </div>
         <hr className="my-[24px]" />
@@ -487,9 +554,22 @@ export default function AnxietySpecialty() {
                 compassion
               </p>
             </div>
-            <button className="button-small mt-[15px] md:mt-[24px] lg:m-0">
+            <button
+              className="button-small mt-[15px] md:mt-[24px] lg:m-0"
+              onClick={() => setModalState("popup6")}
+            >
               Read More
             </button>
+            {modalState === "popup6" && (
+              <Popup
+                isOpen={true}
+                onClose={() => setModalState("closed")}
+                title={"Internal Family Systems (IFS / Parts Work)"}
+                text={
+                  "We all carry different “parts” within us — like the inner critic, the overachiever, the anxious protector, or the one still holding old pain. These parts often show up to keep us safe, especially when life feels overwhelming. Parts work helps us get curious about these inner voices instead of pushing them away. Through compassion and connection, we learn to understand their stories and soften their grip. A well-known approach to this is Internal Family Systems (IFS), which offers a pathway back to our grounded, wise inner Self — the part of us that can hold it all with clarity and care. It’s not about fixing ourselves, it’s about listening."
+                }
+              />
+            )}
           </div>
         </div>
         <hr className="my-[24px]" />
@@ -497,7 +577,27 @@ export default function AnxietySpecialty() {
           IF YOU HAVE ANY QUESTIONS ABOUT THESE APPROACHES or wonder what might
           be right for you, CONTACT the humanmend office.
         </h2>
-        <button className="button-main">Contact Us</button>
+        <button
+          className="button-main"
+          onClick={() => setModalState("getInTouch")}
+        >
+          Contact Us
+        </button>
+        {modalState === "getInTouch" && (
+          <GetInTouch
+            isOpen={true}
+            onClose={() => setModalState("closed")}
+            onSuccess={() => setModalState("success")}
+            linkSelected={""}
+          />
+        )}
+
+        {modalState === "success" && (
+          <Success
+            text="In a world that often asks us to shrink, your message just claimed some space. That’s where healing begins. We will be in touch soon."
+            onClose={() => setModalState("closed")}
+          />
+        )}
       </section>
       <section className="px-[44px] max-w-7xl">
         <Image

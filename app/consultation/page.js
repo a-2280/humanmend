@@ -6,8 +6,11 @@ import PreFooter from "@/components/ui/PreFooter";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
+import FreeConsult from "@/components/ui/FreeConsult";
+import GetInTouch from "@/components/ui/GetInTouch";
 
 export default function Consultation() {
+  const [modalState, setModalState] = useState("closed");
   const [consultationContent, setConsultationContent] = useState(null);
 
   useEffect(() => {
@@ -37,9 +40,26 @@ export default function Consultation() {
         <p className="body-text text-align-last mt-[24px] mb-[37px] lg:mt-[32px] lg:mb-[48px]">
           {consultationContent.section1Paragraph}
         </p>
-        <button className="button-main">
+        <button
+          className="button-main"
+          onClick={() => setModalState("consult")}
+        >
           {consultationContent.section1Button}
         </button>
+        {modalState === "consult" && (
+          <FreeConsult
+            isOpen={true}
+            onClose={() => setModalState("closed")}
+            onSuccess={() => setModalState("success")}
+          />
+        )}
+
+        {modalState === "success" && (
+          <Success
+            text="In a world that often asks us to shrink, your message just claimed some space. That’s where healing begins. We will be in touch soon."
+            onClose={() => setModalState("closed")}
+          />
+        )}
       </section>
       <section className="px-[44px] max-w-7xl">
         <Image src="/flower-6.png" alt="Flower" width={1006} height={403} />
@@ -76,9 +96,27 @@ export default function Consultation() {
                 $200 per 50-minute session
               </p>
             </div>
-            <button className="button-small mt-[15px] md:mt-[24px] lg:m-0">
+            <button
+              className="button-small mt-[15px] md:mt-[24px] lg:m-0"
+              onClick={() => setModalState("solo")}
+            >
               Contact Us
             </button>
+            {modalState === "solo" && (
+              <GetInTouch
+                isOpen={true}
+                onClose={() => setModalState("closed")}
+                onSuccess={() => setModalState("success")}
+                linkSelected={"Individual Consultation"}
+              />
+            )}
+
+            {modalState === "success" && (
+              <Success
+                text="In a world that often asks us to shrink, your message just claimed some space. That’s where healing begins. We will be in touch soon."
+                onClose={() => setModalState("closed")}
+              />
+            )}
           </div>
         </div>
         <hr className="my-[24px]" />
@@ -93,9 +131,27 @@ export default function Consultation() {
                 $80 per person (4–6 participants, 60-minute sessions)
               </p>
             </div>
-            <button className="button-small mt-[15px] md:mt-[24px] lg:m-0">
+            <button
+              className="button-small mt-[15px] md:mt-[24px] lg:m-0"
+              onClick={() => setModalState("group")}
+            >
               Contact Us
             </button>
+            {modalState === "group" && (
+              <GetInTouch
+                isOpen={true}
+                onClose={() => setModalState("closed")}
+                onSuccess={() => setModalState("success")}
+                linkSelected={"Group Consultation"}
+              />
+            )}
+
+            {modalState === "success" && (
+              <Success
+                text="In a world that often asks us to shrink, your message just claimed some space. That’s where healing begins. We will be in touch soon."
+                onClose={() => setModalState("closed")}
+              />
+            )}
           </div>
         </div>
         <hr className="mt-[24px]" />

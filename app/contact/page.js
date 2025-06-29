@@ -6,8 +6,13 @@ import PreFooter from "@/components/ui/PreFooter";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
+import SoloOrGroup from "@/components/ui/SoloOrGroup";
+import Popup from "@/components/ui/Popup";
+import GetInTouch from "@/components/ui/GetInTouch";
+import Application from "@/components/ui/Application";
 
 export default function Contact() {
+  const [modalState, setModalState] = useState("closed");
   const [contactContent, setContactContent] = useState(null);
 
   useEffect(() => {
@@ -42,7 +47,25 @@ export default function Contact() {
         <p className="body-text text-align-last mt-[24px] mb-[37px] lg:mt-[32px] lg:mb-[48px] hidden md:block">
           {contactContent.section1Paragraph}
         </p>
-        <button className="button-main">{contactContent.section1Button}</button>
+        <button
+          className="button-main"
+          onClick={() => setModalState("soloOrGroup")}
+        >
+          {contactContent.section1Button}
+        </button>
+        {modalState === "soloOrGroup" && (
+          <SoloOrGroup
+            isOpen={true}
+            onClose={() => setModalState("closed")}
+            onSuccess={() => setModalState("success")}
+          />
+        )}
+        {modalState === "success" && (
+          <Success
+            text="We look forward to helping you along your professional journey. We will be in touch soon."
+            onClose={() => setModalState("closed")}
+          />
+        )}
       </section>
       <section className="flex bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
       <section className="mb-[80px] mt-[80px] lg:mt-[204px] lg:mb-[166px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[700px]">
@@ -58,9 +81,27 @@ export default function Contact() {
                 ground.
               </p>
             </div>
-            <button className="button-small mt-[15px] md:mt-[24px] lg:m-0">
+            <button
+              className="button-small mt-[15px] md:mt-[24px] lg:m-0"
+              onClick={() => setModalState("anxiety")}
+            >
               Contact Us
             </button>
+            {modalState === "anxiety" && (
+              <GetInTouch
+                isOpen={true}
+                onClose={() => setModalState("closed")}
+                onSuccess={() => setModalState("success")}
+                linkSelected={"Anxiety Therapy"}
+              />
+            )}
+
+            {modalState === "success" && (
+              <Success
+                text="In a world that often asks us to shrink, your message just claimed some space. That’s where healing begins. We will be in touch soon."
+                onClose={() => setModalState("closed")}
+              />
+            )}
           </div>
         </div>
         <hr className="my-[24px]" />
@@ -75,9 +116,27 @@ export default function Contact() {
                 Recovery starts with curiosity, compassion, and support.
               </p>
             </div>
-            <button className="button-small mt-[15px] md:mt-[24px] lg:m-0">
+            <button
+              className="button-small mt-[15px] md:mt-[24px] lg:m-0"
+              onClick={() => setModalState("eating")}
+            >
               Contact Us
             </button>
+            {modalState === "eating" && (
+              <GetInTouch
+                isOpen={true}
+                onClose={() => setModalState("closed")}
+                onSuccess={() => setModalState("success")}
+                linkSelected={"Eating Disorder Therapy"}
+              />
+            )}
+
+            {modalState === "success" && (
+              <Success
+                text="In a world that often asks us to shrink, your message just claimed some space. That’s where healing begins. We will be in touch soon."
+                onClose={() => setModalState("closed")}
+              />
+            )}
           </div>
         </div>
         <hr className="my-[24px]" />
@@ -91,9 +150,27 @@ export default function Contact() {
                 become shared wisdom.
               </p>
             </div>
-            <button className="button-small mt-[15px] md:mt-[24px] lg:m-0">
+            <button
+              className="button-small mt-[15px] md:mt-[24px] lg:m-0"
+              onClick={() => setModalState("group")}
+            >
               Contact Us
             </button>
+            {modalState === "group" && (
+              <GetInTouch
+                isOpen={true}
+                onClose={() => setModalState("closed")}
+                onSuccess={() => setModalState("success")}
+                linkSelected={"Group Therapy"}
+              />
+            )}
+
+            {modalState === "success" && (
+              <Success
+                text="In a world that often asks us to shrink, your message just claimed some space. That’s where healing begins. We will be in touch soon."
+                onClose={() => setModalState("closed")}
+              />
+            )}
           </div>
         </div>
         <hr className="my-[24px]" />
@@ -108,9 +185,25 @@ export default function Contact() {
                 Breathe deeper, feel safer, and create room for change.
               </p>
             </div>
-            <button className="button-small mt-[15px] md:mt-[24px] lg:m-0">
+            <button
+              className="button-small mt-[15px] md:mt-[24px] lg:m-0"
+              onClick={() => setModalState("soloOrGroup2")}
+            >
               Contact Us
             </button>
+            {modalState === "soloOrGroup2" && (
+              <SoloOrGroup
+                isOpen={true}
+                onClose={() => setModalState("closed")}
+                onSuccess={() => setModalState("success")}
+              />
+            )}
+            {modalState === "success" && (
+              <Success
+                text="We look forward to helping you along your professional journey. We will be in touch soon."
+                onClose={() => setModalState("closed")}
+              />
+            )}
           </div>
         </div>
         <hr className="my-[24px]" />
@@ -123,9 +216,26 @@ export default function Contact() {
                 Interesting in becoming a supervisee? Inquire now.
               </p>
             </div>
-            <button className="button-small mt-[15px] md:mt-[24px] lg:m-0">
+            <button
+              className="button-small mt-[15px] md:mt-[24px] lg:m-0"
+              onClick={() => setModalState("application")}
+            >
               Contact Us
             </button>
+            {modalState === "application" && (
+              <Application
+                isOpen={true}
+                onClose={() => setModalState("closed")}
+                onSuccess={() => setModalState("successApp")}
+              />
+            )}
+
+            {modalState === "successApp" && (
+              <Success
+                text="We look forward to helping you along your professional journey. We will be in touch soon."
+                onClose={() => setModalState("closed")}
+              />
+            )}
           </div>
         </div>
         <hr className="my-[24px]" />
@@ -141,9 +251,26 @@ export default function Contact() {
                 team.
               </p>
             </div>
-            <button className="button-small mt-[15px] md:mt-[24px] lg:m-0">
+            <button
+              className="button-small mt-[15px] md:mt-[24px] lg:m-0"
+              onClick={() => setModalState("application2")}
+            >
               Contact Us
             </button>
+            {modalState === "application2" && (
+              <Application
+                isOpen={true}
+                onClose={() => setModalState("closed")}
+                onSuccess={() => setModalState("successApp")}
+              />
+            )}
+
+            {modalState === "successApp" && (
+              <Success
+                text="We look forward to helping you along your professional journey. We will be in touch soon."
+                onClose={() => setModalState("closed")}
+              />
+            )}
           </div>
         </div>
         <hr className="mt-[24px]" />

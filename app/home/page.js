@@ -36,8 +36,8 @@ export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center max-w-screen">
       <Navbar />
-      <section className="mt-[51px] lg:mt-[150px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
-        <h1 className="heading-1">{homePageContent.heroHeading}</h1>
+      <section className="mt-[70px] lg:mt-[150px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+        <h1 className="heading-1 leading-3">{homePageContent.heroHeading}</h1>
         <p className="my-[24px] lg:my-[32px] body-text text-align-last">
           {homePageContent.heroParagraph}
         </p>
@@ -66,12 +66,12 @@ export default function Home() {
           />
         )}
       </section>
-      <section className="lg:mt-[-8rem] w-full max-w-7xl px-[44px]">
+      <section className="mt-[-.75rem] lg:mt-[-8rem] w-full max-w-7xl px-[44px]">
         <Image src="/home-1.png" alt="Bouquet" width={1517} height={958} />
       </section>
-      <section className="my-[80px] lg:mt-[142px] lg:mb-[163px] w-full max-w-[415px] md:max-w-[699px] px-[44px]">
+      <section className="mt-[74px] mb-[80px] lg:mt-[142px] lg:mb-[163px] w-full max-w-[415px] md:max-w-[699px] px-[44px]">
         <div className="mb-[52px] lg:mb-[96px] flex flex-col justify-center items-center">
-          <h1 className="heading-1 mb-[26px] lg:mb-[32px]">
+          <h1 className="heading-1 mb-[26px] lg:mb-[32px] leading-3">
             {homePageContent.section1Heading}
           </h1>
           <p className="body-text">{homePageContent.section1Paragraph}</p>
@@ -82,11 +82,11 @@ export default function Home() {
         </div>
         <div className="flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center">
-            <h1 className="heading-1 mb-[24px] lg:mb-[32px]">
+            <h1 className="heading-1 mb-[24px] lg:mb-[32px] leading-3">
               {homePageContent.section2Heading}
             </h1>
             <p className="body-text">{homePageContent.section2Paragraph}</p>
-            <hr className="mt-[32px] mb-[24px]" />
+            <hr className="mt-[24px] mb-[15px] md:mt-[32px] md:mb-[24px]" />
             {homePageContent.listItems &&
               homePageContent.listItems.map((item, index) => (
                 <div key={index} className="w-full">
@@ -118,7 +118,7 @@ export default function Home() {
         <Image src="/man-2.png" alt="people" width={934} height={773} />
       </section>
       <section className="hidden md:flex flex-col justify-center items-center px-[44px] w-full max-w-[699px] mt-[148px] mb-[204px]">
-        <h1 className="heading-1">OUR SPECIALITIES</h1>
+        <h1 className="heading-1 leading-3">OUR SPECIALITIES</h1>
         <div className="w-full">
           <hr className="mt-[48px] mb-[24px]" />
           <div className="flex justify-between items-start">
@@ -179,7 +179,9 @@ export default function Home() {
       </section>
       <section className="hidden md:flex bg-[url(/stripes.png)] bg-cover bg-center w-full h-[427px] full-width-breakout"></section>
       <section className="my-[80px] lg:mt-[204px] lg:mb-[194px] flex flex-col justify-center items-center w-full max-w-[413px] md:max-w-[699px] px-[44px]">
-        <h1 className="heading-1">{homePageContent.section3Heading}</h1>
+        <h1 className="heading-1 leading-3">
+          {homePageContent.section3Heading}
+        </h1>
         <p className="body-text mt-[24px] lg:mt-[32px]">
           {homePageContent.section3Paragraph}
         </p>
@@ -200,7 +202,7 @@ export default function Home() {
           <span className="ml-4"></span>
           {homePageContent.section3Paragraph3}
         </p>
-        <h2 className="heading-2 max-w-[280px] md:max-w-[500px] mb-[24px] lg:mb-[48px]">
+        <h2 className="heading-2 max-w-[250px] md:max-w-[500px] mb-[24px] lg:mb-[48px]">
           {homePageContent.section3Subheading}
         </h2>
         <Link href={"/about"} className="button-main">
@@ -226,10 +228,10 @@ export default function Home() {
         />
       </section>
       <section className="w-full max-w-[520px] md:max-w-[650px] flex flex-col justify-center items-center mb-[64px] lg:mb-[204px] px-[44px]">
-        <h1 className="heading-1 mb-[48px] lg:mb-[86px]">
+        <h2 className="heading-2 mb-[48px] lg:mb-[86px] leading-3">
           for more support, check out our blog, or subscribe to receive our free
           printable note cards: Permission Notes for Being Human.
-        </h1>
+        </h2>
         <form
           className="w-full flex justify-center items-center mb-[48px] lg:mb-[96px]"
           action="https://formspree.io/f/YOUR_FORM_ID"

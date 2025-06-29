@@ -6,6 +6,7 @@ import PreFooter from "@/components/ui/PreFooter";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
+import Link from "next/link";
 
 export default function Blog() {
   const [blogContent, setBlogContent] = useState(null);
@@ -73,7 +74,7 @@ export default function Blog() {
         />
       </section>
       <section className="mt-[80px] lg:mt-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
-        <div className="mb-[80px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
+        <div className="mb-[80px] lg:flex lg:justify-center lg:items-center lg:mb-[204px] lg:pl-[44px]">
           <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end">
             <div className="lg:max-w-[400px] lg:mr-[231px] flex flex-col justify-center items-center">
               <h1 className="heading-1">{blogContent.section2Heading}</h1>
@@ -83,12 +84,12 @@ export default function Blog() {
               <p className="body-text text-center my-[24px] lg:m-0">
                 {blogContent.section2Paragraph}
               </p>
-              <button className="button-main lg:mt-[48px]">
+              <Link href={"/blog-post-1"} className="button-main lg:mt-[48px]">
                 {blogContent.section2Button}
-              </button>
+              </Link>
             </div>
           </div>
-          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pr-[44px]">
             <Image
               src="/blog-flower-3.png"
               alt="man"
@@ -99,7 +100,7 @@ export default function Blog() {
           </div>
         </div>
         <div className="mb-[80px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
-          <div className="mb-[80px] flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px]">
+          <div className="mb-[80px] flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px] lg:pr-[44px]">
             <h1 className="heading-1">{blogContent.section3Heading}</h1>
             <h2 className="heading-2 lg:my-[24px] max-w-[300px] lg:max-w-[400px]">
               {blogContent.section3Subheading}
@@ -107,18 +108,18 @@ export default function Blog() {
             <p className="body-text text-center my-[24px] lg:m-0">
               {blogContent.section3Paragraph}
             </p>
-            <button className="button-main lg:mt-[48px]">
+            <Link href={"/blog-post-2"} className="button-main lg:mt-[48px]">
               {blogContent.section3Button}
-            </button>
+            </Link>
           </div>
-          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pl-[44px]">
             <Image src="/man-2(2).png" alt="vase" width={670.23} height={595} />
           </div>
         </div>
       </section>
       <section className="mt-[80px] lg:mt-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
         <div className="mb-[80px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
-          <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end">
+          <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end lg:pl-[44px]">
             <div className="lg:max-w-[400px] lg:mr-[231px] flex flex-col justify-center items-center">
               <h1 className="heading-1">{blogContent.section4Heading}</h1>
               <h2 className="heading-2 lg:my-[24px] max-w-[350px] lg:max-w-[400px]">
@@ -127,12 +128,12 @@ export default function Blog() {
               <p className="body-text text-center my-[24px] lg:m-0">
                 {blogContent.section4Paragraph}
               </p>
-              <button className="button-main lg:mt-[48px]">
+              <Link href={"/blog-post-3"} className="button-main lg:mt-[48px]">
                 {blogContent.section4Button}
-              </button>
+              </Link>
             </div>
           </div>
-          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pr-[44px]">
             <Image
               src="/blog-flower-1.png"
               alt="man"
@@ -143,7 +144,7 @@ export default function Blog() {
           </div>
         </div>
         <div className="mb-[80px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
-          <div className="mb-[80px] flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px]">
+          <div className="mb-[80px] flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px] lg:pr-[44px]">
             <h1 className="heading-1">{blogContent.section5Heading}</h1>
             <h2 className="heading-2 lg:my-[24px] max-w-[300px] lg:max-w-[400px]">
               {blogContent.section5Subheading}
@@ -151,18 +152,18 @@ export default function Blog() {
             <p className="body-text text-center my-[24px] lg:m-0">
               {blogContent.section5Paragraph}
             </p>
-            <button className="button-main lg:mt-[48px]">
+            <Link href={"/blog-post-4"} className="button-main lg:mt-[48px]">
               {blogContent.section5Button}
-            </button>
+            </Link>
           </div>
-          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pl-[44px]">
             <Image src="/flower-4.png" alt="vase" width={670.23} height={595} />
           </div>
         </div>
       </section>
       <section className="mt-[80px] lg:my-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
         <div className="mb-[80px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
-          <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end">
+          <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end lg:pl-[44px]">
             <div className="lg:max-w-[400px] lg:mr-[231px] flex flex-col justify-center items-center">
               <h1 className="heading-1">{blogContent.section6Heading}</h1>
               <h2 className="heading-2 lg:my-[24px] max-w-[350px] lg:max-w-[400px]">
@@ -171,12 +172,12 @@ export default function Blog() {
               <p className="body-text text-center my-[24px] lg:m-0">
                 {blogContent.section6Paragraph}
               </p>
-              <button className="button-main lg:mt-[48px]">
+              <Link href={"/blog-post-5"} className="button-main lg:mt-[48px]">
                 {blogContent.section6Button}
-              </button>
+              </Link>
             </div>
           </div>
-          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pr-[44px]">
             <Image
               src="/blog-man-1.png"
               alt="man"
@@ -187,7 +188,7 @@ export default function Blog() {
           </div>
         </div>
         <div className="mb-[80px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
-          <div className="mb-[80px] flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px]">
+          <div className="mb-[80px] flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px] lg:pr-[44px]">
             <h1 className="heading-1">{blogContent.section7Heading}</h1>
             <h2 className="heading-2 lg:my-[24px] max-w-[300px] lg:max-w-[400px]">
               {blogContent.section7Subheading}
@@ -195,11 +196,11 @@ export default function Blog() {
             <p className="body-text text-center my-[24px] lg:m-0">
               {blogContent.section7Paragraph}
             </p>
-            <button className="button-main lg:mt-[48px]">
+            <Link href={"/blog-post-6"} className="button-main lg:mt-[48px]">
               {blogContent.section7Button}
-            </button>
+            </Link>
           </div>
-          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+          <div className="lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pl-[44px]">
             <Image src="/flower-2.png" alt="vase" width={670.23} height={595} />
           </div>
         </div>

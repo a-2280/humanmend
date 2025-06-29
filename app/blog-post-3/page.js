@@ -6,8 +6,11 @@ import PreFooter from "@/components/ui/PreFooter";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
+import FreeConsult from "@/components/ui/FreeConsult";
+import Success from "@/components/ui/Success";
 
 export default function BlogPostThree() {
+  const [modalState, setModalState] = useState("closed");
   const [blog3Content, setBlog3Content] = useState(null);
 
   useEffect(() => {
@@ -139,9 +142,26 @@ export default function BlogPostThree() {
         <h2 className="heading-2 mt-[80px] lg:mt-[96px] mb-[24px] lg:mb-[48px] lg:max-w-[400px]">
           {blog3Content.referenceSubheading}
         </h2>
-        <button className="button-main" href="#">
+        <button
+          className="button-main"
+          onClick={() => setModalState("consult")}
+        >
           {blog3Content.referenceButton}
         </button>
+        {modalState === "consult" && (
+          <FreeConsult
+            isOpen={true}
+            onClose={() => setModalState("closed")}
+            onSuccess={() => setModalState("success")}
+          />
+        )}
+
+        {modalState === "success" && (
+          <Success
+            text="In a world that often asks us to shrink, your message just claimed some space. That’s where healing begins. We will be in touch soon."
+            onClose={() => setModalState("closed")}
+          />
+        )}
       </section>
       <PreFooter />
       <Footer />

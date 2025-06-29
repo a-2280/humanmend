@@ -31,7 +31,10 @@ export default function BlogPostTwo() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center w-full max-w-screen">
+    <div
+      className="flex flex-col justify-center items-center w-full max-w-screen"
+      id="blog6-top"
+    >
       <Navbar />
       <section className="mt-[51px] lg:mt-[150px] mb-[40px] lg:mb-[96px] flex flex-col justify-center items-center px-[44px]">
         <h1 className="heading-1">{blog2Content.title}</h1>
@@ -171,9 +174,9 @@ export default function BlogPostTwo() {
         <h2 className="heading-2 mt-[80px] lg:mt-[96px] mb-[24px] lg:mb-[48px] max-w-[300px] lg:max-w-[450px]">
           {blog2Content.referenceSubheading}
         </h2>
-        <button className="button-main" href="#">
+        <Link className="button-main" href="/blog-post-2">
           {blog2Content.referenceButton}
-        </button>
+        </Link>
       </section>
       <PreFooter />
       <Footer />

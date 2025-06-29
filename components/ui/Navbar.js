@@ -21,9 +21,7 @@ export default function Navbar(props) {
           onMouseLeave={() => setServicesOpen(false)}
           className=""
         >
-          <Link href={""} className="!cursor-[url('/cursor.svg')_12_12,auto]">
-            Services
-          </Link>
+          <Link href={""}>Services</Link>
           {servicesOpen && (
             <ul className="absolute pt-4 flex flex-col gap-4 z-999">
               <li className="w-fit">
@@ -57,7 +55,7 @@ export default function Navbar(props) {
           )}
         </li>
       </ul>
-      <Link href={"/home"} className="mx-12 no-underline">
+      <Link href={"/home"} className="mx-12 no-border">
         <Image
           src={"/blue_logotype.svg"}
           alt="logotype"
