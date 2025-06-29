@@ -10,15 +10,15 @@ export default function Landingpage() {
   useEffect(() => {
     setTimeout(() => {
       setVisibleImages([true, false, false]);
-    }, 300);
+    }, 1000);
 
     setTimeout(() => {
       setVisibleImages([true, true, false]);
-    }, 800);
+    }, 1500);
 
     setTimeout(() => {
       setVisibleImages([true, true, true]);
-    }, 1300);
+    }, 2000);
   }, []);
 
   return (
