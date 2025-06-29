@@ -43,7 +43,7 @@ export default function MobileNavbar({ onClose }) {
           <li>
             <Link
               href={"/home"}
-              className="button-main text-cream border-cream"
+              className="button-main text-cream !border-cream"
             >
               Home
             </Link>
@@ -51,7 +51,7 @@ export default function MobileNavbar({ onClose }) {
           <li>
             <Link
               href={"/anxiety-therapy"}
-              className="button-main text-cream border-cream"
+              className="button-main text-cream !border-cream"
             >
               Anxiety Therapy
             </Link>
@@ -59,7 +59,7 @@ export default function MobileNavbar({ onClose }) {
           <li>
             <Link
               href={"/eating-disorder-therapy"}
-              className="button-main text-cream border-cream"
+              className="button-main text-cream !border-cream"
             >
               Eating Disorder Therapy
             </Link>
@@ -67,7 +67,7 @@ export default function MobileNavbar({ onClose }) {
           <li>
             <Link
               href={"/group-therapy"}
-              className="button-main text-cream border-cream"
+              className="button-main text-cream !border-cream"
             >
               Group Therapy
             </Link>
@@ -75,7 +75,7 @@ export default function MobileNavbar({ onClose }) {
           <li>
             <Link
               href={"/consultation"}
-              className="button-main text-cream border-cream"
+              className="button-main text-cream !border-cream"
             >
               Consultation
             </Link>
@@ -83,7 +83,7 @@ export default function MobileNavbar({ onClose }) {
           <li>
             <Link
               href={"/contact"}
-              className="button-main text-cream border-cream"
+              className="button-main text-cream !border-cream"
             >
               Contact
             </Link>
@@ -91,7 +91,7 @@ export default function MobileNavbar({ onClose }) {
           <li>
             <Link
               href={"/blog"}
-              className="button-main text-cream border-cream"
+              className="button-main text-cream !border-cream"
             >
               Blog
             </Link>
@@ -99,7 +99,7 @@ export default function MobileNavbar({ onClose }) {
           <li>
             <Link
               href={"/about"}
-              className="button-main text-cream border-cream"
+              className="button-main text-cream !border-cream"
             >
               FAQ
             </Link>
