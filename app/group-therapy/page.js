@@ -69,7 +69,7 @@ export default function AnxietySpecialty() {
           alt="Man"
           width={117.4}
           height={112}
-          className="w-full my-[110px] lg:my-0 max-w-[166px] lg:max-w-[143px]"
+          className="w-full mt-[50px] mb-[110px] lg:my-0 max-w-[150px] lg:max-w-[143px]"
         />
       </section>
       <section className="mb-[80px] flex lg:hidden bg-[url(/mobile-stripes.png)] md:bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>

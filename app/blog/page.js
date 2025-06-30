@@ -38,8 +38,15 @@ export default function Blog() {
         <p className="my-[24px] lg:my-[32px] body-text text-align-last">
           {blogContent.section1Paragraph}
         </p>
-        <h2 className="mb-[37px] lg:mb-[64px] heading-2 w-full max-w-[490px]">
-          {blogContent.section1Subheading}
+        <h2 className="mb-[37px] lg:mb-[64px] heading-2 w-full md:hidden">
+          Scroll to peruse our free resources, <br />
+          or subscribe to receive our notecards: permission slips for being
+          human.
+        </h2>
+        <h2 className="mb-[37px] lg:mb-[64px] heading-2 w-full hidden md:block">
+          Scroll to peruse our free resources, <br />
+          or subscribe to receive our printable notecards: permission slips for
+          being human.
         </h2>
 
         <form

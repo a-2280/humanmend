@@ -299,7 +299,7 @@ export default function AnxietySpecialty() {
         )}
       </section>
       <section className="mt-[80px] lg:mt-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
-        <div className="mb-[50px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
+        <div className="mb-[93.45px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
           <div className="mb-[35px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end lg:pl-[44px]">
             <div className="lg:max-w-[400px] lg:mr-[231px]">
               <h1 className="heading-1">{aboutContent.section2Heading}</h1>
@@ -316,7 +316,7 @@ export default function AnxietySpecialty() {
               </p>
             </div>
           </div>
-          <div className="mt-[24px] lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pr-[44px]">
+          <div className="mt-[93.45px] lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pr-[44px]">
             <Image
               src="/man-3.png"
               alt="man"
@@ -326,7 +326,7 @@ export default function AnxietySpecialty() {
             />
           </div>
         </div>
-        <div className="mb-[50px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
+        <div className="mb-[93.45px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
           <div className="flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px] lg:pr-[44px]">
             <h1 className="heading-1">{aboutContent.section3Heading}</h1>
             <p className="body-text my-[24px] lg:my-[32px]">
