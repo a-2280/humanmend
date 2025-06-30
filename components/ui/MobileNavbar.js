@@ -26,9 +26,9 @@ export default function MobileNavbar({ onClose }) {
   }, [onClose]);
 
   return (
-    <nav className="bg-blue h-screen w-screen z-50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <nav className="bg-blue h-screen w-screen z-50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pt-[61px]">
       <div
-        className="w-full h-full flex flex-col justify-start items-center mt-[61px]"
+        className="w-full h-full flex flex-col justify-start items-center"
         onClick={handleBackgroundClick}
       >
         <Link href={"/home"} className="mb-[91px]">
