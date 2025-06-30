@@ -24,7 +24,7 @@ export default function Landingpage() {
   return (
     <div className="fixed inset-0 overflow-hidden">
       <div className="md:bg-[url(/blue-background.png)] h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center w-full px-[44px] lg:px-0">
-        <div className="min-w-[1750px] min-h-[1150px] max-w-[1701px] max-h-[1105px] absolute top-0 left-1/2 -translate-x-1/2">
+        <div className="min-w-[1750px] min-h-[1150px] max-w-[1701px] max-h-[1105px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <Image
             src={"/landing-group-1.svg"}
             alt="men"

@@ -12,7 +12,7 @@ export default function Navbar(props) {
 
   return (
     <>
-      <nav className="flex w-full max-w-7xl justify-center lg:justify-between items-center pt-[59px] px-12 lg:fixed top-0 left-1/2 lg:-translate-x-1/2">
+      <nav className="mt-[-4rem] md:mt-0 flex w-full max-w-7xl justify-center lg:justify-between items-center pt-[59px] px-12 lg:fixed top-0 left-1/2 lg:-translate-x-1/2">
         <ul className="flex-1 hidden lg:flex gap-4 justify-between max-w-[388px]">
           <li>
             <Link href={"/home"}>Home</Link>
