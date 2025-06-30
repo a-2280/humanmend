@@ -40,7 +40,7 @@ export default function BlogPostOne() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="mt-[51px] lg:mt-[150px] mb-[40px] lg:mb-[96px] flex flex-col justify-center items-center px-[20px] md:px-[43px]">
+      <section className="mt-[51px] lg:mt-[250px] mb-[40px] lg:mb-[96px] flex flex-col justify-center items-center px-[20px] md:px-[43px]">
         <h1 className="heading-1">{blog1Content.title}</h1>
         <h2 className="heading-2 mt-1 lg:mt-[24px] mb-[24px] lg:mb-[48px]">
           {blog1Content.subtitle}

@@ -38,7 +38,7 @@ export default function Blog() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="mt-[51px] lg:mt-[150px] lg:mb-[166px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+      <section className="mt-[51px] lg:mt-[250px] lg:mb-[166px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
         <h1 className="heading-1">{blogContent.section1Heading}</h1>
         <p className="my-[24px] lg:my-[32px] body-text text-align-last">
           {blogContent.section1Paragraph}

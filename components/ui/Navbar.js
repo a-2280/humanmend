@@ -50,7 +50,7 @@ export default function Navbar(props) {
             {aboutOpen && (
               <ul className="absolute pt-4 z-999">
                 <li className="w-fit">
-                  <Link href={"#FAQ"}>FAQs</Link>
+                  <Link href={"/about#FAQ"}>FAQs</Link>
                 </li>
               </ul>
             )}

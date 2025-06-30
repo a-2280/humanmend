@@ -18,6 +18,15 @@ export default function AnxietySpecialty() {
   const [expandIndex, setExpandIndex] = useState(null);
 
   useEffect(() => {
+    if (aboutContent && window.location.hash === "#FAQ") {
+      const elem = document.getElementById("FAQ");
+      if (elem) {
+        elem.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [aboutContent]);
+
+  useEffect(() => {
     const query = `*[_type == "about"][0]`;
 
     Promise.all([
@@ -136,7 +145,7 @@ export default function AnxietySpecialty() {
           No, we also specialize in working with clients struggling with
           anxiety, specifically in the areas of perfectionism, relationships,
           people pleasing, and self-esteem. We work from a trauma informed lens
-          and view all parts of you as worthy. Read more about our approach to
+          and view all parts of you as worthy. Read more about our approach to
           anxiety treatment{" "}
           <Link href="/anxiety-therapy" className="border-b-1">
             here
@@ -161,8 +170,8 @@ export default function AnxietySpecialty() {
       content: (
         <p className="body-small mb-[24px]">
           We&#39;ve made an intentional choice to practice as out-of-network
-          providers.  This allows us to focus entirely on your individualized
-          treatment without the limitations of insurance regulations. At
+          providers. This allows us to focus entirely on your individualized
+          treatment without the limitations of insurance regulations. At
           Humanmend, our rate is $225 per 50 minute session. Many insurance
           plans offer significant coverage for therapy services through
           out-of-network benefits: many PPO plans provide 50-80% coverage for
@@ -189,7 +198,7 @@ export default function AnxietySpecialty() {
             </li>
             <li className="ml-4 md:m-0">
               <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
-              Superbills: If preferred, we can provide you with a superbill each
+              Superbills: If preferred, we can provide you with a superbill each
               month containing all the information your insurance requires for
               reimbursement processing.
             </li>
@@ -265,7 +274,7 @@ export default function AnxietySpecialty() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="mt-[51px] lg:mt-[150px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+      <section className="mt-[51px] lg:mt-[250px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
         <h1 className="heading-1">{aboutContent.section1Heading}</h1>
         <p className="my-[24px] lg:my-[32px] body-text text-align-last">
           {aboutContent.section1Paragraph}
@@ -571,7 +580,7 @@ export default function AnxietySpecialty() {
                 onClose={() => setModalState("closed")}
                 title={"Internal Family Systems (IFS / Parts Work)"}
                 text={
-                  "We all carry different “parts” within us — like the inner critic, the overachiever, the anxious protector, or the one still holding old pain. These parts often show up to keep us safe, especially when life feels overwhelming. Parts work helps us get curious about these inner voices instead of pushing them away. Through compassion and connection, we learn to understand their stories and soften their grip. A well-known approach to this is Internal Family Systems (IFS), which offers a pathway back to our grounded, wise inner Self — the part of us that can hold it all with clarity and care. It’s not about fixing ourselves, it’s about listening."
+                  "We all carry different “parts” within us — like the inner critic, the overachiever, the anxious protector, or the one still holding old pain. These parts often show up to keep us safe, especially when life feels overwhelming. Parts work helps us get curious about these inner voices instead of pushing them away. Through compassion and connection, we learn to understand their stories and soften their grip. A well-known approach to this is Internal Family Systems (IFS), which offers a pathway back to our grounded, wise inner Self — the part of us that can hold it all with clarity and care. It’s not about fixing ourselves, it’s about listening."
                 }
               />
             )}
@@ -644,11 +653,8 @@ export default function AnxietySpecialty() {
         </div>
       </section>
       <section className="flex bg-[url(/mobile-stripes.png)] md:bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
-      <section
-        className="my-[80px] lg:mt-[204px] lg:mb-[166px] w-full max-w-[415px] md:max-w-[1310px] px-[44px]"
-        id="FAQ"
-      >
-        <h1 className="heading-1 mb-[32px] lg:mb-[86px]">
+      <section className="my-[80px] lg:mt-[204px] lg:mb-[166px] w-full max-w-[415px] md:max-w-[1310px] px-[44px]">
+        <h1 className="heading-1 mb-[32px] lg:mb-[86px]" id="FAQ">
           FREQUENTLY ASKED QUESTIONS
         </h1>
         <hr />
@@ -658,6 +664,7 @@ export default function AnxietySpecialty() {
               <div
                 className="body-text py-[24px] flex items-start"
                 onClick={() => toggleExpand(index)}
+                id="FAQ"
               >
                 <span className="body-text mr-[24px] select-none">
                   {expandIndex === index ? "-" : "+"}

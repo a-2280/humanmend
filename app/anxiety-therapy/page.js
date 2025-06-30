@@ -41,7 +41,7 @@ export default function AnxietySpecialty() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="my-[51px] lg:mt-[150px] lg:mb-[114px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+      <section className="my-[51px] lg:mt-[250px] lg:mb-[114px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
         <h1 className="heading-1">{anxietyContent.section1Heading}</h1>
         <p className="my-[24px] lg:mt-[32px] lg:mb-[48px] body-text text-align-last md:hidden">
           {`When anxiety takes over, even the simplest moments can feel

@@ -170,7 +170,7 @@ export default function AnxietySpecialty() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="my-[51px] lg:mt-[150px] lg:mb-[97px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+      <section className="my-[51px] lg:mt-[250px] lg:mb-[97px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
         <h1 className="heading-1 max-w-[250px] md:max-w-none">
           {eatingDisorderContent.section1Heading}
         </h1>
