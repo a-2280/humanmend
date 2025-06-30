@@ -6,9 +6,9 @@ import PreFooter from "@/components/ui/PreFooter";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
-import FreeConsult from "@/components/ui/FreeConsult";
 import GetInTouch from "@/components/ui/GetInTouch";
 import Success from "@/components/ui/Success";
+import SoloOrGroup from "@/components/ui/SoloOrGroup";
 
 export default function Consultation() {
   const [modalState, setModalState] = useState("closed");
@@ -28,7 +28,7 @@ export default function Consultation() {
   if (!consultationContent) {
     return (
       <>
-        <div className="md:hidden w-screen h-screen flex justify-center items-center mt-[-5rem]">
+        <div className="md:hidden w-screen h-screen flex justify-center items-center mt-[-4rem]">
           <Image src="/footer.gif" alt="vase" width={100} height={100} />
         </div>
         <div className="hidden w-screen h-screen md:flex justify-center items-center">
@@ -52,17 +52,16 @@ export default function Consultation() {
         >
           {consultationContent.section1Button}
         </button>
-        {modalState === "consult" && (
-          <FreeConsult
+        {modalState === "soloOrGroup" && (
+          <SoloOrGroup
             isOpen={true}
             onClose={() => setModalState("closed")}
             onSuccess={() => setModalState("success")}
           />
         )}
-
         {modalState === "success" && (
           <Success
-            text="In a world that often asks us to shrink, your message just claimed some space. That’s where healing begins. We will be in touch soon."
+            text="We look forward to helping you along your professional journey. We will be in touch soon."
             onClose={() => setModalState("closed")}
           />
         )}

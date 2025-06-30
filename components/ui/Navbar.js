@@ -81,7 +81,7 @@ export default function Navbar(props) {
           alt="burger menu"
           width={30}
           height={30}
-          className="fixed top-[59px] lg:absolute right-12 lg:top-auto lg:hidden w-full max-w-[25px] md:max-w-[30px] z-[9999]"
+          className="fixed top-[59px] lg:absolute right-12 lg:top-auto lg:hidden w-full max-w-[25px] md:max-w-[30px] z-[8888]"
           onClick={() => setMobileOpen(!mobileOpen)}
         />
       </nav>

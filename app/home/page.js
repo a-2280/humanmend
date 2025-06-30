@@ -28,7 +28,7 @@ export default function Home() {
   if (!homePageContent) {
     return (
       <>
-        <div className="md:hidden w-screen h-screen flex justify-center items-center mt-[-5rem]">
+        <div className="md:hidden w-screen h-screen flex justify-center items-center mt-[-4rem]">
           <Image src="/footer.gif" alt="vase" width={100} height={100} />
         </div>
         <div className="hidden w-screen h-screen md:flex justify-center items-center">

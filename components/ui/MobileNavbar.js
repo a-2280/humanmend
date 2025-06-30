@@ -32,7 +32,7 @@ export default function MobileNavbar({ onClose }) {
   }, [onClose]);
 
   return (
-    <nav className="bg-blue h-screen w-screen z-[9999] fixed top-0 left-1/2 -translate-x-1/2 pt-[61px]">
+    <nav className="bg-blue h-screen w-screen z-[8888] fixed top-0 left-1/2 -translate-x-1/2 pt-[61px]">
       <div
         className="w-full h-full flex flex-col justify-start items-center"
         onClick={handleBackgroundClick}
