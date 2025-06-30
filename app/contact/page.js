@@ -68,7 +68,7 @@ export default function Contact() {
           />
         )}
       </section>
-      <section className="flex bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
+      <section className="flex bg-[url(/mobile-stripes.png)] md:bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
       <section className="mb-[80px] mt-[80px] lg:mt-[204px] lg:mb-[166px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[700px]">
         <h1 className="heading-1">THERAPEUTIC APPROACHES</h1>
         <hr className="mb-[24px] mt-[37px] lg:mt-[56px]" />

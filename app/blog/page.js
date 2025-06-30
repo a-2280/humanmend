@@ -38,7 +38,7 @@ export default function Blog() {
         <p className="my-[24px] lg:my-[32px] body-text text-align-last">
           {blogContent.section1Paragraph}
         </p>
-        <h2 className="mb-[37px] lg:mb-[64px] heading-2 w-full max-w-[300px] md:max-w-[400px]">
+        <h2 className="mb-[37px] lg:mb-[64px] heading-2 w-full max-w-[490px]">
           {blogContent.section1Subheading}
         </h2>
 
@@ -54,13 +54,13 @@ export default function Blog() {
             required
             className="border-b-1 border-dark-blue body-text placeholder:!text-blue py-2 w-full outline-0 focus:!placeholder-transparent"
           />
-          <button type="submit">
+          <button type="submit" className="!border-none">
             <Image
               src="/right-arrow.svg"
               alt="right arrow"
               width={24}
               height={24}
-              className="min-w-[15px] md:min-w-[20px] ml-[-1rem] md:ml-[-1.5rem] cursor-pointer"
+              className="min-w-[15px] md:min-w-[20px] ml-[-1rem] md:ml-[-1.5rem]"
             />
           </button>
         </form>
@@ -70,7 +70,7 @@ export default function Blog() {
           alt="Man"
           width={117.4}
           height={112}
-          className="w-full mt-[80px] mb-[90px] lg:my-0 max-w-[151px] lg:max-w-[143px]"
+          className="w-full mt-[80px] mb-[90px] lg:my-0 max-w-[75.5px] lg:max-w-[143px]"
         />
       </section>
       <section className="mt-[80px] lg:mt-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
@@ -99,8 +99,8 @@ export default function Blog() {
             />
           </div>
         </div>
-        <div className="mb-[80px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
-          <div className="mb-[80px] lg:m-0 flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px] lg:pr-[44px]">
+        <div className="m-0 md:mb-[80px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
+          <div className="mb-[80px] lg:m-0 flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[410px] lg:pr-[44px]">
             <h1 className="heading-1">{blogContent.section3Heading}</h1>
             <h2 className="heading-2 lg:my-[24px] max-w-[300px] lg:max-w-[400px]">
               {blogContent.section3Subheading}
@@ -143,8 +143,8 @@ export default function Blog() {
             />
           </div>
         </div>
-        <div className="mb-[80px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
-          <div className="mb-[80px] lg:m-0 flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px] lg:pr-[44px]">
+        <div className="m-0 md:mb-[80px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
+          <div className="mb-[80px] lg:m-0 flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-full lg:max-w-[410px] lg:pr-[44px]">
             <h1 className="heading-1">{blogContent.section5Heading}</h1>
             <h2 className="heading-2 lg:my-[24px] max-w-[300px] lg:max-w-[400px]">
               {blogContent.section5Subheading}
@@ -188,7 +188,7 @@ export default function Blog() {
           </div>
         </div>
         <div className="mb-[80px] lg:m-0 lg:flex lg:flex-row-reverse lg:justify-center lg:items-center">
-          <div className="mb-[80px] lg:m-0 flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[405px] lg:pr-[44px]">
+          <div className="mb-[80px] lg:m-0 flex flex-col justify-center items-center lg:items-center lg:ml-[199px] lg:w-1/2 lg:max-w-[410px] lg:pr-[44px]">
             <h1 className="heading-1">{blogContent.section7Heading}</h1>
             <h2 className="heading-2 lg:my-[24px] max-w-[300px] lg:max-w-[400px]">
               {blogContent.section7Subheading}
@@ -205,7 +205,7 @@ export default function Blog() {
           </div>
         </div>
       </section>
-      <section className="mb-[80px] flex lg:hidden bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
+      <section className="mb-[80px] flex lg:hidden bg-[url(/mobile-stripes.png)] md:bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
       <PreFooter />
       <Footer />
     </div>

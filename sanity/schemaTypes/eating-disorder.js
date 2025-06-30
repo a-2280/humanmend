@@ -49,11 +49,6 @@ export default {
       type: "text",
     },
     {
-      name: "section3Paragraph1",
-      title: "Section 3 Paragraph 1",
-      type: "text",
-    },
-    {
       name: "section3Subheading",
       title: "Section 3 Subheading",
       type: "string",

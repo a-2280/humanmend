@@ -301,7 +301,7 @@ export default function AnxietySpecialty() {
       <section className="mt-[80px] lg:mt-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
         <div className="mb-[50px] lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
           <div className="mb-[35px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end lg:pl-[44px]">
-            <div className="lg:max-w-[400px] lg:mr-[231px] bg-blue-400/25">
+            <div className="lg:max-w-[400px] lg:mr-[231px]">
               <h1 className="heading-1">{aboutContent.section2Heading}</h1>
               <p className="body-text mt-[24px] lg:mt-[32px]">
                 {aboutContent.section2Paragraph}
@@ -339,7 +339,7 @@ export default function AnxietySpecialty() {
               {aboutContent.section3Button}
             </Link>
           </div>
-          <div className="mt-[24px]  lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pl-[44px]">
+          <div className="mt-[93.45px] lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pl-[44px]">
             <Image src="/vase-1.png" alt="vase" width={670.23} height={595} />
           </div>
         </div>
@@ -638,7 +638,7 @@ export default function AnxietySpecialty() {
           <button className="button-main">Book Now</button>
         </div>
       </section>
-      <section className="flex bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
+      <section className="flex bg-[url(/mobile-stripes.png)] md:bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
       <section
         className="my-[80px] lg:mt-[204px] lg:mb-[166px] w-full max-w-[415px] md:max-w-[1310px] px-[44px]"
         id="FAQ"

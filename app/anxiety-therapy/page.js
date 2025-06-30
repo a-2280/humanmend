@@ -80,7 +80,7 @@ export default function AnxietySpecialty() {
           className="hidden md:flex"
         />
         <Image
-          src="/anxiety_page1.svg"
+          src="/anxiety_page1.png"
           alt="flowers"
           width={354}
           height={199}
@@ -107,35 +107,14 @@ export default function AnxietySpecialty() {
           </p>
         </div>
       </section>
-      <section className="flex bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
+      <section className="flex bg-[url(/mobile-stripes.png)] md:bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
       <section className="my-[80px] lg:my-[204px] w-full max-w-[415px] md:max-w-[699px] px-[44px]">
         <div className="flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center">
             <h1 className="heading-1 mb-[26px] lg:mb-[32px] w-full max-w-[250px] md:max-w-none">
               {anxietyContent.section3Heading}
             </h1>
-            <p className="body-text md:hidden">
-              {`This is a space where your feelings and needs matter. You don’t
-              have to perform, over-explain, or manage anyone’s impression of
-              you. It’s a 110% judgment-free zone.`}
-            </p>
-            <p className="body-text hidden md:block">
-              {anxietyContent.section3Paragraph}
-            </p>
-            <p className="body-text">
-              <span className="ml-4 md:hidden"></span>
-              {`We blend evidence-based practices with compassionate curiosity. We
-              won’t just focus on surface-level coping strategies (though we’ll
-              build those too), we’ll also explore the deeper roots of your
-              anxiety. We’ll move at a pace that’s challenging but not
-              overwhelming, with the understanding that real, lasting change
-              happens through steady, manageable steps, not overnight fixes. We
-              will work to:`}
-            </p>
-            <p className="body-text hidden md:block">
-              <span className="ml-4"></span>
-              {anxietyContent.section3Paragraph1}
-            </p>
+            <p className="body-text">{anxietyContent.section3Paragraph}</p>
             <hr className="mt-[32px] mb-[24px]" />
             {anxietyContent.listItems &&
               anxietyContent.listItems.map((item, index) => (

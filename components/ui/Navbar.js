@@ -12,8 +12,7 @@ export default function Navbar(props) {
 
   return (
     <>
-      <div className="h-[80px]" />
-      <nav className="flex w-full max-w-7xl justify-center lg:justify-between items-center pt-[59px] px-12 fixed top-0 left-1/2 -translate-x-1/2">
+      <nav className="flex w-full max-w-7xl justify-center lg:justify-between items-center pt-[59px] px-12 lg:fixed top-0 left-1/2 lg:-translate-x-1/2">
         <ul className="flex-1 hidden lg:flex gap-4 justify-between max-w-[388px]">
           <li>
             <Link href={"/home"}>Home</Link>
@@ -82,7 +81,7 @@ export default function Navbar(props) {
           alt="burger menu"
           width={30}
           height={30}
-          className="absolute right-12 lg:hidden w-full max-w-[25px] md:max-w-[30px] z-[9999]"
+          className="fixed right-12 top-[59px] lg:absolute lg:right-12 lg:top-auto lg:hidden w-full max-w-[25px] md:max-w-[30px] z-[9999]"
           onClick={() => setMobileOpen(!mobileOpen)}
         />
       </nav>

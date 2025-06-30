@@ -15,10 +15,10 @@ export default function PreFooter() {
         height={610}
         className="mb-[24px] md:mb-[96px] w-full lg:min-w-[845px]"
       />
-      <h1 className="heading-1 mb-[48px] lg:mb-[86px]">
+      <h2 className="heading-2 mb-[48px] lg:mb-[86px] max-w-[350px] lg:max-w-[490px]">
         for more support, check out our blog, or subscribe to receive our free
         printable note cards: Permission Notes for Being Human.
-      </h1>
+      </h2>
       <form
         className="w-full flex justify-center items-center mb-[48px] lg:mb-[96px]"
         action="https://formspree.io/f/YOUR_FORM_ID"
@@ -31,7 +31,7 @@ export default function PreFooter() {
           required
           className="border-b-1 border-dark-blue body-text placeholder:!text-blue py-2 w-full outline-0 focus:!placeholder-transparent"
         />
-        <button type="submit">
+        <button type="submit" className="!border-none">
           <Image
             src="/right-arrow.svg"
             alt="right arrow"

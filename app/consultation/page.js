@@ -157,7 +157,7 @@ export default function Consultation() {
         </div>
         <hr className="mt-[24px]" />
       </section>
-      <section className="flex bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout mb-[80px]"></section>
+      <section className="flex bg-[url(/mobile-stripes.png)] md:bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout mb-[80px]"></section>
       <PreFooter />
       <Footer />
     </div>

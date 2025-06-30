@@ -32,7 +32,7 @@ export default function AnxietySpecialty() {
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
       <Navbar />
-      <section className="mt-[51px] lg:mt-[150px] lg:mb-[166px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px] z-10">
+      <section className="mt-[51px] lg:mt-[150px] lg:mb-[166px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[650px]">
         <h1 className="heading-1">{groupContent.section1Heading}</h1>
         <p className="my-[24px] lg:my-[32px] body-text text-align-last">
           {groupContent.section1Paragraph}
@@ -53,13 +53,13 @@ export default function AnxietySpecialty() {
             required
             className="border-b-1 border-dark-blue body-text placeholder:!text-blue py-2 w-full outline-0 focus:!placeholder-transparent"
           />
-          <button type="submit">
+          <button type="submit" className="!border-none">
             <Image
               src="/right-arrow.svg"
               alt="right arrow"
               width={24}
               height={24}
-              className="min-w-[15px] md:min-w-[20px] ml-[-1rem] md:ml-[-1.5rem] cursor-pointer"
+              className="min-w-[15px] md:min-w-[20px] ml-[-1rem] md:ml-[-1.5rem]"
             />
           </button>
         </form>
@@ -69,10 +69,10 @@ export default function AnxietySpecialty() {
           alt="Man"
           width={117.4}
           height={112}
-          className="w-full my-[110px] lg:my-0 max-w-[151px] lg:max-w-[143px]"
+          className="w-full my-[110px] lg:my-0 max-w-[166px] lg:max-w-[143px]"
         />
       </section>
-      <section className="mb-[80px] flex lg:hidden bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
+      <section className="mb-[80px] flex lg:hidden bg-[url(/mobile-stripes.png)] md:bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
       <PreFooter />
       <Footer />
     </div>

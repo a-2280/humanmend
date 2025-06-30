@@ -198,7 +198,7 @@ export default function AnxietySpecialty() {
       <section className="flex bg-[url(/ed-1.png)] bg-cover bg-center w-full h-[200px] md:h-[427px] full-width-breakout"></section>
       <section className="my-[80px] lg:my-[204px] w-full max-w-[415px] md:max-w-[699px] px-[44px]">
         <div className="flex flex-col justify-center items-center">
-          <h1 className="heading-1 mb-[26px] lg:mb-[32px]">
+          <h1 className="heading-1 mb-[26px] lg:mb-[32px] max-w-[230px] md:max-w-none">
             {eatingDisorderContent.section2Heading}
           </h1>
           <p className="body-text">{eatingDisorderContent.section2Paragraph}</p>
@@ -244,7 +244,7 @@ export default function AnxietySpecialty() {
                 <span className="body-text mr-[24px] select-none">
                   {expandIndex === index ? "-" : "+"}
                 </span>
-                <span className="flex-1">{item.title}</span>
+                <span className="flex-1 !text-left">{item.title}</span>
               </div>
               <div className={`${expandIndex === index ? "" : "hidden"}`}>
                 {item.content}
@@ -254,17 +254,13 @@ export default function AnxietySpecialty() {
           ))}
         </ul>
       </section>
-      <section className="flex bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
+      <section className="flex bg-[url(/mobile-stripes.png)] md:bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
       <section className="mt-[51px] mb-[80px] lg:mt-[204px] lg:mb-[156px] px-[44px] flex flex-col justify-center items-center w-full max-w-[415px] md:max-w-[700px] z-10">
         <h1 className="heading-1">{eatingDisorderContent.section3Heading}</h1>
-        <p className="mt-[24px] lg:mt-[32px] body-text">
+        <p className="my-[24px] lg:mt-[43px] lg:mb-[32px] body-text">
           {eatingDisorderContent.section3Paragraph}
         </p>
-        <p className="mb-[24px] lg:mb-[32px] body-text">
-          <span className="ml-4"></span>
-          {eatingDisorderContent.section3Paragraph1}
-        </p>
-        <h2 className="mb-[37px] lg:mb-[48px] heading-2 w-full max-w-[275px] md:max-w-[405px]">
+        <h2 className="mb-[37px] lg:mb-[48px] heading-2 w-full max-w-[240px] md:max-w-[405px]">
           {eatingDisorderContent.section3Subheading}
         </h2>
         <button
