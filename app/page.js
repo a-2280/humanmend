@@ -64,7 +64,7 @@ export default function Landingpage() {
           alt="man"
           width={95}
           height={91}
-          className="md:hidden"
+          className="md:hidden mt-[-5rem]"
         />
         <Image
           src={"/cream_logotype.svg"}
