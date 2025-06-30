@@ -228,7 +228,7 @@ export default function Home() {
         />
       </section>
       <section className="w-full max-w-[450px] md:max-w-[550px] flex flex-col justify-center items-center mb-[64px] lg:mb-[204px] px-[44px]">
-        <h2 className="heading-2 mb-[48px] lg:mb-[86px] leading-3">
+        <h2 className="heading-2 mb-[48px] lg:mb-[86px] max-w-[350px] lg:max-w-[490px]">
           for more support, check out our blog, or subscribe to receive our free
           printable note cards: Permission Notes for Being Human.
         </h2>
@@ -244,7 +244,7 @@ export default function Home() {
             required
             className="border-b-1 border-dark-blue body-text placeholder:!text-blue py-2 w-full outline-0 focus:!placeholder-transparent"
           />
-          <button type="submit">
+          <button type="submit" className="!border-none">
             <Image
               src="/right-arrow.svg"
               alt="right arrow"
