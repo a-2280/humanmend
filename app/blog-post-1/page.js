@@ -26,9 +26,14 @@ export default function BlogPostOne() {
 
   if (!blog1Content) {
     return (
-      <div className="w-screen h-screen flex justify-center items-center">
-        <Image src="/footer.gif" alt="vase" width={100} height={100} />
-      </div>
+      <>
+        <div className="md:hidden w-screen h-screen flex justify-center items-center mt-[-5rem]">
+          <Image src="/footer.gif" alt="vase" width={100} height={100} />
+        </div>
+        <div className="hidden w-screen h-screen md:flex justify-center items-center">
+          <Image src="/footer.gif" alt="vase" width={100} height={100} />
+        </div>
+      </>
     );
   }
 
