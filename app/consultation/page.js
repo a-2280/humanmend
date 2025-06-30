@@ -48,7 +48,7 @@ export default function Consultation() {
         </p>
         <button
           className="button-main"
-          onClick={() => setModalState("consult")}
+          onClick={() => setModalState("soloOrGroup")}
         >
           {consultationContent.section1Button}
         </button>
