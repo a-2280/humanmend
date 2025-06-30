@@ -23,7 +23,7 @@ export default function AnxietySpecialty() {
 
     Promise.all([
       client.fetch(query),
-      new Promise((resolve) => setTimeout(resolve, 3000)),
+      new Promise((resolve) => setTimeout(resolve, 1750)),
     ]).then(([data]) => {
       setEatingDisorderContent(data);
     });

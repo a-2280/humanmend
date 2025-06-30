@@ -11,6 +11,12 @@ export default function MobileNavbar({ onClose }) {
     }
   };
 
+  const handleLinkClick = () => {
+    setTimeout(() => {
+      onClose();
+    }, 500);
+  };
+
   useEffect(() => {
     const handleEscapeKey = (e) => {
       if (e.key === "Escape") {
@@ -31,7 +37,7 @@ export default function MobileNavbar({ onClose }) {
         className="w-full h-full flex flex-col justify-start items-center"
         onClick={handleBackgroundClick}
       >
-        <Link href={"/home"} className="mb-[91px]">
+        <Link href={"/home"} className="mb-[91px]" onClick={handleLinkClick}>
           <Image
             src="/cream_logotype.svg"
             alt="Humanmend"
@@ -44,6 +50,7 @@ export default function MobileNavbar({ onClose }) {
             <Link
               href={"/home"}
               className="button-main text-cream !border-cream"
+              onClick={handleLinkClick}
             >
               Home
             </Link>
@@ -52,6 +59,7 @@ export default function MobileNavbar({ onClose }) {
             <Link
               href={"/anxiety-therapy"}
               className="button-main text-cream !border-cream"
+              onClick={handleLinkClick}
             >
               Anxiety Therapy
             </Link>
@@ -60,6 +68,7 @@ export default function MobileNavbar({ onClose }) {
             <Link
               href={"/eating-disorder-therapy"}
               className="button-main text-cream !border-cream"
+              onClick={handleLinkClick}
             >
               Eating Disorder Therapy
             </Link>
@@ -68,6 +77,7 @@ export default function MobileNavbar({ onClose }) {
             <Link
               href={"/group-therapy"}
               className="button-main text-cream !border-cream"
+              onClick={handleLinkClick}
             >
               Group Therapy
             </Link>
@@ -76,6 +86,7 @@ export default function MobileNavbar({ onClose }) {
             <Link
               href={"/consultation"}
               className="button-main text-cream !border-cream"
+              onClick={handleLinkClick}
             >
               Consultation
             </Link>
@@ -84,6 +95,7 @@ export default function MobileNavbar({ onClose }) {
             <Link
               href={"/contact"}
               className="button-main text-cream !border-cream"
+              onClick={handleLinkClick}
             >
               Contact
             </Link>
@@ -92,6 +104,7 @@ export default function MobileNavbar({ onClose }) {
             <Link
               href={"/blog"}
               className="button-main text-cream !border-cream"
+              onClick={handleLinkClick}
             >
               Blog
             </Link>
@@ -100,6 +113,7 @@ export default function MobileNavbar({ onClose }) {
             <Link
               href={"/about"}
               className="button-main text-cream !border-cream"
+              onClick={handleLinkClick}
             >
               About
             </Link>

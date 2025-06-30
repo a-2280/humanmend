@@ -18,7 +18,7 @@ export default function BlogPostOne() {
 
     Promise.all([
       client.fetch(query),
-      new Promise((resolve) => setTimeout(resolve, 3000)),
+      new Promise((resolve) => setTimeout(resolve, 1750)),
     ]).then(([data]) => {
       setBlog1Content(data);
     });
