@@ -37,7 +37,11 @@ export default function MobileNavbar({ onClose }) {
         className="w-full h-full flex flex-col justify-start items-center"
         onClick={handleBackgroundClick}
       >
-        <Link href={"/home"} className="mb-[91px]" onClick={handleLinkClick}>
+        <Link
+          href={"/home"}
+          className="mb-[91px] no-border"
+          onClick={handleLinkClick}
+        >
           <Image
             src="/cream_logotype.svg"
             alt="Humanmend"
