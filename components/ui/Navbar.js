@@ -70,7 +70,7 @@ export default function Navbar(props) {
             <Link href={"/blog"}>Blog</Link>
           </li>
           <li>
-            <Link href={"/login"}>Login</Link>
+            <Link href={"https://www.simplepractice.com/"}>Login</Link>
           </li>
           <li>
             <Link href={"/contact"}>Contact</Link>

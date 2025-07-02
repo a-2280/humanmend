@@ -81,7 +81,7 @@
 body,
 li {
   cursor:
-    url("/cursor.svg") 12 12,
+    url("/cursor_regular.png") 8 8,
     auto !important;
 }
 
@@ -93,7 +93,7 @@ li,
 input,
 textarea {
   cursor:
-    url("/cursorButton.svg") 8 8,
+    url("/cursor_clickable.png") 8 8,
     pointer !important;
 }
 
