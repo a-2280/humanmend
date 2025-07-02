@@ -11,6 +11,9 @@ import Link from "next/link";
 export default function Blog() {
   const [blogContent, setBlogContent] = useState(null);
 
+  // ADD THIS STATE VARIABLE for the newsletter form
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   useEffect(() => {
     const query = `*[_type == "blog"][0]`;
 
@@ -21,6 +24,37 @@ export default function Blog() {
       setBlogContent(data);
     });
   }, []);
+
+  // ADD THIS FUNCTION for the newsletter form
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.target);
+    // Add a form type identifier
+    formData.append("formType", "newsletter_blog");
+
+    try {
+      const response = await fetch("https://formspree.io/f/mqabnrbe", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        e.target.reset(); // Just reset the form
+      } else {
+        alert("There was an error submitting the form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("There was an error submitting the form. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   if (!blogContent) {
     return (
@@ -54,19 +88,26 @@ export default function Blog() {
           being human.
         </h2>
 
+        {/* UPDATED NEWSLETTER FORM */}
         <form
           className="w-full flex justify-center items-center mb-[48px] lg:mb-[145px]"
-          action="https://formspree.io/f/YOUR_FORM_ID"
-          method="POST"
+          onSubmit={handleNewsletterSubmit}
+          // REMOVED: action="https://formspree.io/f/mqabnrbe"
+          // REMOVED: method="POST"
         >
           <input
             type="email"
             name="email"
             placeholder="enter your email"
             required
-            className="border-b-1 border-dark-blue body-text placeholder:!text-blue py-2 w-full outline-0 focus:!placeholder-transparent"
+            disabled={isSubmitting}
+            className="border-b-1 border-dark-blue body-text placeholder:!text-blue py-2 w-full outline-0 focus:!placeholder-transparent disabled:opacity-50"
           />
-          <button type="submit" className="!border-none">
+          <button
+            type="submit"
+            className="!border-none"
+            disabled={isSubmitting}
+          >
             <Image
               src="/right-arrow.svg"
               alt="right arrow"
@@ -85,6 +126,8 @@ export default function Blog() {
           className="w-full mt-[80px] mb-[90px] lg:my-0 max-w-[75.5px] lg:max-w-[143px]"
         />
       </section>
+
+      {/* REST OF YOUR SECTIONS STAY THE SAME */}
       <section className="mt-[80px] lg:mt-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
         <div className="mb-[80px] lg:flex lg:justify-center lg:items-center lg:mb-[204px] lg:pl-[44px]">
           <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end">
@@ -129,6 +172,7 @@ export default function Blog() {
           </div>
         </div>
       </section>
+
       <section className="mt-[80px] lg:mt-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
         <div className="mb-[80px] lg:m-0 lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
           <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end lg:pl-[44px]">
@@ -173,6 +217,7 @@ export default function Blog() {
           </div>
         </div>
       </section>
+
       <section className="mt-[80px] lg:my-[204px] px-[44px] lg:px-0 flex flex-col justify-center items-center w-full">
         <div className="mb-[80px] lg:m-0 lg:flex lg:justify-center lg:items-center lg:mb-[204px]">
           <div className="mb-[80px] lg:m-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:items-end lg:pl-[44px]">
@@ -217,6 +262,7 @@ export default function Blog() {
           </div>
         </div>
       </section>
+
       <section className="mb-[80px] flex lg:hidden bg-[url(/mobile-stripes.png)] md:bg-[url(/stripes.png)] bg-cover bg-center w-full h-[100px] md:h-[427px] full-width-breakout"></section>
       <PreFooter />
       <Footer />

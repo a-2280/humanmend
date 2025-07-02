@@ -7,7 +7,7 @@ export default function Popup({ title, text, link, onClose }) {
     <div className="bg-black/50 fixed top-0 left-0 h-screen w-full max-w-screen flex justify-center items-start z-[9999] overflow-y-auto hide-scrollbar">
       <div className="bg-dark-blue p-[43px] pt-[75px] md:p-[86px] md:m-[86px] w-[54rem] max-w-full relative flex flex-col justify-center items-center h-screen md:h-auto">
         <p
-          className="heading-1 text-cream absolute top-8 right-8 !cursor-[url('/cursorButton.svg')_12_12,auto]"
+          className="heading-1 text-cream absolute top-8 right-8 !cursor-[url('/cursor_clickable.png')_8_8,pointer]"
           onClick={onClose}
         >
           X

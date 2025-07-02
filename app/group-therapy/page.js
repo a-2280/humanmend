@@ -10,6 +10,9 @@ import { client } from "@/sanity/lib/client";
 export default function AnxietySpecialty() {
   const [groupContent, setGroupContent] = useState(null);
 
+  // ADD THIS STATE VARIABLE for the newsletter form
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   useEffect(() => {
     const query = `*[_type == "group"][0]`;
 
@@ -20,6 +23,37 @@ export default function AnxietySpecialty() {
       setGroupContent(data);
     });
   }, []);
+
+  // ADD THIS FUNCTION for the newsletter form
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.target);
+    // Add a form type identifier
+    formData.append("formType", "newsletter_anxiety_specialty");
+
+    try {
+      const response = await fetch("https://formspree.io/f/mqabnrbe", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        e.target.reset(); // Just reset the form
+      } else {
+        alert("There was an error submitting the form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("There was an error submitting the form. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   if (!groupContent) {
     return (
@@ -46,19 +80,26 @@ export default function AnxietySpecialty() {
           {groupContent.section1Subheading}
         </h2>
 
+        {/* UPDATED NEWSLETTER FORM */}
         <form
           className="w-full flex justify-center items-center mb-[48px] lg:mb-[145px]"
-          action="https://formspree.io/f/YOUR_FORM_ID"
-          method="POST"
+          onSubmit={handleNewsletterSubmit}
+          // REMOVED: action="https://formspree.io/f/mqabnrbe"
+          // REMOVED: method="POST"
         >
           <input
             type="email"
             name="email"
             placeholder="enter your email"
             required
-            className="border-b-1 border-dark-blue body-text placeholder:!text-blue py-2 w-full outline-0 focus:!placeholder-transparent"
+            disabled={isSubmitting}
+            className="border-b-1 border-dark-blue body-text placeholder:!text-blue py-2 w-full outline-0 focus:!placeholder-transparent disabled:opacity-50"
           />
-          <button type="submit" className="!border-none">
+          <button
+            type="submit"
+            className="!border-none"
+            disabled={isSubmitting}
+          >
             <Image
               src="/right-arrow.svg"
               alt="right arrow"

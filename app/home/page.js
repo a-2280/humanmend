@@ -14,6 +14,9 @@ export default function Home() {
   const [modalState, setModalState] = useState("closed");
   const [homePageContent, setHomePageContent] = useState(null);
 
+  // ADD THIS STATE VARIABLE for the newsletter form
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   useEffect(() => {
     const query = `*[_type == "home"][0]`;
 
@@ -24,6 +27,37 @@ export default function Home() {
       setHomePageContent(data);
     });
   }, []);
+
+  // ADD THIS FUNCTION for the newsletter form
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.target);
+    // Add a form type identifier
+    formData.append("formType", "newsletter_home");
+
+    try {
+      const response = await fetch("https://formspree.io/f/mqabnrbe", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        e.target.reset(); // Just reset the form
+      } else {
+        alert("There was an error submitting the form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("There was an error submitting the form. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   if (!homePageContent) {
     return (
@@ -66,7 +100,7 @@ export default function Home() {
 
         {modalState === "success" && (
           <Success
-            text="In a world that often asks us to shrink, your message just claimed some space. That’s where healing begins. We will be in touch soon."
+            text="In a world that often asks us to shrink, your message just claimed some space. That's where healing begins. We will be in touch soon."
             onClose={() => setModalState("closed")}
           />
         )}
@@ -196,8 +230,8 @@ export default function Home() {
         </p>
         <p className="body-text mb-[24px] lg:mb-[32px] md:hidden">
           <span className="ml-4"></span>
-          {`When I’m not in session, you’ll find me on the search for unique
-          stationery, devouring audiobooks at 1.5x speed (yes, I’m that person),
+          {`When I'm not in session, you'll find me on the search for unique
+          stationery, devouring audiobooks at 1.5x speed (yes, I'm that person),
           or planning my next trip to somewhere warmer than wherever I am —
           usually with a slice of margherita pizza in hand. I have a soft spot
           for beautiful interiors: the kind of spaces that feel like an exhale,
@@ -237,19 +271,27 @@ export default function Home() {
           for more support, check out our blog, or subscribe to receive our free
           printable note cards: Permission Notes for Being Human.
         </h2>
+
+        {/* UPDATED NEWSLETTER FORM */}
         <form
           className="w-full flex justify-center items-center mb-[48px] lg:mb-[96px]"
-          action="https://formspree.io/f/YOUR_FORM_ID"
-          method="POST"
+          onSubmit={handleNewsletterSubmit}
+          // REMOVED: action="https://formspree.io/f/mqabnrbe"
+          // REMOVED: method="POST"
         >
           <input
             type="email"
             name="email"
             placeholder="enter your email"
             required
-            className="border-b-1 border-dark-blue body-text placeholder:!text-blue py-2 w-full outline-0 focus:!placeholder-transparent"
+            disabled={isSubmitting}
+            className="border-b-1 border-dark-blue body-text placeholder:!text-blue py-2 w-full outline-0 focus:!placeholder-transparent disabled:opacity-50"
           />
-          <button type="submit" className="!border-none">
+          <button
+            type="submit"
+            className="!border-none"
+            disabled={isSubmitting}
+          >
             <Image
               src="/right-arrow.svg"
               alt="right arrow"
@@ -259,6 +301,7 @@ export default function Home() {
             />
           </button>
         </form>
+
         <div className="flex flex-col justify-center items-center gap-[12px]">
           <p className="body-text">
             Now serving clients in NY, NJ, CT, MA, and CO.

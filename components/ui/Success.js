@@ -3,7 +3,7 @@ export default function Success({ text, onClose }) {
     <div className="bg-black/50 fixed top-0 left-0 h-screen w-screen flex justify-center items-center z-[9999] pt-4 overflow-y-auto hide-scrollbar">
       <div className="bg-dark-blue p-[86px] m-[86px] w-full max-w-[54rem] relative flex flex-col justify-center items-center gap-8">
         <p
-          className="heading-1 text-cream absolute top-8 right-8 !cursor-[url('/cursorButton.svg')_12_12,auto]"
+          className="heading-1 text-cream absolute top-8 right-8 !cursor-[url('/cursor_clickable.png')_8_8,pointer]"
           onClick={onClose}
         >
           X

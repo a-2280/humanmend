@@ -3,7 +3,10 @@
 import { useState, useEffect } from "react";
 
 export default function Application({ isOpen, onClose, onSuccess }) {
-  const [selectedOption, setSelectedOption] = useState("");
+  const [selectedLicensed, setSelectedLicensed] = useState("");
+  const [selectedHowHeard, setSelectedHowHeard] = useState("");
+  const [selectedFutureOpportunities, setSelectedFutureOpportunities] =
+    useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
@@ -23,9 +26,11 @@ export default function Application({ isOpen, onClose, onSuccess }) {
     setIsSubmitting(true);
 
     const formData = new FormData(e.target);
+    // Add a form type identifier
+    formData.append("formType", "job_application");
 
     try {
-      const response = await fetch("https://formspree.io/f/xdkzzrvn", {
+      const response = await fetch("https://formspree.io/f/mzzgongg", {
         method: "POST",
         body: formData,
         headers: {
@@ -52,7 +57,7 @@ export default function Application({ isOpen, onClose, onSuccess }) {
     <div className="bg-black/50 fixed top-0 left-0 h-screen w-screen flex justify-center items-start z-[9999] overflow-y-auto hide-scrollbar">
       <div className="bg-dark-blue p-[43px] pt-[75px] md:p-[86px] md:m-[86px] w-[54rem] max-w-full relative">
         <p
-          className="heading-1 text-cream absolute top-8 right-8 !cursor-[url('/cursorButton.svg')_12_12,auto]"
+          className="heading-1 text-cream absolute top-8 right-8 !cursor-[url('/cursor_clickable.png')_8_8,pointer]"
           onClick={onClose}
         >
           X
@@ -68,7 +73,12 @@ export default function Application({ isOpen, onClose, onSuccess }) {
             you to this work. We&apos;re honored to get to know you.
           </p>
         </div>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-20 mt-20">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-20 mt-20"
+          // REMOVED: action="https://formspree.io/f/mzzgongg"
+          // REMOVED: method="POST"
+        >
           <div className="flex flex-col md:flex-row gap-12">
             <div className="flex flex-col flex-1">
               <label htmlFor="fullName" className="body-text text-cream">
@@ -80,7 +90,8 @@ export default function Application({ isOpen, onClose, onSuccess }) {
                 name="fullName"
                 placeholder="First Last"
                 required
-                className="text-cream outline-0 focus:placeholder-transparent border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2"
+                disabled={isSubmitting}
+                className="text-cream outline-0 focus:placeholder-transparent border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2 disabled:opacity-50"
               />
             </div>
             <div className="flex flex-col flex-1">
@@ -92,7 +103,8 @@ export default function Application({ isOpen, onClose, onSuccess }) {
                 id="pronouns"
                 name="pronouns"
                 placeholder="He/Him"
-                className=" text-cream outline-0 border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2"
+                disabled={isSubmitting}
+                className=" text-cream outline-0 border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2 disabled:opacity-50"
               />
             </div>
           </div>
@@ -106,7 +118,9 @@ export default function Application({ isOpen, onClose, onSuccess }) {
                 id="email"
                 name="email"
                 placeholder="emailaddress@server.com"
-                className="text-cream outline-0 border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2"
+                required
+                disabled={isSubmitting}
+                className="text-cream outline-0 border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2 disabled:opacity-50"
               />
             </div>
             <div className="flex flex-col">
@@ -118,7 +132,8 @@ export default function Application({ isOpen, onClose, onSuccess }) {
                 id="phone"
                 name="phone"
                 placeholder="(XXX) - XXX - XXXX"
-                className="text-cream outline-0 border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2"
+                disabled={isSubmitting}
+                className="text-cream outline-0 border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2 disabled:opacity-50"
               />
             </div>
           </div>
@@ -133,10 +148,11 @@ export default function Application({ isOpen, onClose, onSuccess }) {
               <select
                 id="currentlyLicensed"
                 name="currentlyLicensed"
-                value={selectedOption}
-                onChange={(e) => setSelectedOption(e.target.value)}
+                value={selectedLicensed}
+                onChange={(e) => setSelectedLicensed(e.target.value)}
                 required
-                className="body-text text-cream border-b-[1.5px] pb-2 outline-0"
+                disabled={isSubmitting}
+                className="body-text text-cream border-b-[1.5px] pb-2 outline-0 disabled:opacity-50"
               >
                 <option value="" disabled>
                   Yes/No
@@ -146,30 +162,32 @@ export default function Application({ isOpen, onClose, onSuccess }) {
               </select>
             </div>
 
-            {selectedOption === "yes" && (
+            {selectedLicensed === "yes" && (
               <>
                 <div className="flex flex-col justify-between items-start min-h-[68px]">
-                  <label htmlFor="pronouns" className="body-text text-cream">
+                  <label htmlFor="licenseType" className="body-text text-cream">
                     License Type & State(s):
                   </label>
                   <input
                     type="text"
-                    id="pronouns"
-                    name="pronouns"
+                    id="licenseType"
+                    name="licenseType"
                     placeholder="List licensing and state"
-                    className=" text-cream outline-0 border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2 w-full"
+                    disabled={isSubmitting}
+                    className=" text-cream outline-0 border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2 w-full disabled:opacity-50"
                   />
                 </div>
                 <div className="flex flex-col justify-between items-start min-h-[68px]">
-                  <label htmlFor="pronouns" className="body-text text-cream">
+                  <label htmlFor="location" className="body-text text-cream">
                     Where are you based?
                   </label>
                   <input
                     type="text"
-                    id="pronouns"
-                    name="pronouns"
+                    id="location"
+                    name="location"
                     placeholder="City/State"
-                    className=" text-cream outline-0 border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2 w-full"
+                    disabled={isSubmitting}
+                    className=" text-cream outline-0 border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2 w-full disabled:opacity-50"
                   />
                 </div>
               </>
@@ -177,42 +195,48 @@ export default function Application({ isOpen, onClose, onSuccess }) {
           </div>
           <div className="flex flex-col md:flex-row gap-12">
             <div className="flex flex-col justify-between items-start gap-4">
-              <label htmlFor="pronouns" className="body-text text-cream">
+              <label htmlFor="yearsOfPractice" className="body-text text-cream">
                 How many years have you been
                 <br /> practicing?
               </label>
               <input
                 type="text"
-                id="pronouns"
-                name="pronouns"
+                id="yearsOfPractice"
+                name="yearsOfPractice"
                 placeholder="I have been practicing for X years."
-                className=" text-cream outline-0 border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2 w-full"
+                disabled={isSubmitting}
+                className=" text-cream outline-0 border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2 w-full disabled:opacity-50"
               />
             </div>
             <div className="flex-1 flex flex-col justify-between items-start">
-              <label htmlFor="pronouns" className="body-text text-cream">
+              <label htmlFor="specializations" className="body-text text-cream">
                 Areas of specialization or interest?
               </label>
               <input
                 type="text"
-                id="pronouns"
-                name="pronouns"
+                id="specializations"
+                name="specializations"
                 placeholder="e.g., eating disorders, trauma, anxiety, etc."
-                className=" text-cream outline-0 border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2 w-full"
+                disabled={isSubmitting}
+                className=" text-cream outline-0 border-b-[1.5px] border-cream placeholder-grey text-[14px] py-2 w-full disabled:opacity-50"
               />
             </div>
           </div>
 
           <div className="flex flex-col">
-            <label htmlFor="textBox" className="body-text text-cream mb-4">
+            <label
+              htmlFor="valuesAlignment"
+              className="body-text text-cream mb-4"
+            >
               How do your values as a therapist align with HumanMend&apos;s
               mission and approach?
             </label>
             <textarea
-              id="textBox"
-              name="textBox"
+              id="valuesAlignment"
+              name="valuesAlignment"
               placeholder="Tell us what you think makes you the right fit for HumanMend."
-              className="text-cream outline-0 border-[1.5px] border-cream h-[77px] placeholder-grey text-[14px] tracking-[0.04rem] p-2"
+              disabled={isSubmitting}
+              className="text-cream outline-0 border-[1.5px] border-cream h-[77px] placeholder-grey text-[14px] tracking-[0.04rem] p-2 disabled:opacity-50"
             />
           </div>
 
@@ -226,11 +250,12 @@ export default function Application({ isOpen, onClose, onSuccess }) {
                 name="resume"
                 accept="image/*,.pdf,.doc,.docx"
                 id="file-upload"
-                className="absolute inset-0 w-full h-full opacity-0"
+                disabled={isSubmitting}
+                className="absolute inset-0 w-full h-full opacity-0 disabled:cursor-not-allowed"
               />
               <label
                 htmlFor="file-upload"
-                className="flex items-start justify-start border-[1.5px] border-cream h-[77px] text-grey text-[14px] tracking-[0.04rem] p-2"
+                className={`flex items-start justify-start border-[1.5px] border-cream h-[77px] text-grey text-[14px] tracking-[0.04rem] p-2 ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
               >
                 Click or drag a file to this area to upload.
               </label>
@@ -240,17 +265,20 @@ export default function Application({ isOpen, onClose, onSuccess }) {
           <div className="flex flex-col md:flex-row justify-between items-start gap-12">
             <div className="flex-1 flex flex-col w-fit gap-4">
               <label
-                htmlFor="currentlyLicensed"
+                htmlFor="futureOpportunities"
                 className="body-text text-cream"
               >
                 Are you open to future opportunities
                 <br /> if we aren&apos;t currently hiring?
               </label>
               <select
-                id="currentlyLicensed"
-                name="currentlyLicensed"
+                id="futureOpportunities"
+                name="futureOpportunities"
+                value={selectedFutureOpportunities}
+                onChange={(e) => setSelectedFutureOpportunities(e.target.value)}
                 required
-                className="body-text text-cream border-b-[1.5px] pb-2 outline-0"
+                disabled={isSubmitting}
+                className="body-text text-cream border-b-[1.5px] pb-2 outline-0 disabled:opacity-50"
               >
                 <option value="" disabled>
                   Yes/No
@@ -266,10 +294,11 @@ export default function Application({ isOpen, onClose, onSuccess }) {
               <select
                 id="howHeard"
                 name="howHeard"
-                value={selectedOption}
-                onChange={(e) => setSelectedOption(e.target.value)}
+                value={selectedHowHeard}
+                onChange={(e) => setSelectedHowHeard(e.target.value)}
                 required
-                className="body-text text-cream border-b-[1.5px] pb-2 outline-0 w-full"
+                disabled={isSubmitting}
+                className="body-text text-cream border-b-[1.5px] pb-2 outline-0 w-full disabled:opacity-50"
               >
                 <option value="" disabled>
                   Select One
@@ -279,7 +308,7 @@ export default function Application({ isOpen, onClose, onSuccess }) {
                 <option value="referral">Referral</option>
                 <option value="other">Other (please specify)</option>
               </select>
-              {selectedOption === "other" && (
+              {selectedHowHeard === "other" && (
                 <div className="flex flex-col gap-2 mt-8">
                   <label
                     htmlFor="otherSpecify"
@@ -293,7 +322,8 @@ export default function Application({ isOpen, onClose, onSuccess }) {
                     name="otherSpecify"
                     placeholder="Please tell us how you heard about us"
                     required
-                    className="w-64 border-b-[1.5px] text-cream outline-0 border-cream placeholder-grey text-[14px] py-2"
+                    disabled={isSubmitting}
+                    className="w-64 border-b-[1.5px] text-cream outline-0 border-cream placeholder-grey text-[14px] py-2 disabled:opacity-50"
                   />
                 </div>
               )}
