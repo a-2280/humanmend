@@ -15,7 +15,10 @@ export default function Footer() {
         className="max-w-[25px] md:max-w-[35px]"
       />
       <div className="flex justify-center items-baseline gap-2 md:hidden">
-        <Link href="#" className="button-main border-cream text-cream">
+        <Link
+          href="https://www.instagram.com/humanmend"
+          className="button-main border-cream text-cream"
+        >
           Instagram
         </Link>
         <p className="body-text text-cream">/</p>
