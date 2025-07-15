@@ -34,7 +34,7 @@ export default function Footer() {
         <p className="heading-1 text-cream">© HUMANMEND 2025</p>
         <div className="flex justify-center items-baseline gap-2">
           <Link
-            href="#"
+            href="https://www.instagram.com/humanmend/"
             className="button-main !border-cream text-cream no-hover no-color"
           >
             Instagram
