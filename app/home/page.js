@@ -276,8 +276,8 @@ export default function Home() {
         <form
           className="w-full flex justify-center items-center mb-[48px] lg:mb-[96px]"
           onSubmit={handleNewsletterSubmit}
-          // REMOVED: action="https://formspree.io/f/mqabnrbe"
-          // REMOVED: method="POST"
+          action="https://formspree.io/f/xpwlavdn"
+          method="POST"
         >
           <input
             type="email"
