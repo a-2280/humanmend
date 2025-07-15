@@ -60,15 +60,17 @@ export default function Contact() {
           {contactContent.section1Button}
         </button>
         {modalState === "soloOrGroup" && (
-          <SoloOrGroup
+          <GetInTouch
             isOpen={true}
             onClose={() => setModalState("closed")}
             onSuccess={() => setModalState("success")}
+            linkSelected={"Individual or Group Consultation"}
           />
         )}
+
         {modalState === "success" && (
           <Success
-            text="We look forward to helping you along your professional journey. We will be in touch soon."
+            text="In a world that often asks us to shrink, your message just claimed some space. That’s where healing begins. We will be in touch soon."
             onClose={() => setModalState("closed")}
           />
         )}
