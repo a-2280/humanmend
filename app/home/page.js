@@ -38,7 +38,7 @@ export default function Home() {
     formData.append("formType", "newsletter_home");
 
     try {
-      const response = await fetch("https://formspree.io/f/mqabnrbe", {
+      const response = await fetch("https://formspree.io/f/xpwlavdn", {
         method: "POST",
         body: formData,
         headers: {
@@ -276,8 +276,6 @@ export default function Home() {
         <form
           className="w-full flex justify-center items-center mb-[48px] lg:mb-[96px]"
           onSubmit={handleNewsletterSubmit}
-          action="https://formspree.io/f/xpwlavdn"
-          method="POST"
         >
           <input
             type="email"
