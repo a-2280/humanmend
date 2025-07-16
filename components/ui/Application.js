@@ -30,7 +30,7 @@ export default function Application({ isOpen, onClose, onSuccess }) {
     formData.append("formType", "job_application");
 
     try {
-      const response = await fetch("https://formspree.io/f/mzzgongg", {
+      const response = await fetch("https://formspree.io/f/myzpypkv", {
         method: "POST",
         body: formData,
         headers: {

@@ -27,7 +27,7 @@ export default function SoloOrGroup({ isOpen, onClose, onSuccess }) {
     formData.append("formType", "professional_consultation");
 
     try {
-      const response = await fetch("https://formspree.io/f/xovwrgwn", {
+      const response = await fetch("https://formspree.io/f/xblkjkgy", {
         method: "POST",
         body: formData,
         headers: {

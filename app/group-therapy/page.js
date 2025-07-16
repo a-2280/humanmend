@@ -31,10 +31,10 @@ export default function AnxietySpecialty() {
 
     const formData = new FormData(e.target);
     // Add a form type identifier
-    formData.append("formType", "newsletter_anxiety_specialty");
+    formData.append("formType", "newsletter_home");
 
     try {
-      const response = await fetch("https://formspree.io/f/mqabnrbe", {
+      const response = await fetch("https://formspree.io/f/xpwlavdn", {
         method: "POST",
         body: formData,
         headers: {

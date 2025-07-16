@@ -27,7 +27,7 @@ export default function FreeConsult({ isOpen, onClose, onSuccess }) {
     formData.append("formType", "free_consultation");
 
     try {
-      const response = await fetch("https://formspree.io/f/meoknykz", {
+      const response = await fetch("https://formspree.io/f/mnnzqzpz", {
         method: "POST",
         body: formData,
         headers: {

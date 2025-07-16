@@ -32,7 +32,7 @@ export default function GetInTouch({
     formData.append("formType", "get_in_touch");
 
     try {
-      const response = await fetch("https://formspree.io/f/meoknykz", {
+      const response = await fetch("https://formspree.io/f/mnnzqzpz", {
         method: "POST",
         body: formData,
         headers: {
