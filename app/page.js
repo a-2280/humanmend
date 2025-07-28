@@ -64,27 +64,16 @@ export default function Landingpage() {
     return () => timeouts.forEach(clearTimeout);
   }, [imagesLoaded]);
 
-  // Loading screen component
+  // Loading screen component - matching your home page style
   const LoadingScreen = () => (
-    <div className="fixed inset-0 bg-white md:bg-blue-500 flex flex-col justify-center items-center z-50">
-      <div className="animate-pulse">
-        <Image
-          src="/cream_lettermark.svg"
-          alt="Loading"
-          width={40}
-          height={40}
-          className="hidden md:block"
-        />
-        <Image
-          src="/blue_lettermark.svg"
-          alt="Loading"
-          width={30}
-          height={30}
-          className="md:hidden"
-        />
-      </div>
-      <div className="mt-4 text-blue md:text-cream text-sm">
-        Loading... ({loadedCount}/{criticalImages.length})
+    <div className="fixed inset-0 overflow-hidden">
+      <div className="md:bg-[url(/blue-background.png)] h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center w-full px-[44px] lg:px-0">
+        <div className="md:hidden w-screen h-screen flex justify-center items-center mt-[-4rem]">
+          <Image src="/footer.gif" alt="vase" width={100} height={100} />
+        </div>
+        <div className="hidden w-screen h-screen md:flex justify-center items-center">
+          <Image src="/footer.gif" alt="vase" width={100} height={100} />
+        </div>
       </div>
     </div>
   );
