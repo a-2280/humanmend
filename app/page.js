@@ -7,48 +7,65 @@ import { useEffect, useState } from "react";
 export default function Landingpage() {
   const [visibleImages, setVisibleImages] = useState([false, false, false]);
   const [imagesLoaded, setImagesLoaded] = useState(false);
-  const [loadedCount, setLoadedCount] = useState(0);
 
-  // List of critical images to preload
+  // Only preload the most critical images that affect layout
   const criticalImages = [
     "/blue-background.png",
-    "/landing-group-1.svg",
-    "/landing-group-2.svg",
-    "/landing-group-3.svg",
-    "/man.png",
-    "/cream_logotype.svg",
-    "/blue_logotype.svg",
-    "/cream_lettermark.svg",
-    "/blue_lettermark.svg",
+    "/footer.gif", // For loading screen
   ];
 
-  // Preload images and track loading progress
+  // Faster, more efficient preloading
   useEffect(() => {
-    let loadCount = 0;
+    let loadedCount = 0;
+    const totalImages = criticalImages.length;
+
+    // Quick timeout fallback - don't wait too long
+    const fallbackTimeout = setTimeout(() => {
+      setImagesLoaded(true);
+    }, 1500); // Reduced from 3000ms
 
     const preloadImage = (src) => {
-      return new Promise((resolve, reject) => {
-        const img = new window.Image();
-        img.onload = () => {
-          loadCount++;
-          setLoadedCount(loadCount);
-          resolve(src);
-        };
-        img.onerror = reject;
-        img.src = src;
-      });
+      const img = new window.Image();
+      img.onload = img.onerror = () => {
+        loadedCount++;
+        if (loadedCount >= totalImages) {
+          clearTimeout(fallbackTimeout);
+          setImagesLoaded(true);
+        }
+      };
+      img.src = src;
     };
 
-    // Preload all critical images
-    Promise.all(criticalImages.map(preloadImage))
-      .then(() => {
-        setImagesLoaded(true);
-      })
-      .catch((error) => {
-        console.warn("Some images failed to preload:", error);
-        // Still show content after a timeout even if some images fail
-        setTimeout(() => setImagesLoaded(true), 3000);
+    // Start preloading
+    criticalImages.forEach(preloadImage);
+
+    // Also check if images are already cached
+    const checkCached = () => {
+      let cachedCount = 0;
+      criticalImages.forEach((src) => {
+        const img = new window.Image();
+        img.onload = () => {
+          cachedCount++;
+          if (cachedCount >= totalImages) {
+            clearTimeout(fallbackTimeout);
+            setImagesLoaded(true);
+          }
+        };
+        img.src = src;
+        if (img.complete) {
+          cachedCount++;
+        }
       });
+
+      if (cachedCount >= totalImages) {
+        clearTimeout(fallbackTimeout);
+        setImagesLoaded(true);
+      }
+    };
+
+    checkCached();
+
+    return () => clearTimeout(fallbackTimeout);
   }, []);
 
   // Start animations only after images are loaded
@@ -66,13 +83,27 @@ export default function Landingpage() {
 
   // Loading screen component - matching your home page style
   const LoadingScreen = () => (
-    <div className="fixed inset-0 overflow-hidden">
+    <div className="fixed inset-0 overflow-hidden z-50">
       <div className="md:bg-[url(/blue-background.png)] h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center w-full px-[44px] lg:px-0">
         <div className="md:hidden w-screen h-screen flex justify-center items-center mt-[-4rem]">
-          <Image src="/footer.gif" alt="vase" width={100} height={100} />
+          <Image
+            src="/footer.gif"
+            alt="vase"
+            width={100}
+            height={100}
+            priority
+            unoptimized // Prevent Next.js from processing the GIF
+          />
         </div>
         <div className="hidden w-screen h-screen md:flex justify-center items-center">
-          <Image src="/footer.gif" alt="vase" width={100} height={100} />
+          <Image
+            src="/footer.gif"
+            alt="vase"
+            width={100}
+            height={100}
+            priority
+            unoptimized // Prevent Next.js from processing the GIF
+          />
         </div>
       </div>
     </div>
