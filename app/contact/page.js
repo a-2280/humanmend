@@ -55,12 +55,12 @@ export default function Contact() {
         </p>
         <button
           className="button-main"
-          onClick={() => setModalState("soloOrGroup")}
+          onClick={() => setModalState("getInTouch")}
         >
           {contactContent.section1Button}
         </button>
-        {modalState === "soloOrGroup" && (
-          <SoloOrGroup
+        {modalState === "getInTouch" && (
+          <GetInTouch
             isOpen={true}
             onClose={() => setModalState("closed")}
             onSuccess={() => setModalState("success")}
