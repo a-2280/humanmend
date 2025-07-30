@@ -7,7 +7,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
 import SoloOrGroup from "@/components/ui/SoloOrGroup";
-import Popup from "@/components/ui/Popup";
 import GetInTouch from "@/components/ui/GetInTouch";
 import Application from "@/components/ui/Application";
 import Success from "@/components/ui/Success";
@@ -59,6 +58,7 @@ export default function Contact() {
         >
           {contactContent.section1Button}
         </button>
+
         {modalState === "getInTouch" && (
           <GetInTouch
             isOpen={true}
@@ -193,20 +193,22 @@ export default function Contact() {
             </div>
             <button
               className="button-small mt-[15px] md:mt-[24px] lg:m-0"
-              onClick={() => setModalState("soloOrGroup2")}
+              onClick={() => setModalState("general")}
             >
               Contact Us
             </button>
-            {modalState === "soloOrGroup2" && (
-              <SoloOrGroup
+            {modalState === "general" && (
+              <GetInTouch
                 isOpen={true}
                 onClose={() => setModalState("closed")}
                 onSuccess={() => setModalState("success")}
+                linkSelected={"General Therapy"}
               />
             )}
+
             {modalState === "success" && (
               <Success
-                text="We look forward to helping you along your professional journey. We will be in touch soon."
+                text="In a world that often asks us to shrink, your message just claimed some space. That’s where healing begins. We will be in touch soon."
                 onClose={() => setModalState("closed")}
               />
             )}
@@ -224,21 +226,21 @@ export default function Contact() {
             </div>
             <button
               className="button-small mt-[15px] md:mt-[24px] lg:m-0"
-              onClick={() => setModalState("application")}
+              onClick={() => setModalState("ceds")}
             >
               Contact Us
             </button>
-            {modalState === "application" && (
-              <Application
+            {modalState === "ceds" && (
+              <SoloOrGroup
                 isOpen={true}
                 onClose={() => setModalState("closed")}
-                onSuccess={() => setModalState("successApp")}
+                onSuccess={() => setModalState("success")}
               />
             )}
 
-            {modalState === "successApp" && (
+            {modalState === "success" && (
               <Success
-                text="We look forward to helping you along your professional journey. We will be in touch soon."
+                text="In a world that often asks us to shrink, your message just claimed some space. That’s where healing begins. We will be in touch soon."
                 onClose={() => setModalState("closed")}
               />
             )}
