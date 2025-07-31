@@ -12,9 +12,11 @@ import blog5 from "./blog5";
 import blog6 from "./blog6";
 import contact from "./contact";
 import consultation from "./consultation";
+import test from "./pages/test";
 
 export const schema = {
   types: [
+    test,
     home,
     anxiety,
     eatingDisorder,
