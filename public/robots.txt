@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Disallow studio admin pages
+Disallow: /studio/
+
+# Allow important pages
+Allow: /home
+Allow: /about
+Allow: /anxiety-therapy
+Allow: /eating-disorder-therapy
+Allow: /group-therapy
+Allow: /contact
+Allow: /consultation
+Allow: /blog
+
+# Sitemap location
+Sitemap: https://humanmend.com/sitemap.xml
