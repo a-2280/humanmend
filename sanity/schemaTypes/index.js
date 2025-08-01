@@ -12,11 +12,11 @@ import blog5 from "./blog5";
 import blog6 from "./blog6";
 import contact from "./contact";
 import consultation from "./consultation";
-import test from "./pages/test";
+import seo from "./seo";
 
 export const schema = {
   types: [
-    test,
+    seo,
     home,
     anxiety,
     eatingDisorder,

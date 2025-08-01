@@ -1,3 +1,6 @@
+// BACKUP OF ORIGINAL STRUCTURE - FOR EASY ROLLBACK
+// To restore: copy this content back to structure.js
+
 // https://www.sanity.io/docs/structure-builder-cheat-sheet
 import {
   HomeIcon,
