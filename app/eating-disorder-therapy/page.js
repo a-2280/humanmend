@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
 import GetInTouch from "@/components/ui/GetInTouch";
 import Success from "@/components/ui/Success";
+import PortableTextRenderer from "@/components/ui/PortableTextRenderer";
 
 export default function AnxietySpecialty() {
   const [modalState, setModalState] = useState("closed");
@@ -19,7 +20,13 @@ export default function AnxietySpecialty() {
   };
 
   useEffect(() => {
-    const query = `*[_type == "eating-disorder"][0]`;
+    const query = `*[_type == "eating-disorder"][0]{
+      ...,
+      accordionItems[]{
+        title,
+        content
+      }
+    }`;
 
     Promise.all([
       client.fetch(query),
@@ -42,130 +49,8 @@ export default function AnxietySpecialty() {
     );
   }
 
-  const accordionItems = [
-    {
-      title: "What your eating disorder doesn't want you to know.",
-      content: (
-        <p className="body-small mb-[24px]">
-          It&apos;s not really about the food or your body, even if your mind
-          insists it is. The obsessions, the rules, the behaviors—they&apos;re
-          the surface-level symptoms of deeper needs and emotions. Your eating
-          disorder is a coping mechanism, a way to manage anxiety, process
-          emotions, create a sense of control, or protect yourself from pain.
-          When we understand this truth, recovery becomes less about forcing
-          yourself to eat differently and more about addressing what&apos;s
-          happening beneath the surface. We&apos;ve got you in this deeper
-          exploration
-        </p>
-      ),
-    },
-    {
-      title: 'Uncovering the "Why?" behind your eating disorder.',
-      content: (
-        <div className="mb-[24px]">
-          <p className="body-small">
-            Our approach to eating disorder recovery goes beyond superficial
-            symptom management. We don&apos;t just want to change your
-            behaviors—we want to understand them. Together, we&apos;ll explore:
-          </p>
-          <ul className="body-small">
-            <li className="ml-4 md:m-0">
-              <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
-              What function is your eating disorder serving in your life?
-            </li>
-            <li className="ml-4 md:m-0">
-              <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
-              When did these patterns begin, and what were they protecting you
-              from?
-            </li>
-            <li className="ml-4 md:ml-5 lg:m-0">
-              <span className="body-text ml-[-1rem] mr-2 md:ml-[-.75rem] lg:mx-2">
-                •
-              </span>
-              How is your relationship with food connected to your deeper needs
-              for safety, control, comfort, or validation?
-            </li>
-          </ul>
-          <p className="body-small">
-            Our therapeutic judgment-free zone allows us to get curious about
-            your eating disorder as an intelligent adaptation—not a character
-            flaw or moral failing.
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: "Reclaiming your power, your peace, and your plate.",
-      content: (
-        <div className="mb-[24px]">
-          <p className="body-small">
-            Recovery isn&apos;t about forcing yourself to eat
-            &ldquo;normally&rdquo; through sheer willpower. It&apos;s about
-            gently taking back the power your eating disorder has claimed over
-            your life. Working from a Health at Every Size® approach,
-            we&apos;ll help you:
-          </p>
-          <ul className="body-small">
-            <li className="ml-4 md:ml-5 lg:m-0">
-              <span className="body-text ml-[-1rem] mr-2 md:ml-[-.75rem] lg:mx-2">
-                •
-              </span>
-              Challenge the eating disorder voice that keeps you trapped in
-              cycles of restriction, binging, or compensating behaviors
-            </li>
-            <li className="ml-4 md:m-0">
-              <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
-              Reconnect with your body&apos;s natural hunger and fullness cues
-            </li>
-            <li className="ml-4 md:m-0">
-              <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
-              Dismantle the good food/bad food mentality that fuels anxiety
-              around eating
-            </li>
-            <li className="ml-4 md:m-0">
-              <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
-              Build genuine self-worth that isn&apos;t tied to your appearance
-              or food choices
-            </li>
-            <li className="ml-4 md:m-0">
-              <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
-              Practice allowing yourself to emotionally and physically take up
-              space in the world
-            </li>
-          </ul>
-          <p className="body-small">
-            We recognize that eating disorders and disordered eating affect
-            people in bodies of every size, just as health can exist in every
-            size body. Our society&apos;s narrow definitions of
-            &ldquo;healthy&rdquo; or &ldquo;normal&rdquo; bodies contribute to
-            the shame that fuels eating disorders. We&apos;re here to challenge
-            those definitions, not reinforce them. The goal isn&apos;t perfect
-            eating—it&apos;s freedom. Freedom from constant thoughts about food.
-            Freedom from body criticism. Freedom to show up authentically in
-            your life.
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: "There is so much more to you.",
-      content: (
-        <p className="body-small mb-[24px]">
-          Your eating disorder has convinced you that your value lies in your
-          appearance or your ability to control your food intake. We&apos;re
-          here to remind you of a fundamental truth: you have so much more to
-          offer this world than how you look. Your unique perspectives, your
-          compassion, your creativity, your intelligence, your humor—these are
-          the things that make you indispensable. These are the things that the
-          world is missing when your eating disorder keeps you small and
-          distracted. We believe in your capacity to heal. We believe in your
-          right to a peaceful relationship with food and your body. And we
-          believe that your authentic self—not your eating disorder
-          self—deserves to be known, expressed, and celebrated.
-        </p>
-      ),
-    },
-  ];
+  // Use accordion items from Sanity or fallback to empty array
+  const accordionItems = eatingDisorderContent?.accordionItems || [];
 
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
@@ -252,7 +137,7 @@ export default function AnxietySpecialty() {
                 <span className="flex-1 !text-left">{item.title}</span>
               </div>
               <div className={`${expandIndex === index ? "" : "hidden"}`}>
-                {item.content}
+                <PortableTextRenderer content={item.content} />
               </div>
               <hr />
             </li>

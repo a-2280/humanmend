@@ -85,6 +85,20 @@ export default {
       type: "text",
     },
     {
+      name: "valuesAccordion",
+      title: "Values Accordion Items",
+      type: "array",
+      of: [{ type: "accordionItem" }],
+      description: "Items for the 'Our Values' accordion section",
+    },
+    {
+      name: "faqAccordion",
+      title: "FAQ Accordion Items",
+      type: "array",
+      of: [{ type: "accordionItem" }],
+      description: "Items for the 'Frequently Asked Questions' accordion section",
+    },
+    {
       name: "seoTitle",
       title: "SEO Title",
       type: "string",

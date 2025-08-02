@@ -27,9 +27,10 @@ export default function Landingpage() {
         <div className="min-w-[1750px] min-h-[1150px] max-w-[1701px] max-h-[1105px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <Image
             src={"/landing-group-1.svg"}
-            alt="men"
+            alt="therapy group illustration"
             width={650}
             height={600}
+            priority={visibleImages[0]}
             className={`hidden md:flex absolute bottom-[110px] left-[100px] transition-all duration-700 ease-out ${
               visibleImages[0]
                 ? "opacity-100 translate-y-0"
@@ -38,9 +39,10 @@ export default function Landingpage() {
           />
           <Image
             src={"/landing-group-2.svg"}
-            alt="men"
+            alt="therapy group illustration"
             width={800}
             height={800}
+            priority={visibleImages[1]}
             className={`hidden md:flex absolute top-[100px] right-[150px] transition-all duration-700 ease-out ${
               visibleImages[1]
                 ? "opacity-100 translate-y-0"
@@ -49,9 +51,10 @@ export default function Landingpage() {
           />
           <Image
             src={"/landing-group-3.svg"}
-            alt="men"
+            alt="therapy group illustration"
             width={1050}
             height={500}
+            priority={visibleImages[2]}
             className={`hidden md:flex absolute bottom-[100px] right-[200px] transition-all duration-700 ease-out ${
               visibleImages[2]
                 ? "opacity-100 translate-x-0"
@@ -64,6 +67,7 @@ export default function Landingpage() {
           alt="man"
           width={95}
           height={91}
+          priority
           className="md:hidden mt-[-5rem]"
         />
         <Image
@@ -71,6 +75,7 @@ export default function Landingpage() {
           alt="Humanmend logotype"
           width={210.88}
           height={18.968}
+          priority
           className="mt-16 lg:m-0 hidden md:block"
         />
         <Image
@@ -78,6 +83,7 @@ export default function Landingpage() {
           alt="Humanmend logotype"
           width={163.393}
           height={24.48}
+          priority
           className="mt-[42px] md:hidden"
         />
         <p className="heading-2 my-[35.49px] mb-[37px] max-w-[245px] md:max-w-[330px] text-center text-blue md:text-cream">

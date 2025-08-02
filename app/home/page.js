@@ -21,7 +21,7 @@ export default function Home() {
     const query = `*[_type == "home"][0]`;
 
     Promise.all([
-      client.fetch(query),
+      client.fetch(query, {}, { cache: 'force-cache', next: { revalidate: 3600 } }),
       new Promise((resolve) => setTimeout(resolve, 1750)),
     ]).then(([data]) => {
       setHomePageContent(data);

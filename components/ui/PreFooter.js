@@ -47,6 +47,7 @@ export default function PreFooter() {
         alt="Vase"
         width={845}
         height={610}
+        loading="lazy"
         className="mb-[24px] md:mb-[96px] w-full lg:min-w-[845px]"
       />
       <h2 className="heading-2 mb-[48px] lg:mb-[86px] max-w-[350px] lg:max-w-[490px]">

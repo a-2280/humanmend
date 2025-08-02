@@ -59,6 +59,13 @@ export default {
       type: "string",
     },
     {
+      name: "accordionItems",
+      title: "Accordion Items",
+      type: "array",
+      of: [{ type: "accordionItem" }],
+      description: "Items for the 'We've got secrets' accordion section",
+    },
+    {
       name: "seoTitle",
       title: "SEO Title",
       type: "string",

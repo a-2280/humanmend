@@ -11,11 +11,13 @@ import Success from "@/components/ui/Success";
 import Link from "next/link";
 import Popup from "@/components/ui/Popup";
 import GetInTouch from "@/components/ui/GetInTouch";
+import PortableTextRenderer from "@/components/ui/PortableTextRenderer";
 
 export default function AnxietySpecialty() {
   const [modalState, setModalState] = useState("closed");
   const [aboutContent, setAboutContent] = useState(null);
-  const [expandIndex, setExpandIndex] = useState(null);
+  const [valuesExpandIndex, setValuesExpandIndex] = useState(null);
+  const [faqExpandIndex, setFaqExpandIndex] = useState(null);
 
   useEffect(() => {
     if (aboutContent && window.location.hash === "#FAQ") {
@@ -27,7 +29,17 @@ export default function AnxietySpecialty() {
   }, [aboutContent]);
 
   useEffect(() => {
-    const query = `*[_type == "about"][0]`;
+    const query = `*[_type == "about"][0]{
+      ...,
+      valuesAccordion[]{
+        title,
+        content
+      },
+      faqAccordion[]{
+        title,
+        content
+      }
+    }`;
 
     Promise.all([
       client.fetch(query),
@@ -50,226 +62,17 @@ export default function AnxietySpecialty() {
     );
   }
 
-  const toggleExpand = (index) => {
-    setExpandIndex(expandIndex === index ? null : index);
+  const toggleValuesExpand = (index) => {
+    setValuesExpandIndex(valuesExpandIndex === index ? null : index);
   };
 
-  const accordionItems = [
-    {
-      title: "There is beauty in the broken.",
-      content: (
-        <p className="body-small mb-[24px]">
-          We are not here to &#34;fix you.&#34; We&#39;re here to help support
-          you on your healing journey.
-        </p>
-      ),
-    },
-    {
-      title: "We treat the whole person, not just the diagnosis.",
-      content: (
-        <p className="body-small mb-[24px]">
-          We won&#39;t put you in a box. Your experiences can&#39;t be reduced
-          to a collection of symptoms or a diagnostic label.
-        </p>
-      ),
-    },
-    {
-      title: "All parts are welcome.",
-      content: (
-        <p className="body-small mb-[24px]">
-          You&#39;re the expert of your own life. Our role is to ask questions
-          that help illuminate the path you&#39;re already sensing.
-        </p>
-      ),
-    },
-    {
-      title: "Authenticity matters.",
-      content: (
-        <p className="body-small mb-[24px]">
-          Our work together aims to create space for you to discover and reclaim
-          the parts of yourself that may have been set aside to please others or
-          stay safe.
-        </p>
-      ),
-    },
-    {
-      title: "Compassionate Curiosity.",
-      content: (
-        <p className="body-small mb-[24px]">
-          Your identity is valid and worthy of celebration, not merely
-          tolerance.
-        </p>
-      ),
-    },
-    {
-      title: "Health at Every Size (HAES).",
-      content: (
-        <p className="body-small mb-[24px]">
-          All bodies, shapes, and sizes are welcome here. Your worth isn&#39;t
-          determined by your appearance.
-        </p>
-      ),
-    },
-    {
-      title: "LGBTQIA+ Affirming.",
-      content: (
-        <p className="body-small mb-[24px]">
-          Even the aspects of yourself you&#39;ve been taught to hide or reject
-          have wisdom to offer. We create space for all of you.
-        </p>
-      ),
-    },
-  ];
+  const toggleFaqExpand = (index) => {
+    setFaqExpandIndex(faqExpandIndex === index ? null : index);
+  };
 
-  const accordionItems2 = [
-    {
-      title: "What if I don’t feel ready? What if I can’t let go?",
-      content: (
-        <p className="body-small mb-[24px]">
-          If the thought of recovery stirs up fear, know that this ambivalence
-          is completely normal. Your eating disorder has been with you through
-          difficult times. It&#39;s been your coping strategy, your companion,
-          your way of feeling safe in an unpredictable world. We honor this
-          relationship and understand that letting go happens gradually, not
-          overnight. You don&#39;t have to be &#34;all in&#34; to begin healing.
-          Curiosity is enough. The desire for something different is enough.
-          We&#39;ll meet you exactly where you are as we join you on your
-          journey.
-        </p>
-      ),
-    },
-    {
-      title: "Do you only work with eating disorders?",
-      content: (
-        <p className="body-small mb-[24px]">
-          No, we also specialize in working with clients struggling with
-          anxiety, specifically in the areas of perfectionism, relationships,
-          people pleasing, and self-esteem. We work from a trauma informed lens
-          and view all parts of you as worthy. Read more about our approach to
-          anxiety treatment{" "}
-          <Link href="/anxiety-therapy" className="border-b-1">
-            here
-          </Link>
-          . Beyond anxiety and eating disorder therapy, we offer general therapy
-          services and will offer group therapy services in the near future. Our
-          practice also provides consultation opportunities. To learn more,
-          visit our{" "}
-          <Link href="/consultation" className="border-b-1">
-            consultation page
-          </Link>{" "}
-          or inquire further about our services via our{" "}
-          <Link href="/contact" className="border-b-1">
-            contact page
-          </Link>
-          .
-        </p>
-      ),
-    },
-    {
-      title: "What is the cost of therapy? Do you accept insurance?",
-      content: (
-        <p className="body-small mb-[24px]">
-          We&#39;ve made an intentional choice to practice as out-of-network
-          providers. This allows us to focus entirely on your individualized
-          treatment without the limitations of insurance regulations. At
-          Humanmend, our rate is $225 per 50 minute session. Many insurance
-          plans offer significant coverage for therapy services through
-          out-of-network benefits: many PPO plans provide 50-80% coverage for
-          therapy sessions after your out-of-network deductible has been met.
-        </p>
-      ),
-    },
-    {
-      title: "How do I submit for reimbursement?",
-      content: (
-        <div className="mb-[24px]">
-          <p className="body-small">We have two options</p>
-          <ul className="body-small">
-            <li className="ml-4 md:ml-5 lg:m-0">
-              <span className="body-text ml-[-1rem] mr-2 md:ml-[-.75rem] lg:mx-2">
-                •
-              </span>
-              Thrizer: We have partnered with{" "}
-              <Link href="https://www.thrizer.com/" className="border-b-1">
-                Thrizer
-              </Link>{" "}
-              to help support the claim submission and reimbursement process so
-              you don&#39;t have to. There is a minimal fee to use this service
-            </li>
-            <li className="ml-4 md:m-0">
-              <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
-              Superbills: If preferred, we can provide you with a superbill each
-              month containing all the information your insurance requires for
-              reimbursement processing.
-            </li>
-          </ul>
-          <p className="body-small">
-            Please note, if we submit claims to insurance through Thrizer or if
-            you&#39;d like a superbill, a diagnosis will need to be assigned.
-          </p>
-          <p className="body-small mt-4">We accept multiple payment methods:</p>
-          <ul className="body-small">
-            <li className="ml-4 md:ml-5 lg:m-0">
-              <span className="body-text ml-[-1rem] mr-2 md:ml-[-.75rem] lg:mx-2">
-                •
-              </span>
-              HSA/FSA cards
-            </li>
-            <li className="ml-4 md:m-0">
-              <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
-              Credit cards
-            </li>
-            <li className="ml-4 md:m-0">
-              <span className="body-text ml-[-1rem] mr-2 md:mx-[.5rem]">•</span>
-              Debit cards
-            </li>
-          </ul>
-        </div>
-      ),
-    },
-    {
-      title: "How long will I need therapy?",
-      content: (
-        <p className="body-small mb-[24px]">
-          Depending on what you are currently struggling with will determine our
-          treatment trajectory. All humans are different and unique and the
-          treatment should be as well. Though it&#39;s hard to predict exact
-          timelines, we typically see clients weekly for a minimum of six months
-          to one+ years. We have many long-term clients who continue to seek
-          support and therapy to navigate healing in different areas of their
-          life, even after the original symptoms have decreased. We can assess
-          this together!
-        </p>
-      ),
-    },
-    {
-      title: "What is your approach to therapy?",
-      content: (
-        <p className="body-small mb-[24px]">
-          We utilize an individualized (vs one size fits all) approach
-          throughout your treatment. We will check in regularly to reassess
-          goals, as we go, and determine next steps. See the{" "}
-          <Link href="/about" className="border-b-1">
-            about page
-          </Link>{" "}
-          for more information.
-        </p>
-      ),
-    },
-    {
-      title: "How do I get started?",
-      content: (
-        <p className="body-small mb-[24px]">
-          Please fill out a{" "}
-          <Link href="/contact" className="border-b-1">
-            contact form
-          </Link>{" "}
-          and we will get back to you within 48 business hours to schedule a
-          free 15 minute consultation call to ensure we are a good fit.
-        </p>
-      ),
-    },
-  ];
+  // Use accordion items from Sanity or fallback to empty arrays
+  const valuesAccordionItems = aboutContent?.valuesAccordion || [];
+  const faqAccordionItems = aboutContent?.faqAccordion || [];
 
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-screen">
@@ -626,19 +429,19 @@ export default function AnxietySpecialty() {
         <h1 className="heading-1 mb-[32px] lg:mb-[86px]">OUR VALUES</h1>
         <hr />
         <ul>
-          {accordionItems.map((item, index) => (
+          {valuesAccordionItems.map((item, index) => (
             <li key={index}>
               <div
                 className="body-text py-[24px] flex items-start"
-                onClick={() => toggleExpand(index)}
+                onClick={() => toggleValuesExpand(index)}
               >
                 <span className="body-text mr-[24px] select-none">
-                  {expandIndex === index ? "-" : "+"}
+                  {valuesExpandIndex === index ? "-" : "+"}
                 </span>
                 <span className="flex-1">{item.title}</span>
               </div>
-              <div className={`${expandIndex === index ? "" : "hidden"}`}>
-                {item.content}
+              <div className={`${valuesExpandIndex === index ? "" : "hidden"}`}>
+                <PortableTextRenderer content={item.content} />
               </div>
               <hr />
             </li>
@@ -659,20 +462,20 @@ export default function AnxietySpecialty() {
         </h1>
         <hr />
         <ul>
-          {accordionItems2.map((item, index) => (
+          {faqAccordionItems.map((item, index) => (
             <li key={index}>
               <div
                 className="body-text py-[24px] flex items-start"
-                onClick={() => toggleExpand(index)}
+                onClick={() => toggleFaqExpand(index)}
                 id="FAQ"
               >
                 <span className="body-text mr-[24px] select-none">
-                  {expandIndex === index ? "-" : "+"}
+                  {faqExpandIndex === index ? "-" : "+"}
                 </span>
                 <span className="flex-1">{item.title}</span>
               </div>
-              <div className={`${expandIndex === index ? "" : "hidden"}`}>
-                {item.content}
+              <div className={`${faqExpandIndex === index ? "" : "hidden"}`}>
+                <PortableTextRenderer content={item.content} />
               </div>
               <hr />
             </li>

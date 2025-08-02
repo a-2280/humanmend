@@ -13,10 +13,12 @@ import blog6 from "./blog6";
 import contact from "./contact";
 import consultation from "./consultation";
 import seo from "./seo";
+import accordionItem from "./accordionItem";
 
 export const schema = {
   types: [
     seo,
+    accordionItem,
     home,
     anxiety,
     eatingDisorder,

@@ -3,16 +3,19 @@
 @font-face {
   font-family: "Outfit";
   src: url("/fonts/Outfit-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "OutfitMedium";
   src: url("/fonts/Outfit-Medium.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Pitch";
   src: url("/fonts/Pitch-Regular.otf") format("opentype");
+  font-display: swap;
 }
 
 @theme {
@@ -80,21 +83,28 @@
 
 body,
 li {
-  cursor:
-    url("/cursor_regular.png") 8 8,
-    auto !important;
+  cursor: auto !important;
 }
 
-a:hover,
-button:hover,
-a,
-button,
-li,
-input,
-textarea {
-  cursor:
-    url("/cursor_clickable.png") 8 8,
-    pointer !important;
+@media (min-width: 768px) {
+  body,
+  li {
+    cursor:
+      url("/cursor_regular.png") 8 8,
+      auto !important;
+  }
+  
+  a:hover,
+  button:hover,
+  a,
+  button,
+  li,
+  input,
+  textarea {
+    cursor:
+      url("/cursor_clickable.png") 8 8,
+      pointer !important;
+  }
 }
 
 nav li {

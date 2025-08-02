@@ -8,18 +8,36 @@ export default function Application({ isOpen, onClose, onSuccess }) {
   const [selectedFutureOpportunities, setSelectedFutureOpportunities] =
     useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedFile, setSelectedFile] = useState(null);
 
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflowY = "hidden";
     } else {
       document.body.style.overflowY = "unset";
+      // Clear form state when modal closes
+      setSelectedFile(null);
+      setSelectedLicensed("");
+      setSelectedHowHeard("");
+      setSelectedFutureOpportunities("");
     }
 
     return () => {
       document.body.style.overflowY = "unset";
     };
   }, [isOpen]);
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setSelectedFile(file);
+  };
+
+  const clearFile = () => {
+    setSelectedFile(null);
+    // Clear the file input
+    const fileInput = document.getElementById("file-upload");
+    if (fileInput) fileInput.value = "";
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,6 +57,11 @@ export default function Application({ isOpen, onClose, onSuccess }) {
       });
 
       if (response.ok) {
+        // Clear form state on success
+        setSelectedFile(null);
+        setSelectedLicensed("");
+        setSelectedHowHeard("");
+        setSelectedFutureOpportunities("");
         onSuccess();
       } else {
         alert("There was an error submitting the form. Please try again.");
@@ -244,22 +267,44 @@ export default function Application({ isOpen, onClose, onSuccess }) {
             <label htmlFor="resume" className="body-text text-cream mb-4">
               Upload your resume
             </label>
-            <div className="relative">
-              <input
-                type="file"
-                name="resume"
-                accept="image/*,.pdf,.doc,.docx"
-                id="file-upload"
-                disabled={isSubmitting}
-                className="absolute inset-0 w-full h-full opacity-0 disabled:cursor-not-allowed"
-              />
-              <label
-                htmlFor="file-upload"
-                className={`flex items-start justify-start border-[1.5px] border-cream h-[77px] text-grey text-[14px] tracking-[0.04rem] p-2 ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
-              >
-                Click or drag a file to this area to upload.
-              </label>
-            </div>
+            {selectedFile ? (
+              <div className="border-[1.5px] border-cream h-[77px] flex items-center justify-between p-2">
+                <div className="flex flex-col gap-1">
+                  <span className="text-cream text-[14px] tracking-[0.04rem]">
+                    File selected: {selectedFile.name}
+                  </span>
+                  <span className="text-grey text-[12px]">
+                    {(selectedFile.size / 1024 / 1024).toFixed(2)} MB
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  onClick={clearFile}
+                  disabled={isSubmitting}
+                  className="text-cream text-[14px] border-b-[1px] border-cream hover:opacity-70 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Remove
+                </button>
+              </div>
+            ) : (
+              <div className="relative">
+                <input
+                  type="file"
+                  name="resume"
+                  accept=".pdf,.doc,.docx"
+                  id="file-upload"
+                  onChange={handleFileChange}
+                  disabled={isSubmitting}
+                  className="absolute inset-0 w-full h-full opacity-0 cursor-pointer disabled:cursor-not-allowed"
+                />
+                <label
+                  htmlFor="file-upload"
+                  className={`flex items-center justify-center border-[1.5px] border-cream h-[77px] text-grey text-[14px] tracking-[0.04rem] p-2 cursor-pointer hover:bg-cream/5 transition-colors ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
+                >
+                  Click to upload your resume (.pdf, .doc, .docx)
+                </label>
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col md:flex-row justify-between items-start gap-12">
