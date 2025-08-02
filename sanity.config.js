@@ -15,7 +15,7 @@ import { structure } from "./sanity/structure";
 
 export default defineConfig({
   name: "humanmend",
-  title: "Humanmend",
+  title: "HumanMend",
   basePath: "/studio",
   projectId,
   dataset,
