@@ -1,5 +1,34 @@
 @import "tailwindcss";
 
+/* Minimal cross-browser form normalization - preserves existing styles */
+input, select, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Remove Safari's inner shadow and rounded corners */
+input[type="text"], input[type="email"], input[type="tel"] {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Remove browser default dropdown arrows from selects */
+select {
+  background-image: none;
+}
+select::-ms-expand { display: none; }
+
+/* Remove textarea resize handle variations */
+textarea { resize: none; }
+
+/* Normalize autofill styling */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
 @font-face {
   font-family: "Outfit";
   src: url("/fonts/Outfit-Regular.woff2") format("woff2");
