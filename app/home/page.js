@@ -21,7 +21,11 @@ export default function Home() {
     const query = `*[_type == "home"][0]`;
 
     Promise.all([
-      client.fetch(query, {}, { cache: 'force-cache', next: { revalidate: 3600 } }),
+      client.fetch(
+        query,
+        {},
+        { cache: "force-cache", next: { revalidate: 3600 } }
+      ),
       new Promise((resolve) => setTimeout(resolve, 1750)),
     ]).then(([data]) => {
       setHomePageContent(data);
@@ -304,15 +308,6 @@ export default function Home() {
           <p className="body-text">
             Now serving clients in NY, NJ, CT, MA, and CO.
           </p>
-          <h2 className="text-[12px] md:text-[14px] leading-[16px] md:leading-[23.17px] tracking-[0.04rem] md:tracking-[0.15rem] text-justify text-blue font-family-outfit md:uppercase text-nowrap">
-            Interested in joining our team? inquire{" "}
-            <button
-              className="text-[12px] md:text-[14px] leading-[16px] tracking-size[0.04rem] md:tracking-size[0.15rem] text-justify text-blue font-family-outfit md:uppercase md:border-b-1"
-              onClick={() => setModalState("application")}
-            >
-              here
-            </button>
-          </h2>
         </div>
 
         {modalState === "application" && (

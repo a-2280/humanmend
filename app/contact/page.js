@@ -246,41 +246,7 @@ export default function Contact() {
             )}
           </div>
         </div>
-        <hr className="my-[24px]" />
-        <div className="w-full flex justify-start items-start gap-[24px] lg:gap-[50px]">
-          <p className="numbers-text">06</p>
-          <div className="flex-1 lg:flex lg:justify-between lg:items-start">
-            <div className="flex flex-col justify-center items-start lg:gap-[24px]">
-              <h2 className="heading-2 !text-left lg:max-w-[350px]">
-                work with us
-              </h2>
-              <p className="body-small lg:max-w-[350px]">
-                Interested in our work? Inquire now about joining our growing
-                team.
-              </p>
-            </div>
-            <button
-              className="button-small mt-[15px] md:mt-[24px] lg:m-0"
-              onClick={() => setModalState("application2")}
-            >
-              Contact Us
-            </button>
-            {modalState === "application2" && (
-              <Application
-                isOpen={true}
-                onClose={() => setModalState("closed")}
-                onSuccess={() => setModalState("successApp")}
-              />
-            )}
 
-            {modalState === "successApp" && (
-              <Success
-                text="We look forward to helping you along your professional journey. We will be in touch soon."
-                onClose={() => setModalState("closed")}
-              />
-            )}
-          </div>
-        </div>
         <hr className="mt-[24px]" />
       </section>
       <PreFooter />
