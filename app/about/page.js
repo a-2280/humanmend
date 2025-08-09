@@ -31,6 +31,10 @@ export default function AnxietySpecialty() {
   useEffect(() => {
     const query = `*[_type == "about"][0]{
       ...,
+      heroImageAlt,
+      profileImageAlt,
+      therapistHeadshotAlt,
+      decorativeImageAlt,
       valuesAccordion[]{
         title,
         content
@@ -94,7 +98,7 @@ export default function AnxietySpecialty() {
 
         <Image
           src="/man(1).png"
-          alt="Man"
+          alt={aboutContent?.heroImageAlt || "Man"}
           width={117.4}
           height={112}
           className="mt-[67px] md:mt-[133px] max-w-[96px] md:max-w-none"
@@ -136,7 +140,7 @@ export default function AnxietySpecialty() {
           <div className="mt-[93.45px] lg:m-0 lg:w-1/2 md:flex md:justify-center md:items-center lg:pr-[44px]">
             <Image
               src="/man-3.png"
-              alt="man"
+              alt={aboutContent?.profileImageAlt || "man"}
               width={630}
               height={502.85}
               className="lg:w-[630px]"
@@ -192,7 +196,7 @@ export default function AnxietySpecialty() {
         <div className="lg:w-1/2">
           <Image
             src="/Lindsiemeek-headshots-atp-92-2.JPEG"
-            alt="Lindsie"
+            alt={aboutContent?.therapistHeadshotAlt || "Lindsie"}
             width={863}
             height={1139}
           />
@@ -419,7 +423,7 @@ export default function AnxietySpecialty() {
       <section className="px-[44px] max-w-7xl">
         <Image
           src="/flower-1.png"
-          alt="flower"
+          alt={aboutContent?.decorativeImageAlt || "flower"}
           width={960.83}
           height={385}
           className="w-full max-w-[354.19px] lg:max-w-[960.83px]"

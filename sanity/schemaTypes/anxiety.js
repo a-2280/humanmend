@@ -104,10 +104,10 @@ export default {
       description: "Custom keywords for this page, separated by commas. Leave empty to use default.",
     },
     {
-      name: "seoImage",
-      title: "Social Media Image",
-      type: "image",
-      description: "Custom image for social media sharing. Leave empty to use default.",
+      name: "seoImageAlt",
+      title: "Social Media Image Alt Text",
+      type: "string",
+      description: "Alt text for the default social media image. Describes the image for accessibility and SEO.",
     },
   ],
 };

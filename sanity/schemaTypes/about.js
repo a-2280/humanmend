@@ -85,6 +85,30 @@ export default {
       type: "text",
     },
     {
+      name: "heroImageAlt",
+      title: "Hero Image Alt Text",
+      type: "string",
+      description: "Alt text for the hero image (/man(1).png). Describes the image for accessibility.",
+    },
+    {
+      name: "profileImageAlt",
+      title: "Profile Image Alt Text",
+      type: "string",
+      description: "Alt text for the profile image (/man-3.png). Describes the image for accessibility.",
+    },
+    {
+      name: "therapistHeadshotAlt",
+      title: "Therapist Headshot Alt Text", 
+      type: "string",
+      description: "Alt text for the therapist headshot (/Lindsiemeek-headshots-atp-92-2.JPEG).",
+    },
+    {
+      name: "decorativeImageAlt",
+      title: "Decorative Flower Alt Text",
+      type: "string", 
+      description: "Alt text for the decorative flower image (/flower-1.png).",
+    },
+    {
       name: "valuesAccordion",
       title: "Values Accordion Items",
       type: "array",
@@ -118,10 +142,10 @@ export default {
       description: "Custom keywords for this page, separated by commas. Leave empty to use default.",
     },
     {
-      name: "seoImage",
-      title: "Social Media Image",
-      type: "image",
-      description: "Custom image for social media sharing. Leave empty to use default.",
+      name: "seoImageAlt",
+      title: "Social Media Image Alt Text",
+      type: "string",
+      description: "Alt text for the default social media image. Describes the image for accessibility and SEO.",
     },
   ],
 };

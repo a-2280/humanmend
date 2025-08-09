@@ -96,6 +96,30 @@ export default {
       type: "string",
     },
     {
+      name: "bouquetImageAlt",
+      title: "Bouquet Image Alt Text",
+      type: "string",
+      description: "Alt text for the bouquet image (/home-1.png).",
+    },
+    {
+      name: "peopleImageAlt",
+      title: "People Image Alt Text",
+      type: "string",
+      description: "Alt text for the people image (/man-2.png).",
+    },
+    {
+      name: "therapistImageAlt",
+      title: "Therapist Image Alt Text",
+      type: "string",
+      description: "Alt text for the therapist image (/Lindsiemeek-headshots-atp-103-2.jpeg).",
+    },
+    {
+      name: "inspirationalGifAlt",
+      title: "Inspirational GIF Alt Text",
+      type: "string",
+      description: "Alt text for the inspirational GIF (/you_deserve_to_take_up_space.gif).",
+    },
+    {
       name: "seoTitle",
       title: "SEO Title",
       type: "string",
@@ -115,10 +139,10 @@ export default {
       description: "Custom keywords for this page, separated by commas. Leave empty to use default.",
     },
     {
-      name: "seoImage",
-      title: "Social Media Image",
-      type: "image",
-      description: "Custom image for social media sharing. Leave empty to use default.",
+      name: "seoImageAlt",
+      title: "Social Media Image Alt Text",
+      type: "string",
+      description: "Alt text for the default social media image. Describes the image for accessibility and SEO.",
     },
   ],
 };

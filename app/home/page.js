@@ -18,7 +18,13 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    const query = `*[_type == "home"][0]`;
+    const query = `*[_type == "home"][0]{
+      ...,
+      bouquetImageAlt,
+      peopleImageAlt,
+      therapistImageAlt,
+      inspirationalGifAlt
+    }`;
 
     Promise.all([
       client.fetch(
@@ -110,7 +116,12 @@ export default function Home() {
         )}
       </section>
       <section className="mt-[37px] lg:mt-[-8rem] w-full max-w-7xl px-[44px]">
-        <Image src="/home-1.png" alt="Bouquet" width={1517} height={958} />
+        <Image 
+          src="/home-1.png" 
+          alt={homePageContent?.bouquetImageAlt || "Bouquet"} 
+          width={1517} 
+          height={958} 
+        />
       </section>
       <section className="mt-[37px] mb-[80px] lg:mt-[142px] lg:mb-[163px] w-full max-w-[415px] md:max-w-[699px] px-[44px]">
         <div className="mb-[52px] lg:mb-[96px] flex flex-col justify-center items-center">
@@ -158,7 +169,12 @@ export default function Home() {
         </div>
       </section>
       <section className="w-full max-w-7xl px-[44px] flex justify-center items-center">
-        <Image src="/man-2.png" alt="people" width={934} height={773} />
+        <Image 
+          src="/man-2.png" 
+          alt={homePageContent?.peopleImageAlt || "people"} 
+          width={934} 
+          height={773} 
+        />
       </section>
       <section className="hidden md:flex flex-col justify-center items-center px-[44px] w-full max-w-[699px] mt-[148px] mb-[204px]">
         <h1 className="heading-1 leading-3">OUR SPECIALITIES</h1>
@@ -255,7 +271,7 @@ export default function Home() {
       <section className="mb-[80px] lg:mb-[74px]">
         <Image
           src="/Lindsiemeek-headshots-atp-103-2.jpeg"
-          alt="Lindsie Meek"
+          alt={homePageContent?.therapistImageAlt || "Lindsie Meek"}
           width={472}
           height={613}
           className="mix-blend-multiply max-w-[250px] md:max-w-none px-[44px]"
@@ -264,7 +280,7 @@ export default function Home() {
       <section className="mb-[80px] lg:mb-[64px]">
         <Image
           src="/you_deserve_to_take_up_space.gif"
-          alt="You deserve to take up space"
+          alt={homePageContent?.inspirationalGifAlt || "You deserve to take up space"}
           width={964}
           height={699}
           className="w-full max-w-[318.58px] md:max-w-none px-[44px]"

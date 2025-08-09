@@ -22,7 +22,7 @@ export default function Footer() {
           Instagram
         </Link>
         <p className="body-text text-cream">/</p>
-        <Link href="#" className="button-main border-cream text-cream">
+        <Link href="mailto:info@humanmend.com" className="button-main border-cream text-cream">
           Email
         </Link>
       </div>

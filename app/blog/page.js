@@ -139,7 +139,11 @@ export default function Blog() {
               <p className="body-text text-center my-[24px] lg:m-0">
                 {blogContent.section2Paragraph}
               </p>
-              <Link href={"/blog-post-1"} className="button-main lg:mt-[48px]">
+              {/* blog-post-1 */}
+              <Link
+                href={"/find-beauty-in-your-broken"}
+                className="button-main lg:mt-[48px]"
+              >
                 {blogContent.section2Button}
               </Link>
             </div>
@@ -163,7 +167,11 @@ export default function Blog() {
             <p className="body-text text-center my-[24px] lg:m-0">
               {blogContent.section3Paragraph}
             </p>
-            <Link href={"/blog-post-2"} className="button-main lg:mt-[48px]">
+            {/* blog-post-2 */}
+            <Link
+              href={"/but-im-overweight"}
+              className="button-main lg:mt-[48px]"
+            >
               {blogContent.section3Button}
             </Link>
           </div>
@@ -184,7 +192,11 @@ export default function Blog() {
               <p className="body-text text-center my-[24px] lg:m-0">
                 {blogContent.section4Paragraph}
               </p>
-              <Link href={"/blog-post-3"} className="button-main lg:mt-[48px]">
+              {/* blog-post-3 */}
+              <Link
+                href={"/claiming-your-space"}
+                className="button-main lg:mt-[48px]"
+              >
                 {blogContent.section4Button}
               </Link>
             </div>
@@ -208,7 +220,11 @@ export default function Blog() {
             <p className="body-text text-center my-[24px] lg:m-0">
               {blogContent.section5Paragraph}
             </p>
-            <Link href={"/blog-post-4"} className="button-main lg:mt-[48px]">
+            {/* blog-post-4 */}
+            <Link
+              href={"/beyond-the-stereotypes"}
+              className="button-main lg:mt-[48px]"
+            >
               {blogContent.section5Button}
             </Link>
           </div>
@@ -229,7 +245,11 @@ export default function Blog() {
               <p className="body-text text-center my-[24px] lg:m-0">
                 {blogContent.section6Paragraph}
               </p>
-              <Link href={"/blog-post-5"} className="button-main lg:mt-[48px]">
+              {/* blog-post-5 */}
+              <Link
+                href={"/they-probably-hate-me"}
+                className="button-main lg:mt-[48px]"
+              >
                 {blogContent.section6Button}
               </Link>
             </div>
@@ -253,7 +273,11 @@ export default function Blog() {
             <p className="body-text text-center my-[24px] lg:m-0">
               {blogContent.section7Paragraph}
             </p>
-            <Link href={"/blog-post-6"} className="button-main lg:mt-[48px]">
+            {/* blog-post-6 */}
+            <Link
+              href={"/the-beach-body-rebellion"}
+              className="button-main lg:mt-[48px]"
+            >
               {blogContent.section7Button}
             </Link>
           </div>
